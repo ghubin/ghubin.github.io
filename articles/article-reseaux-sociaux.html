@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pourquoi j'ai arrêté les réseaux sociaux — L'Antre du Nuton Grognon</title>
+  <!--
+    BONNE PRATIQUE SEO : le titre de la page article contient
+    d'abord le titre de l'article, puis le nom du site.
+    Google affiche environ 60 caractères, donc on va à l'essentiel.
+  -->
+  <meta name="description" content="Après deux ans d'expérience, voici ce que j'ai gagné — et ce que j'ai perdu — en quittant les plateformes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+
+  <!-- Le même fichier style.css partagé entre toutes les pages -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!--
+    INITIALISATION DU DARK MODE — identique sur chaque page.
+    Ce bloc doit être le PREMIER enfant du <body>, avant tout
+    contenu visible, pour éviter un flash de couleur au chargement.
+    On lit localStorage : si l'utilisateur avait choisi le mode nuit,
+    on ajoute la classe "dark" immédiatement.
+  -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
+
+  <!-- =============================================
+       NAVIGATION — identique sur toutes les pages.
+       Ici, aucun lien n'a class="active" car on est
+       sur une sous-page article, pas sur Blog ni À propos.
+       ============================================= -->
+  <nav>
+    <div class="nav-left">
+      <a href="../index.html" class="nav-logo">L'Antre du Nuton<span> Grognon</span></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Blog</a></li>
+      <li><a href="../about.html">À propos</a></li>
+      <li>
+        <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- =============================================
+       CONTENU PRINCIPAL DE L'ARTICLE
+       <main> indique au navigateur (et à Google)
+       que c'est ici que se trouve le contenu principal.
+       Il ne doit y en avoir qu'un seul par page.
+       ============================================= -->
+  <main class="article-wrapper">
+    <!--
+      .article-wrapper est défini dans style.css :
+      max-width: 680px — largeur idéale pour la lecture
+      margin: 0 auto  — centré horizontalement
+    -->
+
+    <!-- Lien retour vers la liste des articles -->
+    <a href="../index.html" class="back-link">← Retour aux articles</a>
+
+    <!-- ---- EN-TÊTE DE L'ARTICLE ---- -->
+    <header class="article-header">
+      <!--
+        On utilise <header> ici à l'intérieur du <main>.
+        En HTML5, <header> peut être utilisé dans n'importe
+        quelle section, pas uniquement en haut de page.
+        Il représente "l'introduction" de son parent.
+      -->
+
+      <span class="tag">Technologie</span>
+
+      <!--
+        <h1> = titre principal de la page.
+        Il n'y en a qu'un seul par page, c'est une règle SEO.
+        Sur la page d'accueil, le h1 était dans le hero.
+        Ici, c'est le titre de l'article.
+      -->
+      <h1>Pourquoi j'ai arrêté d'utiliser les réseaux sociaux</h1>
+
+      <!-- Métadonnées de l'article : date, temps de lecture -->
+      <div class="article-meta">
+        <span>10 juin 2026</span>
+        <span>·</span>
+        <span>8 min de lecture</span>
+        <!--
+          Le temps de lecture estimé est une convention UX populaire.
+          On l'affiche ici en dur, mais dans un vrai blog (WordPress,
+          Ghost, etc.) il serait calculé automatiquement.
+        -->
+      </div>
+    </header>
+
+    <!-- ---- CORPS DE L'ARTICLE ---- -->
+    <article class="article-body">
+      <!--
+        On utilise <article> ici car ce contenu est autonome :
+        il aurait du sens même extrait de la page (dans un flux RSS
+        par exemple). C'est la balise sémantique correcte pour
+        un article de blog ou de presse.
+      -->
+
+      <p>
+        Il y a deux ans, j'ai désinstallé Instagram, Twitter et Facebook en l'espace d'un week-end.
+        Pas par idéologie, pas par militantisme numérique. Juste parce que j'avais l'impression de
+        sortir de chaque session plus vide que j'y étais entré. Ce texte, c'est le bilan honnête
+        de cette expérience — avec ce que j'ai gagné, ce que j'ai perdu, et ce que je n'avais pas prévu.
+      </p>
+
+      <!--
+        <hr> = séparateur horizontal.
+        En HTML5, il signifie un "changement de sujet" dans le texte,
+        pas simplement une ligne décorative. On s'en sert ici pour
+        marquer la transition entre l'intro et le développement.
+      -->
+      <hr>
+
+      <!--
+        <h2> = sous-titre de niveau 2.
+        La hiérarchie des titres doit être respectée :
+        h1 → h2 → h3, sans sauter de niveau.
+        C'est important pour l'accessibilité et le SEO.
+      -->
+      <h2>Ce que j'ai arrêté, exactement</h2>
+
+      <p>
+        Pour être précis : j'ai quitté les plateformes de <em>flux infini</em> — celles conçues
+        pour me faire défiler sans fin. J'ai gardé LinkedIn (contraint et forcé, pour le boulot)
+        et YouTube, que j'utilise avec intention plutôt que par réflexe.
+        <!--
+          <em> = emphase, italique sémantique.
+          À préférer à <i>, qui est purement stylistique.
+          <em> dit "ce mot est important dans le sens de la phrase".
+        -->
+      </p>
+
+      <p>
+        La différence entre ces deux usages, c'est la <strong>passivité</strong>. Sur Instagram,
+        je subissais un contenu que je n'avais pas choisi. Sur YouTube, je cherche quelque chose
+        de précis. Nuance capitale.
+        <!--
+          <strong> = importance forte, gras sémantique.
+          À préférer à <b>, qui est purement stylistique.
+        -->
+      </p>
+
+      <h2>Ce que j'ai gagné</h2>
+
+      <h3>Du temps, évidemment</h3>
+      <!--
+        <h3> = sous-sous-titre, niveau 3.
+        On l'utilise pour décomposer une section h2 en plusieurs points.
+      -->
+
+      <p>
+        L'argument bateau, mais réel. Screen Time m'indiquait 1h45 par jour sur les réseaux
+        en moyenne. Sur deux ans, ça représente environ <strong>25 jours pleins</strong> récupérés.
+        Je n'ai pas tout transformé en productivité vertueuse — j'ai aussi juste... regardé par
+        la fenêtre. Et c'est déjà bien.
+      </p>
+
+      <h3>Une mémoire moins fragmentée</h3>
+
+      <p>
+        Ce que je n'avais pas anticipé : la qualité de ma concentration a changé.
+        Pas de façon spectaculaire, mais j'arrive mieux à tenir sur un texte long, à rester dans
+        une pensée sans chercher à la couper. Le flux constant de micro-contenus avait, sans que
+        je m'en rende compte, recâblé mon seuil d'ennui à la baisse.
+      </p>
+
+      <!--
+        <blockquote> = citation mise en valeur.
+        Sémantiquement, ça signifie "ce contenu est emprunté ou extrait".
+        On peut y ajouter un attribut cite="URL" si la source est en ligne.
+        Dans notre CSS, on lui a donné une bordure gauche colorée.
+      -->
+      <blockquote>
+        « Le vrai luxe du XXIe siècle, c'est l'attention. Pas l'argent, pas le temps —
+        l'attention non divisée à une seule chose. »
+      </blockquote>
+
+      <p>
+        Je ne sais plus qui a dit ça. Mais depuis que j'ai quitté les réseaux, je comprends
+        ce que ça veut vraiment dire.
+      </p>
+
+      <h3>Moins d'anxiété de comparaison</h3>
+
+      <p>
+        Instagram est une machine à produire de l'insatisfaction douce. Pas de façon agressive —
+        par accumulation. Chaque vie qui semble plus intéressante, chaque vacances plus ensoleillée,
+        chaque corps plus sculpté que le mien. Rien de dramatique isolément, toxique en continu.
+        Depuis que j'ai coupé ce flux, je pense beaucoup moins à ce que je ne suis pas.
+      </p>
+
+      <hr>
+
+      <h2>Ce que j'ai perdu</h2>
+
+      <p>
+        Le bilan ne serait pas honnête sans cette partie. Quitter les réseaux, c'est aussi perdre
+        quelque chose — et ce serait trop simple de prétendre le contraire.
+      </p>
+
+      <h3>Des nouvelles de certaines personnes</h3>
+
+      <p>
+        Une partie de mon réseau social <em>réel</em> ne communique plus qu'à travers Instagram.
+        Des gens que j'appréciais et que je croise désormais moins. Pas des amis proches — ceux-là,
+        on se retrouve autrement. Mais cette zone tiède des connaissances sympathiques avec qui on
+        maintient un lien à travers les stories : elle s'est en grande partie évaporée.
+      </p>
+
+      <h3>Une certaine forme de légèreté</h3>
+
+      <p>
+        Ça peut sembler paradoxal, mais les réseaux avaient aussi une fonction de divertissement
+        bas effort que je sous-estimais. Certains soirs, défiler sans réfléchir avait une forme
+        d'utilité — comme regarder une émission médiocre après une longue journée. J'ai mis du
+        temps à trouver quoi mettre à la place.
+      </p>
+
+      <hr>
+
+      <h2>Ce que je n'avais pas prévu</h2>
+
+      <p>
+        La chose la plus surprenante : <strong>le manque s'est dissipé en trois semaines</strong>.
+        J'attendais quelque chose de plus dur, une sorte de sevrage prolongé. Ce n'était pas le cas.
+        Passé ce cap, l'envie de vérifier mes notifications s'est tout simplement éteinte — comme
+        une habitude dont on réalise après coup qu'elle n'était qu'un automatisme, pas un besoin.
+      </p>
+
+      <p>
+        L'autre surprise : j'ai recommencé à lire. Pas parce que j'avais décidé de "lire plus" —
+        juste parce que le vide laissé par le défilement avait besoin d'être comblé, et que les
+        livres étaient là.
+      </p>
+
+      <hr>
+
+      <h2>Est-ce que je recommande ?</h2>
+
+      <p>
+        Honnêtement : ça dépend. Si tu utilises les réseaux avec intention, pour des communautés
+        précises, pour du travail créatif — peut-être que le rapport bénéfice/coût est positif pour
+        toi. Pour moi, il ne l'était clairement pas.
+      </p>
+
+      <p>
+        Ce que je recommande à tout le monde en revanche, c'est de <em>mesurer</em>. D'activer
+        Screen Time ou Digital Wellbeing pendant une semaine sans changer aucune habitude, et de
+        regarder les chiffres en face. La plupart des gens que je connais ont été surpris. Moi
+        le premier.
+      </p>
+
+      <blockquote>
+        On ne quitte pas les réseaux sociaux par vertu. On les quitte quand on réalise qu'on y
+        passe plus de temps qu'on ne le voudrait, pour moins que ce qu'on en espérait.
+      </blockquote>
+
+      <p>
+        C'est tout ce que j'avais à dire. Si ça t'a parlé — ou si tu es en désaccord total —
+        les commentaires sont ouverts. Enfin, il n'y en a pas sur ce blog. Mais tu sais où me trouver.
+      </p>
+
+    </article>
+    <!-- Fin du corps de l'article -->
+
+    <!-- Lien de retour en bas de page aussi, confort de lecture -->
+    <a href="../index.html" class="back-link" style="margin-top: 3rem;">← Retour aux articles</a>
+
+  </main>
+
+  <footer>
+    <p>© 2026 L'Antre du Nuton Grognon — Fait avec curiosité et un peu de café.</p>
+  </footer>
+
+  <!--
+    SCRIPT DARK MODE — placé en bas du <body>.
+    Identique sur toutes les pages : on copie-colle ce bloc
+    tel quel. Dans un vrai projet, on l'externaliserait dans
+    un fichier darkmode.js importé une seule fois.
+  -->
+  <script>
+    const btn = document.getElementById('dark-toggle');
+
+    function updateIcon() {
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    }
+
+    updateIcon(); // affiche la bonne icône dès le chargement
+
+    btn.addEventListener('click', function () {
+      document.body.classList.toggle('dark'); // ajoute ou retire la classe dark
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      // on sauvegarde le choix pour qu'il persiste d'une page à l'autre
+      updateIcon();
+    });
+  </script>
+  
+  <script>
+    window.addEventListener('scroll', () => {
+      const item = document.getElementById('navigation-links');
+      if(!item) return;
+      
+      const currentScroll = window.scrollY;
+      const scrollThreshold = 75;
+
+      if(currentScroll >= scrollThreshold){
+        item.style.opacity = '0';
+        item.style.visibility='none';
+        item.style.pointerEvents = 'none';
+      }
+      else{
+        item.style.opacity = 1-(currentScroll/scrollThreshold);
+        item.style.visibility = 'visible';
+        item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+  
+
+</body>
+</html>

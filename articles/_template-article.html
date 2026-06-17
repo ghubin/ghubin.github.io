@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pourquoi j'ai arrêté les réseaux sociaux — L'Antre du Nuton Grognon</title>
+  <!--
+    BONNE PRATIQUE SEO : le titre de la page article contient
+    d'abord le titre de l'article, puis le nom du site.
+    Google affiche environ 60 caractères, donc on va à l'essentiel.
+  -->
+  <meta name="description" content="Après deux ans d'expérience, voici ce que j'ai gagné — et ce que j'ai perdu — en quittant les plateformes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+
+  <!-- Le même fichier style.css partagé entre toutes les pages -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!--
+    INITIALISATION DU DARK MODE — identique sur chaque page.
+    Ce bloc doit être le PREMIER enfant du <body>, avant tout
+    contenu visible, pour éviter un flash de couleur au chargement.
+    On lit localStorage : si l'utilisateur avait choisi le mode nuit,
+    on ajoute la classe "dark" immédiatement.
+  -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
+
+  <!-- =============================================
+       NAVIGATION — identique sur toutes les pages.
+       Ici, aucun lien n'a class="active" car on est
+       sur une sous-page article, pas sur Blog ni À propos.
+       ============================================= -->
+  <nav>
+    <div class="nav-left">
+      <a href="../index.html" class="nav-logo">L'Antre du Nuton<span> Grognon</span></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Blog</a></li>
+      <li><a href="../about.html">À propos</a></li>
+      <li>
+        <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- =============================================
+       CONTENU PRINCIPAL DE L'ARTICLE
+       <main> indique au navigateur (et à Google)
+       que c'est ici que se trouve le contenu principal.
+       Il ne doit y en avoir qu'un seul par page.
+       ============================================= -->
+  <main class="article-wrapper">
+    <!--
+      .article-wrapper est défini dans style.css :
+      max-width: 680px — largeur idéale pour la lecture
+      margin: 0 auto  — centré horizontalement
+    -->
+
+    <!-- Lien retour vers la liste des articles -->
+    <a href="../index.html" class="back-link">← Retour aux articles</a>
+
+    <!-- ---- EN-TÊTE DE L'ARTICLE ---- -->
+    <header class="article-header">
+      <!--
+        On utilise <header> ici à l'intérieur du <main>.
+        En HTML5, <header> peut être utilisé dans n'importe
+        quelle section, pas uniquement en haut de page.
+        Il représente "l'introduction" de son parent.
+      -->
+
+      <span class="tag">TAG</span>
+
+      <!--
+        <h1> = titre principal de la page.
+        Il n'y en a qu'un seul par page, c'est une règle SEO.
+        Sur la page d'accueil, le h1 était dans le hero.
+        Ici, c'est le titre de l'article.
+      -->
+      <h1>TITRE</h1>
+
+      <!-- Métadonnées de l'article : date, temps de lecture -->
+      <div class="article-meta">
+        <span>DATE</span>
+        <span>·</span>
+        <span>DUREE DE LECTURE</span>
+        <!--
+          Le temps de lecture estimé est une convention UX populaire.
+          On l'affiche ici en dur, mais dans un vrai blog (WordPress,
+          Ghost, etc.) il serait calculé automatiquement.
+        -->
+      </div>
+    </header>
+
+    <!-- ---- CORPS DE L'ARTICLE ---- -->
+    <article class="article-body">
+        <p>
+            BLABLA
+        </p>
+    </article>
+       
+    <a href="../index.html" class="back-link" style="margin-top: 3rem;">← Retour aux articles</a>
+
+  </main>
+
+  <footer>
+    <p>© 2026 L'Antre du Nuton Grognon — Fait avec curiosité et un peu de café.</p>
+  </footer>
+
+  <!--
+    SCRIPT DARK MODE — placé en bas du <body>.
+    Identique sur toutes les pages : on copie-colle ce bloc
+    tel quel. Dans un vrai projet, on l'externaliserait dans
+    un fichier darkmode.js importé une seule fois.
+  -->
+  <script>
+    const btn = document.getElementById('dark-toggle');
+
+    function updateIcon() {
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    }
+
+    updateIcon(); // affiche la bonne icône dès le chargement
+
+    btn.addEventListener('click', function () {
+      document.body.classList.toggle('dark'); // ajoute ou retire la classe dark
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      // on sauvegarde le choix pour qu'il persiste d'une page à l'autre
+      updateIcon();
+    });
+  </script>
+  
+  <script>
+    window.addEventListener('scroll', () => {
+      const item = document.getElementById('navigation-links');
+      if(!item) return;
+      
+      const currentScroll = window.scrollY;
+      const scrollThreshold = 75;
+
+      if(currentScroll >= scrollThreshold){
+        item.style.opacity = '0';
+        item.style.visibility='none';
+        item.style.pointerEvents = 'none';
+      }
+      else{
+        item.style.opacity = 1-(currentScroll/scrollThreshold);
+        item.style.visibility = 'visible';
+        item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+
+</body>
+</html>

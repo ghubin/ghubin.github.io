@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Nuton Cave</title>
+  <meta name="description" content="Personal website of a grumpy mythical Belgian creature">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,900&f[]=nippo@400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=aktura@400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/cave-icon" href="img/cave.png">
+</head>
+
+<body>
+
+  <!--
+    SCRIPT D'INITIALISATION DU DARK MODE — placé tôt dans le <body>
+    On lit localStorage avant que la page s'affiche,
+    ce qui évite un "flash" de thème clair au chargement.
+  -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
+  
+<div class="wrapper">
+  <nav>
+    <div class="nav-left">
+      <a id="index-nav" href="index.html" class="nav-logo active">
+        <span class="nav-highlight"></span> 
+        The Cave
+      </a>
+      <a id="projects-nav" href="projects.html" class="nav-logo"> 
+        <span class="nav-highlight"></span>
+        Projects 
+      </a>
+      <a id="reading-nav" href="study.html" class="nav-logo"> 
+        Reading 
+        <span class="nav-highlight"></span>
+      </a> 
+      <a id="listening-nav" href="listeningRoom.html" class="nav-logo">
+        Listening
+        <span class="nav-highlight"></span>
+      </a>
+      <a id="blog-nav" href="thoughts.html" class="nav-logo">
+        Thoughts
+        <span class="nav-highlight"></span>
+      </a>
+
+    </div>
+    <ul id= "navigation-links" class="nav-links">
+      <li><a href="about.html">About the Nuton</a></li>
+      <li><a href="https://github.com/ghubin" target="_blank" rel="noopener noreferrer">Github</a></li>
+      <li>
+        <!--
+          BOUTON DARK MODE
+          aria-label = texte pour les lecteurs d'écran (accessibilité)
+          L'icône changera via JavaScript selon le thème actif
+        -->
+        <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="home-grid">
+    <div class="home-text">
+      <a href="https://youtu.be/rEq1Z0bjdwc?t=6" target="_blank" rel="noopener noreferrer">
+        Hello there</a>, I'm Géraud and welcome to the <a href="about.html" target="_blank" rel="noopener noreferrer">Nuton</a> Cave. 
+        Here I try to track what I like to 
+        <a href="projects.html" target="_blank" rel="noopener noreferrer">do</a>, 
+        <a href="study.html" target="_blank" rel="noopener noreferrer">read</a> 
+        and  <a href="listeningRoom.html" target="_blank" rel="noopener noreferrer">listen to</a>.
+        <br>
+        <br>
+        I am very curious and often tend to dive in rabbit holes that I come across.
+        This website and the disparity in subjects covered are just evidences of this tendency. 
+        <br>
+        <br>
+        The design is currently (more than inspired by) <a href="https://www.chester.how" target="_blank" rel="noopener noreferrer">chester.how</a>
+        as I enjoy its simplicity and needed a starting point to discover website creation, but it will evolve as I learn.
+    </div>
+    <div class="home-show-2by1">
+      <img src="img/Sunset.JPG" alt="Sunset at home">
+    </div>
+    
+
+  </div>
+
+  
+  <header class="hero">
+    <span class="hero-tag">— Journal personnel</span>
+    <h1>Idées, notes<br>& explorations</h1>
+    <p>Un espace pour écrire librement sur la tech, la culture et tout ce qui m'interpelle.</p>
+  </header>
+
+  <main class="articles-grid">
+
+    <!-- ARTICLE 1 — lien vers la page article complète -->
+    <a href="articles/article-reseaux-sociaux.html" class="article-card">
+      <span class="tag">Technologie</span>
+      <h2>Pourquoi j'ai arrêté d'utiliser les réseaux sociaux</h2>
+      <p class="excerpt">
+        Après deux ans d'expérience, voici ce que j'ai gagné — et ce que j'ai perdu — en quittant les plateformes.
+      </p>
+      <div class="meta">
+        <span>12 mai 2025</span>
+        <!-- Ce lien pointe désormais vers la vraie page de l'article -->
+        <span class="read-more">Lire →</span>
+      </div>
+    </a>
+
+    <a href="https://www.google.com/search?q=NON+Y%27A+ENCORE+RIEN&ie=UTF-8" class="article-card">
+      <span class="tag">Écriture</span>
+      <h2>Comment le journaling a changé ma façon de penser</h2>
+      <p class="excerpt">
+        Tenir un journal quotidien depuis 18 mois m'a appris des choses sur moi-même que je n'aurais jamais découvertes autrement.
+      </p>
+      <div class="meta">
+        <span>3 avril 2025</span>
+        <span href="#" class="read-more">Lire →</span>
+      </div>
+    </a>
+
+    <article class="article-card">
+      <span class="tag">Lecture</span>
+      <h2>Les 5 livres qui ont redéfini ma vision du monde</h2>
+      <p class="excerpt">
+        Une liste non exhaustive, forcément subjective, et probablement amenée à changer l'année prochaine.
+      </p>
+      <div class="meta">
+        <span>18 mars 2025</span>
+        <a href="#" class="read-more">Lire →</a>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <span class="tag">Technologie</span>
+      <h2>L'IA dans mon quotidien : bilan après 6 mois</h2>
+      <p class="excerpt">
+        Entre gain de temps réel et nouvelles dépendances, le bilan est plus nuancé qu'on ne le croit.
+      </p>
+      <div class="meta">
+        <span>2 février 2025</span>
+        <a href="#" class="read-more">Lire →</a>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <span class="tag">Vie</span>
+      <h2>Déménager à l'étranger : ce que personne ne te dit</h2>
+      <p class="excerpt">
+        Le pragmatisme administratif, la solitude des débuts, et cette étrange liberté qu'on ne comprend qu'après.
+      </p>
+      <div class="meta">
+        <span>10 janvier 2025</span>
+        <a href="#" class="read-more">Lire →</a>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
+  </footer>
+
+  <!--
+    SCRIPT DU DARK MODE — placé en bas du <body>
+    Raison : le DOM (les éléments HTML) doit être chargé
+    avant qu'on puisse y accéder avec getElementById.
+    Placer les scripts à la fin est une bonne pratique.
+  -->
+  <script>
+    const btn = document.getElementById('dark-toggle');
+    // getElementById cherche l'élément avec id="dark-toggle"
+
+    // Fonction qui met à jour l'icône selon le thème actif
+    function updateIcon() {
+      // body.classList.contains('dark') renvoie true ou false
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      // Si dark → afficher le soleil (pour repasser au clair)
+      // Sinon → afficher la lune (pour passer au sombre)
+    }
+
+    updateIcon(); // appel immédiat pour afficher la bonne icône au chargement
+
+    btn.addEventListener('click', function () {
+      // addEventListener écoute les clics sur le bouton
+      // À chaque clic, on bascule la classe "dark" sur le <body>
+      document.body.classList.toggle('dark');
+      // toggle = ajoute la classe si absente, la retire si présente
+
+      // On sauvegarde le choix dans localStorage
+      // localStorage = stockage persistant dans le navigateur (survit à la fermeture)
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+
+      updateIcon(); // met à jour l'icône après le changement
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const item = document.getElementById('navigation-links');
+      if(!item) return;
+      
+      const currentScroll = window.scrollY;
+      const scrollThreshold = 75;
+
+      if(currentScroll >= scrollThreshold){
+        item.style.opacity = '0';
+        item.style.visibility='none';
+        item.style.pointerEvents = 'none';
+      }
+      else{
+        item.style.opacity = 1-(currentScroll/scrollThreshold);
+        item.style.visibility = 'visible';
+        item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+
+</div>
+</body>
+</html>
