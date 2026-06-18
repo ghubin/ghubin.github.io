@@ -15,11 +15,6 @@
 
 <body>
 
-  <!--
-    INITIALISATION DU DARK MODE — premier bloc du <body>.
-    Même logique que sur les autres pages : on lit localStorage
-    avant l'affichage pour éviter un flash de thème clair.
-  -->
   <script>
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark');
@@ -27,10 +22,6 @@
   </script>
 
   <div class="wrapper">
-  <!-- =============================================
-       NAVIGATION — class="active" sur "À propos"
-       car c'est la page sur laquelle on se trouve.
-       ============================================= -->
   <nav>
     <div class="nav-left">
       <a id="index-nav" href="index.html" class="nav-logo active">
@@ -59,131 +50,88 @@
       <li><a href="about.html" class="active">About the Nuton</a></li>
       <li><a href="https://github.com/ghubin" target="_blank" rel="noopener noreferrer">Github</a></li>
       <li>
-        <!--
-          BOUTON DARK MODE
-          aria-label = texte pour les lecteurs d'écran (accessibilité)
-          L'icône changera via JavaScript selon le thème actif
-        -->
         <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
       </li>
     </ul>
   </nav>
-  <!-- =============================================
-       CONTENU DE LA PAGE ABOUT
-       ============================================= -->
+
   <main class="about-wrapper">
 
-    <!-- En-tête : avatar + nom du blog + accroche -->
     <div class="about-header">
-
-      <!--
-        Avatar CSS pur : un cercle coloré avec une initiale.
-        Pas besoin d'image réelle pour commencer.
-        Pour utiliser une vraie photo, remplace ce <div> par :
-        <img src="photo.jpg" alt="Le Nuton Grognon" class="about-avatar">
-        et adapte le CSS de .about-avatar en conséquence.
-      -->
-      <!-- <div class="about-avatar" aria-hidden="true">N</div>
-       -->
-      
-      <!--
-        aria-hidden="true" indique aux lecteurs d'écran
-        d'ignorer cet élément purement décoratif.
-        La lettre "N" pour Nuton — à changer selon ton pseudo.
-      -->
 
       <div class="about-intro">
         <h1>Welcome to the Nuton cave</h1>
-        <!--
-          <h1> = titre principal, un seul par page.
-          Ici il remplace le titre de la page d'accueil.
-        -->
         <span class="role">A Nuton · Somewhere in Wallonia</span>
-        <!--
-          <span> est un élément inline générique sans sens
-          sémantique propre. On lui donne du sens via la classe CSS.
-          Ici il sert juste à styler une ligne de texte.
-        -->
       </div>
     </div>
 
-    <!-- Corps du texte organisé en sections thématiques -->
     <div class="about-body">
 
-      <!-- ---- SECTION : Qui se cache ici ---- -->
       <section class="about-section">
-        <!--
-          <section> = bloc de contenu thématiquement cohérent.
-          Meilleur que <div> pour la structure sémantique,
-          ce qui aide les moteurs de recherche à comprendre la page.
-        -->
-        <h2>Qui se cache ici ?</h2>
+        <h2>Who's hiding in the cave ?</h2>
         <p>
-          Un nuton, ça grogne. Mais ça observe aussi, ça réfléchit, et parfois ça écrit.
-          Ce blog, c'est mon coin à moi sur l'internet — sans algorithme pour décider ce qui
-          mérite d'être lu, sans fil infini pour noyer les idées. Juste du texte et des pensées.
+          Hello, my name is Géraud, I am an graduate in Chemical and materials engineering from UCLouvain, 
+          currently looking for a job. Whether it is in the industry (pharmaceutical, electronics, aeronautics, transports, energy,...) or more focused towards research, I aim 
+          to have a positive impact on society through my work.
+          <br>
+          <br>
+        <p style="text-align: center;">
+          Feel free to connect with me on <a href="https://www.linkedin.com/in/géraud-hubin-8a73ba354" target="_blank" rel="noopener noreferrer">LinkedIn!</a>
+        </p>
+          <br>
+          <br>
+        <p> 
+          I am a very curious person and I enjoy learning and understanding how things work, this is why this website 
+          was mainly created by hand, in order to understand what is happening. 
+          Mainly because it is important to know how to use tools as useful as AI, so the first structure was created using Claude to have starting point as well as provide explanation.
+          <br>
+          <br>
+          I tend to have a lot of ideas and difficulties to track them, this website is intended to serve as 
+          a learning tool as well as a tracker for projects that made it past the notebooks or the notes in my phone.
         </p>
       </section>
 
-      <!-- ---- SECTION : Pourquoi ce blog ---- -->
       <section class="about-section">
-        <h2>Pourquoi l'Antre ?</h2>
+        <h2>What is a Nuton ?</h2>
         <p>
-          Parce que j'avais besoin d'un endroit où développer des idées sans contrainte de format.
-          Pas 280 caractères. Pas un algorithme qui décide si mon opinion mérite d'être vue.
-          Juste une page blanche et le temps de la remplir correctement.
-        </p>
-        <!--
-          style="margin-top: ..." inline : on l'utilise ici en exception
-          pour espacer deux paragraphes consécutifs dans la même section.
-          Dans un projet plus grand, on préférerait une classe CSS dédiée.
-        -->
-        <p style="margin-top: 0.8rem;">
-          J'écris sur ce qui me traverse : la technologie, les réseaux sociaux, les livres,
-          la vie numérique. Parfois sur rien de tout ça. L'antre, ça a ses propres règles.
+          A <a href="https://fr.wikipedia.org/wiki/Nuton" target="_blank" rel="noopener noreferrer">nuton</a> 
+          is a small mythical creature from the Belgian and French Ardennes, quite similar to a lutin.
+          They used to live in caves or holes called "<i>Trou de Nutons</i>" in french that can be seen 
+          scattered across Wallonia. They are known to be great craftsmen, and used to repair shoes and cauldrons or 
+          sharpen knives of the people leaving their objects with a food offering at the entrance of their caves.
+          Because the Nuton is also a little foodie !
+          <br>
+          <br>
+          I really enjoyed this picture of the maker, honing his skills and I want to add a more modern 
+          twist onto it, trying to create projects revolving around 3D printings or electronics.  
         </p>
       </section>
 
-      <!-- ---- SECTION : Ce que je fais ---- -->
       <section class="about-section">
-        <h2>Ce que je fais</h2>
-        <p>Par passion ou par nécessité :</p>
+        <h2>What I do</h2>
 
-        <!--
-          <ul> = liste non ordonnée (unordered list).
-          Chaque <li> est un élément de la liste.
-          Dans le CSS, on a retiré les puces (list-style: none)
-          et on affiche les items comme des tags visuels.
-        -->
         <ul class="skills-list">
-          <li>Développement web</li>
-          <li>Écriture</li>
-          <li>Photographie</li>
-          <li>Lecture compulsive</li>
-          <li>Grognements divers</li>
-          <li>Café en quantité déraisonnable</li>
+          <li>Engineering (how my brain works)</li>
+          <li>Web dev (very recent)</li>
+          <li>3D CAD Modeling (AutoDesk Fusion)</li>
+          <li>Music discovery (constantly)</li>
+          <li>Reading (as much as possible)</li>
+          <li>Gaming (often)</li>
+          <li>Writing (not as regularly as I wish)</li>
         </ul>
       </section>
 
-      <!-- ---- SECTION : Contact ---- -->
       <section class="about-section">
-        <h2>Me contacter</h2>
+        <h2>Contact me</h2>
         <p>
-          Le Nuton est accessible par e-mail :
-          <!--
-            <a href="mailto:..."> est un lien spécial.
-            Quand l'utilisateur clique dessus, son client mail
-            (Outlook, Gmail, Apple Mail...) s'ouvre automatiquement
-            avec l'adresse déjà remplie dans le champ "À :".
-          -->
-          <a href="mailto:nuton@exemple.com" style="color: var(--accent);">nuton@exemple.com</a>.
-          Il répond quand l'humeur le permet, ce qui, soyons honnêtes,
-          est la plupart du temps.
+          You can reach me by mail <a href="mailto:geraud.hubin@gmail.com" style="color: var(--ink);">here</a> 
+          or through <a href="https://www.linkedin.com/in/géraud-hubin-8a73ba354" target="_blank" rel="noopener noreferrer">LinkedIn</a>. 
+          <br>
+          I try to answer quickly as nutons now have high speed Wi-fi in their caves.
         </p>
       </section>
 
     </div>
-    <!-- Fin de .about-body -->
 
   </main>
 
@@ -191,30 +139,17 @@
     <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
   </footer>
 
-  <!--
-    SCRIPT DARK MODE — en bas du <body>, après tout le HTML.
-    Le navigateur parse le HTML de haut en bas : si on mettait
-    ce script dans le <head>, document.getElementById('dark-toggle')
-    retournerait null car le bouton n'existerait pas encore.
-    En bas du body, tous les éléments sont garantis d'exister.
-  -->
   <script>
     const btn = document.getElementById('dark-toggle');
 
     function updateIcon() {
-      // Opérateur ternaire : condition ? valeur_si_vrai : valeur_si_faux
       btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
     }
 
-    updateIcon(); // initialisation immédiate au chargement de la page
+    updateIcon(); 
 
     btn.addEventListener('click', function () {
-      // toggle : si la classe "dark" est là → on l'enlève, sinon → on l'ajoute
       document.body.classList.toggle('dark');
-
-      // localStorage.setItem('clé', 'valeur') stocke une donnée
-      // dans le navigateur, même après fermeture de l'onglet.
-      // C'est comme ça que le choix de thème "survit" à la navigation.
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
 
       updateIcon();
