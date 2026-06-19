@@ -14,10 +14,13 @@
   --bordernav:#565656;
   --lacostegreen: #004526;
   --upforest: #014421;
+  --BIC:#5980d4;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Lora', Georgia, serif;
   --font-ui: 'DM Mono', monospace;
+  --font-handwritten: 'Annie Use Your Telescope', cursive;
   --radius-picture: 14px;
+
 }
 
 /* =========================================
@@ -249,7 +252,6 @@ nav {
   grid-column: span 2;
   grid-row: span 1;
   width: 100%;
-  padding: 0.25rem;
   aspect-ratio: 2/1;
   border-radius: var(--radius-picture);
   overflow: hidden;
@@ -260,14 +262,12 @@ nav {
   height: 100%;        /* Forces the image height to match the box height */
   max-width: 100%;     /* Strictly prevents it from expanding past 100% width */
   max-height: 100%;    /* Strictly prevents it from expanding past 100% height */
+  padding: 0.25rem 0.5rem;
   transition: transform 0.3s ease-in-out;
-
   /* CRITICAL: Centers and crops the image dynamically so it doesn't squish */
   object-fit: cover;   
-  
   display: block;      /* Removes extra unwanted whitespace at the bottom */
   border-radius:var(--radius-picture);
-
 }
 
 /*
@@ -288,6 +288,34 @@ nav {
 }
 .home-show-1by1 a{
   color: inherit;
+}
+
+.home-show-stickyNote {
+  grid-column: span 1;
+  grid-row: span 1;
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem;
+  aspect-ratio: 1/1;
+  font-family:var(--font-handwritten) ;
+  list-style: inside;
+  color: var(--BIC);
+  background-color: #FFFF8F;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition-duration: 250ms;
+}
+
+.home-show-stickyNote a {
+  color: inherit;
+}
+
+a.home-show-stickyNote{
+  text-decoration: none;
+}
+
+.home-show-stickyNote:hover {
+  transform:rotate(-1.5deg) scale(1.025);
 }
 
 .home-show-1by2{
