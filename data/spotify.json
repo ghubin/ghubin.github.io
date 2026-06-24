@@ -1,0 +1,112 @@
+{
+  "week": "2026-06-17/2026-06-24",
+  "top_tracks": [
+    {
+      "rank": 1,
+      "name": "You've Got Everything Now - 2011 Remaster",
+      "artist": "The Smiths",
+      "plays": 2
+    },
+    {
+      "rank": 2,
+      "name": "Wow.",
+      "artist": "Post Malone",
+      "plays": 1
+    },
+    {
+      "rank": 3,
+      "name": "Shape Of My Heart",
+      "artist": "Sting",
+      "plays": 1
+    },
+    {
+      "rank": 4,
+      "name": "Call Me",
+      "artist": "Blondie",
+      "plays": 1
+    },
+    {
+      "rank": 5,
+      "name": "When You Know",
+      "artist": "Puggy",
+      "plays": 1
+    },
+    {
+      "rank": 6,
+      "name": "Bette Davis Eyes",
+      "artist": "Kim Carnes",
+      "plays": 1
+    },
+    {
+      "rank": 7,
+      "name": "Livin' On A Prayer",
+      "artist": "Bon Jovi",
+      "plays": 1
+    },
+    {
+      "rank": 8,
+      "name": "Born to Run",
+      "artist": "Bruce Springsteen",
+      "plays": 1
+    },
+    {
+      "rank": 9,
+      "name": "Le Soldat Rose",
+      "artist": "-M-",
+      "plays": 1
+    },
+    {
+      "rank": 10,
+      "name": "Get Down On It - Single Version",
+      "artist": "Kool & The Gang",
+      "plays": 1
+    }
+  ],
+  "top_artists": [
+    {
+      "rank": 1,
+      "name": "Buena Vista Social Club",
+      "plays": 13
+    },
+    {
+      "rank": 2,
+      "name": "The Smiths",
+      "plays": 2
+    },
+    {
+      "rank": 3,
+      "name": "Lykke Li",
+      "plays": 2
+    },
+    {
+      "rank": 4,
+      "name": "Post Malone",
+      "plays": 1
+    },
+    {
+      "rank": 5,
+      "name": "Sting",
+      "plays": 1
+    }
+  ],
+  "top_albums": [
+    {
+      "rank": 1,
+      "name": "Buena Vista Social Club",
+      "artist": "Buena Vista Social Club",
+      "plays": 13
+    },
+    {
+      "rank": 2,
+      "name": "The Smiths",
+      "artist": "The Smiths",
+      "plays": 2
+    },
+    {
+      "rank": 3,
+      "name": "Hollywood's Bleeding",
+      "artist": "Post Malone",
+      "plays": 1
+    }
+  ]
+}
