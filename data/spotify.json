@@ -1,92 +1,92 @@
 {
-  "week": "2026-06-17/2026-06-24",
+  "week": "2026-06-22/2026-06-29",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "You've Got Everything Now - 2011 Remaster",
-      "artist": "The Smiths",
+      "name": "Bécane - A COLORS SHOW",
+      "artist": "Yamê",
       "plays": 2
     },
     {
       "rank": 2,
-      "name": "Wow.",
-      "artist": "Post Malone",
-      "plays": 1
+      "name": "Knights of Cydonia",
+      "artist": "Muse",
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "Shape Of My Heart",
-      "artist": "Sting",
-      "plays": 1
+      "name": "Map of the Problematique",
+      "artist": "Muse",
+      "plays": 2
     },
     {
       "rank": 4,
-      "name": "Call Me",
-      "artist": "Blondie",
-      "plays": 1
+      "name": "Unravelling",
+      "artist": "Muse",
+      "plays": 2
     },
     {
       "rank": 5,
-      "name": "When You Know",
-      "artist": "Puggy",
-      "plays": 1
+      "name": "The Sickness In You & I",
+      "artist": "Muse",
+      "plays": 2
     },
     {
       "rank": 6,
-      "name": "Bette Davis Eyes",
-      "artist": "Kim Carnes",
-      "plays": 1
+      "name": "Space Debris",
+      "artist": "Muse",
+      "plays": 2
     },
     {
       "rank": 7,
+      "name": "Plug in Baby",
+      "artist": "Muse",
+      "plays": 2
+    },
+    {
+      "rank": 8,
+      "name": "You've Got Everything Now - 2011 Remaster",
+      "artist": "The Smiths",
+      "plays": 1
+    },
+    {
+      "rank": 9,
       "name": "Livin' On A Prayer",
       "artist": "Bon Jovi",
       "plays": 1
     },
     {
-      "rank": 8,
+      "rank": 10,
       "name": "Born to Run",
       "artist": "Bruce Springsteen",
-      "plays": 1
-    },
-    {
-      "rank": 9,
-      "name": "Le Soldat Rose",
-      "artist": "-M-",
-      "plays": 1
-    },
-    {
-      "rank": 10,
-      "name": "Get Down On It - Single Version",
-      "artist": "Kool & The Gang",
       "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
+      "name": "Muse",
+      "plays": 47
+    },
+    {
+      "rank": 2,
       "name": "Buena Vista Social Club",
       "plays": 13
     },
     {
-      "rank": 2,
-      "name": "The Smiths",
-      "plays": 2
+      "rank": 3,
+      "name": "ERA",
+      "plays": 3
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "Lykke Li",
       "plays": 2
     },
     {
-      "rank": 4,
-      "name": "Post Malone",
-      "plays": 1
-    },
-    {
       "rank": 5,
-      "name": "Sting",
-      "plays": 1
+      "name": "Yamê",
+      "plays": 2
     }
   ],
   "top_albums": [
@@ -98,15 +98,15 @@
     },
     {
       "rank": 2,
-      "name": "The Smiths",
-      "artist": "The Smiths",
-      "plays": 2
+      "name": "The Wow! Signal",
+      "artist": "Muse",
+      "plays": 12
     },
     {
       "rank": 3,
-      "name": "Hollywood's Bleeding",
-      "artist": "Post Malone",
-      "plays": 1
+      "name": "Origin of Symmetry",
+      "artist": "Muse",
+      "plays": 8
     }
   ]
 }
