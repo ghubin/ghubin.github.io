@@ -1,112 +1,112 @@
 {
-  "week": "2026-06-22/2026-06-29",
+  "week": "2026-06-29/2026-07-06",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Bécane - A COLORS SHOW",
-      "artist": "Yamê",
-      "plays": 2
+      "name": "Hush",
+      "artist": "Muse",
+      "plays": 3
     },
     {
       "rank": 2,
-      "name": "Knights of Cydonia",
-      "artist": "Muse",
+      "name": "Not You Again",
+      "artist": "ERA",
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Map of the Problematique",
-      "artist": "Muse",
+      "name": "Wait a Minute!",
+      "artist": "WILLOW",
       "plays": 2
     },
     {
       "rank": 4,
-      "name": "Unravelling",
-      "artist": "Muse",
+      "name": "Frankly, Mr. Shankly - 2011 Remaster",
+      "artist": "The Smiths",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "The Sickness In You & I",
-      "artist": "Muse",
+      "name": "School",
+      "artist": "Supertramp",
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "Space Debris",
-      "artist": "Muse",
+      "name": "This Is The Life",
+      "artist": "Amy Macdonald",
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "Plug in Baby",
-      "artist": "Muse",
+      "name": "Aline",
+      "artist": "Christophe",
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "You've Got Everything Now - 2011 Remaster",
-      "artist": "The Smiths",
+      "name": "Not This Time",
+      "artist": "ERA",
       "plays": 1
     },
     {
       "rank": 9,
-      "name": "Livin' On A Prayer",
-      "artist": "Bon Jovi",
+      "name": "Sempire Deo",
+      "artist": "ERA",
       "plays": 1
     },
     {
       "rank": 10,
-      "name": "Born to Run",
-      "artist": "Bruce Springsteen",
+      "name": "Will You Call My Name - Remix",
+      "artist": "ERA",
       "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Muse",
-      "plays": 47
+      "name": "The Smiths",
+      "plays": 11
     },
     {
       "rank": 2,
-      "name": "Buena Vista Social Club",
-      "plays": 13
+      "name": "ERA",
+      "plays": 8
     },
     {
       "rank": 3,
-      "name": "ERA",
-      "plays": 3
+      "name": "ROSALÍA",
+      "plays": 4
     },
     {
       "rank": 4,
-      "name": "Lykke Li",
-      "plays": 2
+      "name": "Muse",
+      "plays": 4
     },
     {
       "rank": 5,
-      "name": "Yamê",
-      "plays": 2
+      "name": "Ellie Goulding",
+      "plays": 3
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Buena Vista Social Club",
-      "artist": "Buena Vista Social Club",
-      "plays": 13
+      "name": "The Queen Is Dead",
+      "artist": "The Smiths",
+      "plays": 11
     },
     {
       "rank": 2,
-      "name": "The Wow! Signal",
-      "artist": "Muse",
-      "plays": 12
+      "name": "ERA VIII",
+      "artist": "ERA",
+      "plays": 8
     },
     {
       "rank": 3,
-      "name": "Origin of Symmetry",
-      "artist": "Muse",
-      "plays": 8
+      "name": "LUX (Complete Works)",
+      "artist": "ROSALÍA",
+      "plays": 4
     }
   ]
 }
