@@ -1,112 +1,112 @@
 {
-  "week": "2026-06-29/2026-07-06",
+  "week": "2026-07-06/2026-07-13",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Hush",
+      "name": "The Dark Forest",
       "artist": "Muse",
       "plays": 3
     },
     {
       "rank": 2,
-      "name": "Not You Again",
-      "artist": "ERA",
+      "name": "Blue Monday",
+      "artist": "New Order",
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Wait a Minute!",
-      "artist": "WILLOW",
+      "name": "Rosanna",
+      "artist": "TOTO",
       "plays": 2
     },
     {
       "rank": 4,
-      "name": "Frankly, Mr. Shankly - 2011 Remaster",
-      "artist": "The Smiths",
+      "name": "Zombie - 2025 Remastered",
+      "artist": "The Cranberries",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "School",
-      "artist": "Supertramp",
+      "name": "Nightshift Superstar",
+      "artist": "Muse",
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "This Is The Life",
-      "artist": "Amy Macdonald",
+      "name": "Shimmering Scars",
+      "artist": "Muse",
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "Aline",
-      "artist": "Christophe",
+      "name": "Cryogen",
+      "artist": "Muse",
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "Not This Time",
-      "artist": "ERA",
-      "plays": 1
+      "name": "Be With You",
+      "artist": "Muse",
+      "plays": 2
     },
     {
       "rank": 9,
-      "name": "Sempire Deo",
-      "artist": "ERA",
-      "plays": 1
+      "name": "Hexagons",
+      "artist": "Muse",
+      "plays": 2
     },
     {
       "rank": 10,
-      "name": "Will You Call My Name - Remix",
-      "artist": "ERA",
-      "plays": 1
+      "name": "The Sickness In You & I",
+      "artist": "Muse",
+      "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "The Smiths",
-      "plays": 11
+      "name": "Muse",
+      "plays": 23
     },
     {
       "rank": 2,
-      "name": "ERA",
-      "plays": 8
+      "name": "Buena Vista Social Club",
+      "plays": 4
     },
     {
       "rank": 3,
-      "name": "ROSALÍA",
-      "plays": 4
+      "name": "New Order",
+      "plays": 2
     },
     {
       "rank": 4,
-      "name": "Muse",
-      "plays": 4
+      "name": "TOTO",
+      "plays": 2
     },
     {
       "rank": 5,
-      "name": "Ellie Goulding",
-      "plays": 3
+      "name": "The Cranberries",
+      "plays": 2
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "The Queen Is Dead",
-      "artist": "The Smiths",
-      "plays": 11
+      "name": "The Wow! Signal",
+      "artist": "Muse",
+      "plays": 21
     },
     {
       "rank": 2,
-      "name": "ERA VIII",
-      "artist": "ERA",
-      "plays": 8
+      "name": "Substance",
+      "artist": "New Order",
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "LUX (Complete Works)",
-      "artist": "ROSALÍA",
-      "plays": 4
+      "name": "Toto IV",
+      "artist": "TOTO",
+      "plays": 2
     }
   ]
 }
