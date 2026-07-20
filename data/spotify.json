@@ -1,112 +1,112 @@
 {
-  "week": "2026-07-06/2026-07-13",
+  "week": "2026-07-13/2026-07-20",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "The Dark Forest",
-      "artist": "Muse",
-      "plays": 3
+      "name": "Tenere",
+      "artist": "Abdallah Oumbadougou",
+      "plays": 1
     },
     {
       "rank": 2,
-      "name": "Blue Monday",
-      "artist": "New Order",
-      "plays": 2
+      "name": "Heartbeat",
+      "artist": "Childish Gambino",
+      "plays": 1
     },
     {
       "rank": 3,
-      "name": "Rosanna",
-      "artist": "TOTO",
-      "plays": 2
+      "name": "Separate Ways (Worlds Apart) [2023 Remaster]",
+      "artist": "Journey",
+      "plays": 1
     },
     {
       "rank": 4,
-      "name": "Zombie - 2025 Remastered",
-      "artist": "The Cranberries",
-      "plays": 2
+      "name": "Snow (Hey Oh)",
+      "artist": "Red Hot Chili Peppers",
+      "plays": 1
     },
     {
       "rank": 5,
-      "name": "Nightshift Superstar",
-      "artist": "Muse",
-      "plays": 2
+      "name": "D.A.N.C.E.",
+      "artist": "Justice",
+      "plays": 1
     },
     {
       "rank": 6,
-      "name": "Shimmering Scars",
-      "artist": "Muse",
-      "plays": 2
+      "name": "Baker Street",
+      "artist": "Gerry Rafferty",
+      "plays": 1
     },
     {
       "rank": 7,
-      "name": "Cryogen",
-      "artist": "Muse",
-      "plays": 2
+      "name": "Gimme Love",
+      "artist": "Joji",
+      "plays": 1
     },
     {
       "rank": 8,
-      "name": "Be With You",
-      "artist": "Muse",
-      "plays": 2
+      "name": "Around the World",
+      "artist": "Daft Punk",
+      "plays": 1
     },
     {
       "rank": 9,
-      "name": "Hexagons",
-      "artist": "Muse",
-      "plays": 2
+      "name": "Behind Blue Eyes",
+      "artist": "Limp Bizkit",
+      "plays": 1
     },
     {
       "rank": 10,
-      "name": "The Sickness In You & I",
-      "artist": "Muse",
-      "plays": 2
+      "name": "Breezeblocks",
+      "artist": "alt-J",
+      "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Muse",
-      "plays": 23
+      "name": "Abdallah Oumbadougou",
+      "plays": 1
     },
     {
       "rank": 2,
-      "name": "Buena Vista Social Club",
-      "plays": 4
+      "name": "Childish Gambino",
+      "plays": 1
     },
     {
       "rank": 3,
-      "name": "New Order",
-      "plays": 2
+      "name": "Journey",
+      "plays": 1
     },
     {
       "rank": 4,
-      "name": "TOTO",
-      "plays": 2
+      "name": "Red Hot Chili Peppers",
+      "plays": 1
     },
     {
       "rank": 5,
-      "name": "The Cranberries",
-      "plays": 2
+      "name": "Justice",
+      "plays": 1
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "The Wow! Signal",
-      "artist": "Muse",
-      "plays": 21
+      "name": "Anou Malane",
+      "artist": "Abdallah Oumbadougou",
+      "plays": 1
     },
     {
       "rank": 2,
-      "name": "Substance",
-      "artist": "New Order",
-      "plays": 2
+      "name": "Camp",
+      "artist": "Childish Gambino",
+      "plays": 1
     },
     {
       "rank": 3,
-      "name": "Toto IV",
-      "artist": "TOTO",
-      "plays": 2
+      "name": "Frontiers (2023 Remaster)",
+      "artist": "Journey",
+      "plays": 1
     }
   ]
 }
