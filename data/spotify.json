@@ -1,112 +1,112 @@
 {
-  "week": "2026-07-13/2026-07-20",
+  "week": "2026-07-20/2026-07-27",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Tenere",
-      "artist": "Abdallah Oumbadougou",
-      "plays": 1
+      "name": "Odysseus",
+      "artist": "Ludwig Göransson",
+      "plays": 8
     },
     {
       "rank": 2,
-      "name": "Heartbeat",
-      "artist": "Childish Gambino",
-      "plays": 1
+      "name": "Ithaca",
+      "artist": "Ludwig Göransson",
+      "plays": 4
     },
     {
       "rank": 3,
-      "name": "Separate Ways (Worlds Apart) [2023 Remaster]",
-      "artist": "Journey",
-      "plays": 1
+      "name": "Penelope",
+      "artist": "Ludwig Göransson",
+      "plays": 4
     },
     {
       "rank": 4,
-      "name": "Snow (Hey Oh)",
-      "artist": "Red Hot Chili Peppers",
-      "plays": 1
+      "name": "Psycho Shit",
+      "artist": "The Strokes",
+      "plays": 4
     },
     {
       "rank": 5,
-      "name": "D.A.N.C.E.",
-      "artist": "Justice",
-      "plays": 1
+      "name": "The Trial of the Bow / Vengeance",
+      "artist": "Ludwig Göransson",
+      "plays": 3
     },
     {
       "rank": 6,
-      "name": "Baker Street",
-      "artist": "Gerry Rafferty",
-      "plays": 1
+      "name": "Telemachus",
+      "artist": "Ludwig Göransson",
+      "plays": 3
     },
     {
       "rank": 7,
-      "name": "Gimme Love",
-      "artist": "Joji",
-      "plays": 1
+      "name": "Gats",
+      "artist": "Susumu Hirasawa",
+      "plays": 3
     },
     {
       "rank": 8,
-      "name": "Around the World",
-      "artist": "Daft Punk",
-      "plays": 1
+      "name": "Dine N'Dash",
+      "artist": "The Strokes",
+      "plays": 3
     },
     {
       "rank": 9,
-      "name": "Behind Blue Eyes",
-      "artist": "Limp Bizkit",
-      "plays": 1
+      "name": "Sirens",
+      "artist": "Ludwig Göransson",
+      "plays": 2
     },
     {
       "rank": 10,
-      "name": "Breezeblocks",
-      "artist": "alt-J",
-      "plays": 1
+      "name": "When I’m Home",
+      "artist": "James Blake",
+      "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Abdallah Oumbadougou",
-      "plays": 1
+      "name": "Ludwig Göransson",
+      "plays": 35
     },
     {
       "rank": 2,
-      "name": "Childish Gambino",
-      "plays": 1
+      "name": "The Strokes",
+      "plays": 22
     },
     {
       "rank": 3,
-      "name": "Journey",
-      "plays": 1
+      "name": "Muse",
+      "plays": 5
     },
     {
       "rank": 4,
-      "name": "Red Hot Chili Peppers",
-      "plays": 1
+      "name": "Linkin Park",
+      "plays": 4
     },
     {
       "rank": 5,
-      "name": "Justice",
-      "plays": 1
+      "name": "Seta Hagopian",
+      "plays": 3
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Anou Malane",
-      "artist": "Abdallah Oumbadougou",
-      "plays": 1
+      "name": "The Odyssey (Original Motion Picture Soundtrack)",
+      "artist": "Ludwig Göransson",
+      "plays": 35
     },
     {
       "rank": 2,
-      "name": "Camp",
-      "artist": "Childish Gambino",
-      "plays": 1
+      "name": "Reality Awaits",
+      "artist": "The Strokes",
+      "plays": 21
     },
     {
       "rank": 3,
-      "name": "Frontiers (2023 Remaster)",
-      "artist": "Journey",
-      "plays": 1
+      "name": "BERSERK Original Soundtrack",
+      "artist": "Susumu Hirasawa",
+      "plays": 3
     }
   ]
 }
