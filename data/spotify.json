@@ -1,112 +1,112 @@
 {
-  "week": "2026-07-20/2026-07-27",
+  "week": "2026-08-03/2026-08-10",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Odysseus",
-      "artist": "Ludwig Göransson",
-      "plays": 8
+      "name": "Sun Is Up - Play & Win Radio Edit",
+      "artist": "INNA",
+      "plays": 1
     },
     {
       "rank": 2,
-      "name": "Ithaca",
-      "artist": "Ludwig Göransson",
-      "plays": 4
+      "name": "Little Lion Man",
+      "artist": "Mumford & Sons",
+      "plays": 1
     },
     {
       "rank": 3,
-      "name": "Penelope",
-      "artist": "Ludwig Göransson",
-      "plays": 4
+      "name": "The Kids Aren't Alright",
+      "artist": "The Offspring",
+      "plays": 1
     },
     {
       "rank": 4,
-      "name": "Psycho Shit",
-      "artist": "The Strokes",
-      "plays": 4
+      "name": "Karma Police",
+      "artist": "Radiohead",
+      "plays": 1
     },
     {
       "rank": 5,
-      "name": "The Trial of the Bow / Vengeance",
-      "artist": "Ludwig Göransson",
-      "plays": 3
+      "name": "Plastic Love",
+      "artist": "Mariya Takeuchi",
+      "plays": 1
     },
     {
       "rank": 6,
-      "name": "Telemachus",
-      "artist": "Ludwig Göransson",
-      "plays": 3
+      "name": "Afterlife (from the Netflix Series \"Devil May Cry\")",
+      "artist": "Evanescence",
+      "plays": 1
     },
     {
       "rank": 7,
-      "name": "Gats",
-      "artist": "Susumu Hirasawa",
-      "plays": 3
+      "name": "dead yet (with phem)",
+      "artist": "gabriel black",
+      "plays": 1
     },
     {
       "rank": 8,
-      "name": "Dine N'Dash",
-      "artist": "The Strokes",
-      "plays": 3
+      "name": "Dracula",
+      "artist": "Tame Impala",
+      "plays": 1
     },
     {
       "rank": 9,
-      "name": "Sirens",
-      "artist": "Ludwig Göransson",
-      "plays": 2
+      "name": "The Adults Are Talking",
+      "artist": "The Strokes",
+      "plays": 1
     },
     {
       "rank": 10,
-      "name": "When I’m Home",
-      "artist": "James Blake",
-      "plays": 2
+      "name": "Take Me Out",
+      "artist": "Franz Ferdinand",
+      "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Ludwig Göransson",
-      "plays": 35
+      "name": "Tame Impala",
+      "plays": 5
     },
     {
       "rank": 2,
       "name": "The Strokes",
-      "plays": 22
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "Muse",
-      "plays": 5
+      "name": "INNA",
+      "plays": 1
     },
     {
       "rank": 4,
-      "name": "Linkin Park",
-      "plays": 4
+      "name": "Mumford & Sons",
+      "plays": 1
     },
     {
       "rank": 5,
-      "name": "Seta Hagopian",
-      "plays": 3
+      "name": "The Offspring",
+      "plays": 1
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "The Odyssey (Original Motion Picture Soundtrack)",
-      "artist": "Ludwig Göransson",
-      "plays": 35
+      "name": "Deadbeat",
+      "artist": "Tame Impala",
+      "plays": 2
     },
     {
       "rank": 2,
-      "name": "Reality Awaits",
+      "name": "The New Abnormal",
       "artist": "The Strokes",
-      "plays": 21
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "BERSERK Original Soundtrack",
-      "artist": "Susumu Hirasawa",
-      "plays": 3
+      "name": "Currents",
+      "artist": "Tame Impala",
+      "plays": 2
     }
   ]
 }
