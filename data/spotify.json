@@ -1,111 +1,111 @@
 {
-  "week": "2026-08-03/2026-08-10",
+  "week": "2026-08-10/2026-08-17",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Sun Is Up - Play & Win Radio Edit",
-      "artist": "INNA",
-      "plays": 1
+      "name": "Losing My Religion",
+      "artist": "R.E.M.",
+      "plays": 2
     },
     {
       "rank": 2,
-      "name": "Little Lion Man",
-      "artist": "Mumford & Sons",
-      "plays": 1
+      "name": "Bitter Sweet Symphony - Remastered 2016",
+      "artist": "The Verve",
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "The Kids Aren't Alright",
-      "artist": "The Offspring",
-      "plays": 1
+      "name": "Heartbeat",
+      "artist": "Childish Gambino",
+      "plays": 2
     },
     {
       "rank": 4,
-      "name": "Karma Police",
-      "artist": "Radiohead",
-      "plays": 1
+      "name": "No Church In The Wild",
+      "artist": "JAŸ-Z",
+      "plays": 2
     },
     {
       "rank": 5,
-      "name": "Plastic Love",
-      "artist": "Mariya Takeuchi",
-      "plays": 1
+      "name": "Complicated",
+      "artist": "Avril Lavigne",
+      "plays": 2
     },
     {
       "rank": 6,
-      "name": "Afterlife (from the Netflix Series \"Devil May Cry\")",
-      "artist": "Evanescence",
-      "plays": 1
+      "name": "Wicked Game",
+      "artist": "Chris Isaak",
+      "plays": 2
     },
     {
       "rank": 7,
-      "name": "dead yet (with phem)",
-      "artist": "gabriel black",
-      "plays": 1
+      "name": "I Was Made For Lovin' You",
+      "artist": "KISS",
+      "plays": 2
     },
     {
       "rank": 8,
-      "name": "Dracula",
-      "artist": "Tame Impala",
-      "plays": 1
+      "name": "The Emptiness Machine",
+      "artist": "Linkin Park",
+      "plays": 2
     },
     {
       "rank": 9,
-      "name": "The Adults Are Talking",
-      "artist": "The Strokes",
-      "plays": 1
+      "name": "Immigrant Song - Remaster",
+      "artist": "Led Zeppelin",
+      "plays": 2
     },
     {
       "rank": 10,
-      "name": "Take Me Out",
-      "artist": "Franz Ferdinand",
-      "plays": 1
+      "name": "Here With Me",
+      "artist": "Dido",
+      "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Tame Impala",
-      "plays": 5
+      "name": "Muse",
+      "plays": 3
     },
     {
       "rank": 2,
-      "name": "The Strokes",
-      "plays": 2
+      "name": "Kavinsky",
+      "plays": 3
     },
     {
       "rank": 3,
-      "name": "INNA",
-      "plays": 1
+      "name": "R.E.M.",
+      "plays": 2
     },
     {
       "rank": 4,
-      "name": "Mumford & Sons",
-      "plays": 1
+      "name": "The Verve",
+      "plays": 2
     },
     {
       "rank": 5,
-      "name": "The Offspring",
-      "plays": 1
+      "name": "a-ha",
+      "plays": 2
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Deadbeat",
-      "artist": "Tame Impala",
+      "name": "Out Of Time (25th Anniversary Edition)",
+      "artist": "R.E.M.",
       "plays": 2
     },
     {
       "rank": 2,
-      "name": "The New Abnormal",
-      "artist": "The Strokes",
+      "name": "Urban Hymns (Remastered 2016)",
+      "artist": "The Verve",
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Currents",
-      "artist": "Tame Impala",
+      "name": "Discovery",
+      "artist": "Daft Punk",
       "plays": 2
     }
   ]
