@@ -1,112 +1,112 @@
 {
-  "week": "2026-08-10/2026-08-17",
+  "week": "2026-08-17/2026-08-24",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Losing My Religion",
-      "artist": "R.E.M.",
-      "plays": 2
+      "name": "Reel Around the Fountain - 2011 Remaster",
+      "artist": "The Smiths",
+      "plays": 3
     },
     {
       "rank": 2,
-      "name": "Bitter Sweet Symphony - Remastered 2016",
-      "artist": "The Verve",
-      "plays": 2
+      "name": "You've Got Everything Now - 2011 Remaster",
+      "artist": "The Smiths",
+      "plays": 3
     },
     {
       "rank": 3,
-      "name": "Heartbeat",
-      "artist": "Childish Gambino",
-      "plays": 2
+      "name": "Miserable Lie - 2011 Remaster",
+      "artist": "The Smiths",
+      "plays": 3
     },
     {
       "rank": 4,
-      "name": "No Church In The Wild",
-      "artist": "JAŸ-Z",
+      "name": "Still Ill - 2011 Remaster",
+      "artist": "The Smiths",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "Complicated",
-      "artist": "Avril Lavigne",
+      "name": "This Charming Man - 2011 Remaster",
+      "artist": "The Smiths",
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "Wicked Game",
-      "artist": "Chris Isaak",
+      "name": "Hand in Glove - 2011 Remaster",
+      "artist": "The Smiths",
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "I Was Made For Lovin' You",
-      "artist": "KISS",
+      "name": "What Difference Does It Make? - 2011 Remaster",
+      "artist": "The Smiths",
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "The Emptiness Machine",
-      "artist": "Linkin Park",
+      "name": "I Don't Owe You Anything - 2011 Remaster",
+      "artist": "The Smiths",
       "plays": 2
     },
     {
       "rank": 9,
-      "name": "Immigrant Song - Remaster",
-      "artist": "Led Zeppelin",
+      "name": "Suffer Little Children - 2011 Remaster",
+      "artist": "The Smiths",
       "plays": 2
     },
     {
       "rank": 10,
-      "name": "Here With Me",
-      "artist": "Dido",
+      "name": "Pretty Girls Make Graves - 2011 Remaster",
+      "artist": "The Smiths",
       "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Muse",
-      "plays": 3
+      "name": "The Smiths",
+      "plays": 25
     },
     {
       "rank": 2,
-      "name": "Kavinsky",
-      "plays": 3
+      "name": "Darren Korb",
+      "plays": 20
     },
     {
       "rank": 3,
-      "name": "R.E.M.",
-      "plays": 2
+      "name": "Ashley Barrett",
+      "plays": 10
     },
     {
       "rank": 4,
-      "name": "The Verve",
-      "plays": 2
+      "name": "The Strokes",
+      "plays": 10
     },
     {
       "rank": 5,
-      "name": "a-ha",
-      "plays": 2
+      "name": "Ludwig Göransson",
+      "plays": 7
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Out Of Time (25th Anniversary Edition)",
-      "artist": "R.E.M.",
-      "plays": 2
+      "name": "The Smiths",
+      "artist": "The Smiths",
+      "plays": 25
     },
     {
       "rank": 2,
-      "name": "Urban Hymns (Remastered 2016)",
-      "artist": "The Verve",
-      "plays": 2
+      "name": "Reality Awaits",
+      "artist": "The Strokes",
+      "plays": 9
     },
     {
       "rank": 3,
-      "name": "Discovery",
-      "artist": "Daft Punk",
-      "plays": 2
+      "name": "The Odyssey (Original Motion Picture Soundtrack)",
+      "artist": "Ludwig Göransson",
+      "plays": 7
     }
   ]
 }
