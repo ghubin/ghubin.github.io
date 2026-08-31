@@ -1,112 +1,65 @@
 {
-  "week": "2026-08-17/2026-08-24",
+  "week": "2026-08-24/2026-08-31",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Reel Around the Fountain - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 3
+      "name": "Sa haara kinni mu käest",
+      "artist": "Tõnis Mägi",
+      "plays": 1
     },
     {
       "rank": 2,
-      "name": "You've Got Everything Now - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 3
+      "name": "Toubouk Ine Chihoussay",
+      "artist": "Etran de L'AÏr",
+      "plays": 1
     },
     {
       "rank": 3,
-      "name": "Miserable Lie - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 3
-    },
-    {
-      "rank": 4,
-      "name": "Still Ill - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 2
-    },
-    {
-      "rank": 5,
-      "name": "This Charming Man - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 2
-    },
-    {
-      "rank": 6,
-      "name": "Hand in Glove - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 2
-    },
-    {
-      "rank": 7,
-      "name": "What Difference Does It Make? - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 2
-    },
-    {
-      "rank": 8,
-      "name": "I Don't Owe You Anything - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 2
-    },
-    {
-      "rank": 9,
-      "name": "Suffer Little Children - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 2
-    },
-    {
-      "rank": 10,
-      "name": "Pretty Girls Make Graves - 2011 Remaster",
-      "artist": "The Smiths",
-      "plays": 2
+      "name": "Going The Distance - From \"Rocky\" Soundtrack / Remastered 2006",
+      "artist": "Bill Conti",
+      "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "The Smiths",
-      "plays": 25
+      "name": "Tõnis Mägi",
+      "plays": 1
     },
     {
       "rank": 2,
-      "name": "Darren Korb",
-      "plays": 20
+      "name": "Music Seif",
+      "plays": 1
     },
     {
       "rank": 3,
-      "name": "Ashley Barrett",
-      "plays": 10
+      "name": "Etran de L'AÏr",
+      "plays": 1
     },
     {
       "rank": 4,
-      "name": "The Strokes",
-      "plays": 10
-    },
-    {
-      "rank": 5,
-      "name": "Ludwig Göransson",
-      "plays": 7
+      "name": "Bill Conti",
+      "plays": 1
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "The Smiths",
-      "artist": "The Smiths",
-      "plays": 25
+      "name": "Groove of ESSR: Funk, Disco, Jazz from Soviet Estonia",
+      "artist": "Tõnis Mägi",
+      "plays": 1
     },
     {
       "rank": 2,
-      "name": "Reality Awaits",
-      "artist": "The Strokes",
-      "plays": 9
+      "name": "Agadez",
+      "artist": "Etran de L'AÏr",
+      "plays": 1
     },
     {
       "rank": 3,
-      "name": "The Odyssey (Original Motion Picture Soundtrack)",
-      "artist": "Ludwig Göransson",
-      "plays": 7
+      "name": "Rocky (Original Motion Picture Score)",
+      "artist": "Bill Conti",
+      "plays": 1
     }
   ]
 }
