@@ -1,65 +1,112 @@
 {
-  "week": "2026-08-24/2026-08-31",
+  "week": "2026-08-31/2026-09-07",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Sa haara kinni mu käest",
-      "artist": "Tõnis Mägi",
-      "plays": 1
+      "name": "Still Loving You",
+      "artist": "Scorpions",
+      "plays": 3
     },
     {
       "rank": 2,
-      "name": "Toubouk Ine Chihoussay",
-      "artist": "Etran de L'AÏr",
-      "plays": 1
+      "name": "Stockholm Syndrome",
+      "artist": "Muse",
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "Going The Distance - From \"Rocky\" Soundtrack / Remastered 2006",
-      "artist": "Bill Conti",
-      "plays": 1
+      "name": "Enjoy the Silence",
+      "artist": "Depeche Mode",
+      "plays": 2
+    },
+    {
+      "rank": 4,
+      "name": "American Idiot",
+      "artist": "Green Day",
+      "plays": 2
+    },
+    {
+      "rank": 5,
+      "name": "It's My Life",
+      "artist": "Bon Jovi",
+      "plays": 2
+    },
+    {
+      "rank": 6,
+      "name": "Message In A Bottle",
+      "artist": "The Police",
+      "plays": 2
+    },
+    {
+      "rank": 7,
+      "name": "Muscle Museum",
+      "artist": "Muse",
+      "plays": 2
+    },
+    {
+      "rank": 8,
+      "name": "Showbiz",
+      "artist": "Muse",
+      "plays": 2
+    },
+    {
+      "rank": 9,
+      "name": "Bring Me To Life",
+      "artist": "Evanescence",
+      "plays": 2
+    },
+    {
+      "rank": 10,
+      "name": "Beautiful Day",
+      "artist": "U2",
+      "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Tõnis Mägi",
-      "plays": 1
+      "name": "Muse",
+      "plays": 29
     },
     {
       "rank": 2,
-      "name": "Music Seif",
-      "plays": 1
+      "name": "Linkin Park",
+      "plays": 8
     },
     {
       "rank": 3,
-      "name": "Etran de L'AÏr",
-      "plays": 1
+      "name": "Depeche Mode",
+      "plays": 5
     },
     {
       "rank": 4,
-      "name": "Bill Conti",
-      "plays": 1
+      "name": "Scorpions",
+      "plays": 5
+    },
+    {
+      "rank": 5,
+      "name": "The Offspring",
+      "plays": 5
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Groove of ESSR: Funk, Disco, Jazz from Soviet Estonia",
-      "artist": "Tõnis Mägi",
-      "plays": 1
+      "name": "The Wow! Signal",
+      "artist": "Muse",
+      "plays": 10
     },
     {
       "rank": 2,
-      "name": "Agadez",
-      "artist": "Etran de L'AÏr",
-      "plays": 1
+      "name": "Absolution",
+      "artist": "Muse",
+      "plays": 6
     },
     {
       "rank": 3,
-      "name": "Rocky (Original Motion Picture Score)",
-      "artist": "Bill Conti",
-      "plays": 1
+      "name": "From Zero",
+      "artist": "Linkin Park",
+      "plays": 5
     }
   ]
 }
