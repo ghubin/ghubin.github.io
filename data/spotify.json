@@ -1,112 +1,125 @@
 {
-  "week": "2026-08-31/2026-09-07",
+  "week": "2026-09-07/2026-09-14",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Still Loving You",
-      "artist": "Scorpions",
-      "plays": 3
+      "name": "Roadgame",
+      "artist": "Kavinsky",
+      "cover": null,
+      "plays": 4
     },
     {
       "rank": 2,
-      "name": "Stockholm Syndrome",
-      "artist": "Muse",
+      "name": "Kugutsu Uta Uramite Chiru",
+      "artist": "Nishida Kazue Shachu",
+      "cover": null,
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Enjoy the Silence",
-      "artist": "Depeche Mode",
+      "name": "Kugutsu Uta Aratayo ni Kamu Tsudohite",
+      "artist": "Nishida Kazue Shachu",
+      "cover": null,
       "plays": 2
     },
     {
       "rank": 4,
-      "name": "American Idiot",
-      "artist": "Green Day",
+      "name": "Under Pressure (feat. David Bowie)",
+      "artist": "Queen",
+      "cover": null,
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "It's My Life",
-      "artist": "Bon Jovi",
+      "name": "Reptilia",
+      "artist": "The Strokes",
+      "cover": null,
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "Message In A Bottle",
-      "artist": "The Police",
+      "name": "The Adults Are Talking",
+      "artist": "The Strokes",
+      "cover": null,
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "Muscle Museum",
+      "name": "Bliss",
       "artist": "Muse",
+      "cover": null,
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "Showbiz",
-      "artist": "Muse",
+      "name": "Africa",
+      "artist": "TOTO",
+      "cover": null,
       "plays": 2
     },
     {
       "rank": 9,
-      "name": "Bring Me To Life",
-      "artist": "Evanescence",
+      "name": "Master Of Puppets",
+      "artist": "Metallica",
+      "cover": null,
       "plays": 2
     },
     {
       "rank": 10,
-      "name": "Beautiful Day",
-      "artist": "U2",
+      "name": "Immigrant Song - Remaster",
+      "artist": "Led Zeppelin",
+      "cover": null,
       "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Muse",
-      "plays": 29
-    },
-    {
-      "rank": 2,
       "name": "Linkin Park",
       "plays": 8
     },
     {
+      "rank": 2,
+      "name": "Muse",
+      "plays": 7
+    },
+    {
       "rank": 3,
-      "name": "Depeche Mode",
-      "plays": 5
+      "name": "Kavinsky",
+      "plays": 6
     },
     {
       "rank": 4,
-      "name": "Scorpions",
+      "name": "Nishida Kazue Shachu",
       "plays": 5
     },
     {
       "rank": 5,
-      "name": "The Offspring",
-      "plays": 5
+      "name": "The Strokes",
+      "plays": 4
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "The Wow! Signal",
-      "artist": "Muse",
-      "plays": 10
+      "name": "OutRun",
+      "artist": "Kavinsky",
+      "cover": null,
+      "plays": 6
     },
     {
       "rank": 2,
-      "name": "Absolution",
-      "artist": "Muse",
-      "plays": 6
+      "name": "GHOST IN THE SHELL superb music",
+      "artist": "Nishida Kazue Shachu",
+      "cover": null,
+      "plays": 5
     },
     {
       "rank": 3,
       "name": "From Zero",
       "artist": "Linkin Park",
-      "plays": 5
+      "cover": null,
+      "plays": 3
     }
   ]
 }
