@@ -1,124 +1,124 @@
 {
-  "week": "2026-09-07/2026-09-14",
+  "week": "2026-09-14/2026-09-21",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Roadgame",
-      "artist": "Kavinsky",
-      "cover": null,
-      "plays": 4
+      "name": "Over Each Other",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "plays": 2
     },
     {
       "rank": 2,
-      "name": "Kugutsu Uta Uramite Chiru",
-      "artist": "Nishida Kazue Shachu",
-      "cover": null,
+      "name": "My Hero",
+      "artist": "Foo Fighters",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024bc9bcdbdc9ac34e37d8b6bb",
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Kugutsu Uta Aratayo ni Kamu Tsudohite",
-      "artist": "Nishida Kazue Shachu",
-      "cover": null,
+      "name": "Obstacle 1",
+      "artist": "Interpol",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0249240ebf0c49e2d758fe6373",
       "plays": 2
     },
     {
       "rank": 4,
-      "name": "Under Pressure (feat. David Bowie)",
-      "artist": "Queen",
-      "cover": null,
+      "name": "American Idiot",
+      "artist": "Green Day",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0208a1b1e0674086d3f1995e1b",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "Reptilia",
-      "artist": "The Strokes",
-      "cover": null,
+      "name": "How You Remind Me",
+      "artist": "Nickelback",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02699a422d25adc550dc5aa11c",
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "The Adults Are Talking",
-      "artist": "The Strokes",
-      "cover": null,
+      "name": "Heavy Is the Crown",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "Bliss",
-      "artist": "Muse",
-      "cover": null,
+      "name": "Go With The Flow",
+      "artist": "Queens of the Stone Age",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029eec33b045d88f87b9b06e67",
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "Africa",
-      "artist": "TOTO",
-      "cover": null,
+      "name": "Dine N'Dash",
+      "artist": "The Strokes",
+      "cover": "https://i.scdn.co/image/ab67616d00001e026b458d1409d938dad4e3ba2c",
       "plays": 2
     },
     {
       "rank": 9,
-      "name": "Master Of Puppets",
-      "artist": "Metallica",
-      "cover": null,
+      "name": "In the End",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02e2f039481babe23658fc719a",
       "plays": 2
     },
     {
       "rank": 10,
-      "name": "Immigrant Song - Remaster",
-      "artist": "Led Zeppelin",
-      "cover": null,
+      "name": "Dying In Reverse",
+      "artist": "Cage The Elephant",
+      "cover": "https://i.scdn.co/image/ab67616d00001e026b0bbf9f0f91be527104ca6e",
       "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Linkin Park",
-      "plays": 8
+      "name": "Sade",
+      "plays": 12
     },
     {
       "rank": 2,
-      "name": "Muse",
-      "plays": 7
+      "name": "Linkin Park",
+      "plays": 10
     },
     {
       "rank": 3,
-      "name": "Kavinsky",
-      "plays": 6
+      "name": "Muse",
+      "plays": 8
     },
     {
       "rank": 4,
-      "name": "Nishida Kazue Shachu",
-      "plays": 5
+      "name": "The Strokes",
+      "plays": 6
     },
     {
       "rank": 5,
-      "name": "The Strokes",
-      "plays": 4
+      "name": "Queens of the Stone Age",
+      "plays": 3
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "OutRun",
-      "artist": "Kavinsky",
-      "cover": null,
-      "plays": 6
+      "name": "The Best of Sade",
+      "artist": "Sade",
+      "cover": "https://i.scdn.co/image/ab67616d00001e025e25e034e25258b356774c79",
+      "plays": 12
     },
     {
       "rank": 2,
-      "name": "GHOST IN THE SHELL superb music",
-      "artist": "Nishida Kazue Shachu",
-      "cover": null,
-      "plays": 5
+      "name": "From Zero",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "plays": 6
     },
     {
       "rank": 3,
-      "name": "From Zero",
-      "artist": "Linkin Park",
-      "cover": null,
+      "name": "American Idiot",
+      "artist": "Green Day",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0208a1b1e0674086d3f1995e1b",
       "plays": 3
     }
   ]
