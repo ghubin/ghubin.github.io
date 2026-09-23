@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 212 436"
+   width="212"
+   height="436"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="muji_cd_player.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="1.305"
+     inkscape:cx="105.36398"
+     inkscape:cy="210.34483"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11" />
+  <!-- Background for contrast -->
+  <!-- Main Hanging Pull-Cord -->
+  <line
+     x1="106"
+     y1="140"
+     x2="106"
+     y2="430"
+     stroke="#d1d1cb"
+     stroke-width="4"
+     stroke-linecap="round"
+     id="line1" />
+  <!-- Pull-Cord Handle/Node -->
+  <circle
+     cx="106"
+     cy="430"
+     r="6"
+     fill="#a8a8a0"
+     id="circle1" />
+  <!-- Main Body Group (Shadow + Outer Shell) -->
+  <g
+     id="muji-body"
+     transform="translate(-94,-90)">
+    <!-- Subtle Flat Drop Shadow -->
+    <rect
+       x="94"
+       y="94"
+       width="212"
+       height="212"
+       rx="44"
+       fill="#e2e2dc"
+       id="rect2" />
+    <!-- Outer Plastic Frame -->
+    <rect
+       x="94"
+       y="90"
+       width="212"
+       height="212"
+       rx="44"
+       fill="#eaeae4"
+       id="rect3" />
+    <!-- Inner Speaker Grille Area -->
+    <rect
+       x="102"
+       y="98"
+       width="196"
+       height="196"
+       rx="36"
+       fill="#dfdfd8"
+       id="rect4" />
+  </g>
+  <!-- CD Compartment & Disc Group -->
+  <g
+     id="cd-player-core"
+     transform="translate(-94,-90)">
+    <!-- Inner Circular Recess (Dark Background) -->
+    <circle
+       cx="200"
+       cy="196"
+       r="82"
+       fill="#1c1c1c"
+       id="circle4" />
+    <!-- Exposed CD Rim -->
+    <circle
+       cx="200"
+       cy="196"
+       r="80"
+       fill="#ebebe4"
+       opacity="0.9"
+       id="circle5" />
+    <!-- CD Inner Art Ring -->
+    <circle
+       cx="200"
+       cy="196"
+       r="40"
+       fill="#ffffff"
+       id="circle6" />
+    <!-- CD Center Transparent Plastic Rim -->
+    <circle
+       cx="200"
+       cy="196"
+       r="24"
+       fill="#e2e2dc"
+       stroke="#c0c0b8"
+       stroke-width="1"
+       id="circle7" />
+  </g>
+  <!-- Central Spindle & Laser Drive Assembly -->
+  <g
+     id="center-spindle"
+     transform="translate(-94,-90)">
+    <!-- Center Black Hub -->
+    <circle
+       cx="200"
+       cy="196"
+       r="15"
+       fill="#111111"
+       id="circle8" />
+    <!-- Inner Metal Spindle Ring -->
+    <circle
+       cx="200"
+       cy="196"
+       r="8"
+       fill="#cccccc"
+       id="circle9" />
+    <!-- Center Pin -->
+    <circle
+       cx="200"
+       cy="196"
+       r="4"
+       fill="#444444"
+       id="circle10" />
+    <!-- Exposed Laser Lens Track (Left Side Cutout) -->
+    <path
+       d="m 185,190 a 15,15 0 0 0 0,12 h -30 a 6,6 0 0 1 0,-12 z"
+       fill="#111111"
+       id="path10" />
+    <!-- Tiny Laser Lens Blue Glint -->
+    <circle
+       cx="168"
+       cy="196"
+       r="2.5"
+       fill="#4a90e2"
+       id="circle11" />
+  </g>
+</svg>

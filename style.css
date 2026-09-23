@@ -5,13 +5,14 @@
    et le thème sombre (sur body.dark)
    ========================================= */
 :root {
-  --bg: #ffffff;
+  --bg: #fbfaf9;
   --ink: #1a1612;
   --muted: #7a6f64;
   --accent: #c0392b;
   --card-bg: #ffffff;
   --border: #e8e0d5;
   --bordernav:#565656;
+  --nav-left:rgb(229 229 229);
   --lacostegreen: #004526;
   --upforest: #014421;
   --BIC:#5980d4;
@@ -20,6 +21,11 @@
   --font-ui: 'DM Mono', monospace;
   --font-handwritten: 'Annie Use Your Telescope', cursive;
   --radius-picture: 14px;
+  --font-tooltip: 'DM Mono', monospace;
+  --wall: #c1ccc4;
+  --floor: #C2B29F;
+  --plinthe: #D3C5B4;
+
 
 }
 
@@ -31,12 +37,15 @@
    On ne retouche pas au reste du CSS !
    ========================================= */
 body.dark {
-  --bg: #141210;
+  --bg: #181714;
   --ink: #e8e0d5;
   --muted: #8a7f74;
   --accent: #e05a4a;
   --card-bg: #1e1a17;
   --border: #2e2820;
+  --wall: #2e2820;
+  --floor: #ac9a82;
+  --plinthe: #c0af9b;
 }
 
 /* =========================================
@@ -60,13 +69,14 @@ body {
   /* transition sur toutes les propriétés colorées :
      permet une animation douce lors du changement de thème */
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.wrapper {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
   max-width: 1550px;  /* largeur maximale du contenu */
   margin: 0 auto;     /* centré horizontalement */
   padding: 0 2rem;    /* marges gauche et droite */
 }
+
 
 /* =========================================
    NAVIGATION
@@ -88,7 +98,7 @@ nav {
 .nav-left {
   display: flex;
   align-items: center;
-  border: solid rgb(229 229 229);
+  border: solid var(--nav-left);
   border-radius: 0.5rem;
   border-width: 1px;
   gap: 0.15rem;
@@ -205,6 +215,250 @@ nav {
   max-width: 500px;
   font-size: 1rem;
 }
+
+.room-container {
+      position: relative;
+      justify-self: center;
+      width: 90vw;
+      max-width: 1400px;
+      aspect-ratio: 16 / 10; /* Proportion fixe pour garder l'alignement */
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid;
+      border-color: var(--nav-left);
+      
+    }
+
+    /* 3. Les éléments de décor de la pièce */
+    .wall {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background-color: var(--wall); /* Sauge pastel doux */
+      transition: background-color 0.3s ease;
+    }
+
+    .skirting-board {
+      position: absolute;
+      top: 88%;
+      left: 0;
+      width: 100%;
+      height: 2%;
+      background-color: var(--plinthe); /* Plinthe */
+    }
+
+    .floor {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      background-color: var(--floor); /* Sol Parquet */
+    }
+
+    /* 4. Ton bureau (Image de fond posée sur le sol) */
+    .bureau-base {
+      position: absolute;
+      bottom: 8.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: auto;
+      pointer-events: none; /* Les clics traversent l'image du bureau */
+      filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Whiteboard */
+    .whiteboard-base {
+    position: absolute;
+    bottom: 60%;
+    left: 5%;
+    width: 35%;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+    }
+
+    .whiteboard-base img {
+    width: 100%;
+    }
+
+    /* le Skadis au milieu */
+    .skadis-base {
+     position: absolute;
+     bottom: 65%;
+     left: 57%;
+     width: 12%;
+     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+    }
+
+    /* 5. Style de base pour TOUS les objets interactifs */
+    .room-item {
+      position: absolute;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
+      text-decoration: none;
+    }
+
+    .room-item img, .room-item svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  
+  .item-laptop{
+    bottom: 52.8%;
+    left: 40.5%;
+    width: 16%;
+  }
+  .item-vinyl{
+    bottom: 30%;
+    left: 12.1%;
+    width: 10.5%;
+  }
+    
+    /* Le conteneur du lecteur dans ta pièce */
+	.item-cd-player {
+	  position: absolute;
+	  top: 10%;
+	  right: 50%;
+	  width: 8%;
+	  aspect-ratio: 1 / 2; /* Garde le ratio avec la cordelette */
+	  cursor: pointer;
+	}
+
+	/* Le lecteur fixe */
+	.muji-base {
+	  width: 100%;
+	  height: auto;
+	  display: block;
+	}
+
+	/* Le CD superposé sur le plateau */
+	.cd-disc {
+	  position: absolute;
+	  top: 5%;    /* Ajuste le % pour centrer le CD sur le carré du Muji */
+	  left: 10%;   /* Ajuste selon les marges de ton fichier Muji */
+	  width: 80%;  /* Le CD occupe 80% de la largeur du lecteur */
+	  height: auto;
+	  border-radius: 40%; /* Sécurité si ton image de CD est carrée */
+  
+  /* Transition pour un arrêt fluide */
+  transition: transform 0.6s ease-out;
+}
+
+/* Animation de rotation */
+@keyframes spinCD {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Déclenchement de la rotation au survol */
+.item-cd-player:hover .cd-disc {
+  animation: spinCD 3.5s linear infinite;
+} 
+    /* Effet d'animation au survol sur n'importe quel objet */
+    .room-item:hover {
+      transform: scale(1.05) translateY(-5px);
+      filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
+    }
+
+/* Style des info-bulles (Tooltips) */
+  .tooltip {
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8C6D58; /* Couleur Noyer de ta palette */
+    color: #FFFFFF;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: var(--font-tooltip);
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+   .room-item:hover .tooltip {
+     opacity: 1;
+     transform: translateX(-50%) translateY(3px);
+   }
+
+/* 6. Placement précis des objets (Exemples) */
+   
+.item-books-right {
+  bottom: 29.88%;
+  left: 76.94%;
+  width: 10%;
+}
+
+/* La Fenêtre au mur (Haut Gauche) */
+.item-fenetre {
+  top: 10%;
+  left: 10%;
+  width: 20%;
+}
+
+/* Un Cadre/Poster au mur (Haut Droit) */
+.item-poster {
+  top: 12%;
+  right: 12%;
+  width: 14%;
+}
+
+/* L'Ordinateur posé au centre du plateau du bureau */
+.item-ordinateur {
+  bottom: 51.9%;
+  left: 42%;
+  width: 16%;
+}
+
+    /* La Tasse posée à droite sur le plateau */
+    .item-tasse {
+      bottom: 53.2%;
+      left: 62%;
+      width: 6%;
+    }
+
+    
+    
+    /* Zone de texte superposée sur le tableau */
+    .tableau-content {
+      position: absolute;
+      top: 8%;    /* Ajuste en % pour que le texte rentre bien dans le cadre */
+      left: 8%;
+      width: 88%;
+      height: 85%;
+      overflow: hidden; /* Évite que le texte dépasse du tableau */
+      color: #2e465d;
+      font-family: 'Permanent Marker', cursive, sans-serif; /* Style "écrit à la main" */
+      transform: rotate(-1deg); /* Donne un petit effet écrit à la main */
+       /* Les clics traversent directement vers le lien <a> */
+    }
+
+    .tableau-titre {
+      font-size: 1.1vw; /* Taille responsive basée sur la largeur de l'écran */
+      padding-bottom: 4px;
+    }
+
+    .tableau-liste {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 0.85vw;
+    }
+
+    .tableau-liste li {
+      margin-bottom: 2px;
+    }
 
 /* ==========================================
   HOME GRID
@@ -657,6 +911,7 @@ a.article-card {
    FOOTER
    ========================================= */
 footer {
+  margin-top: 1rem;
   border-top: 1px solid var(--border);
   padding: 2rem 3rem;
   text-align: center;

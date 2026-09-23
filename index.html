@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Nuton Cave</title>
+  <meta name="description" content="Personal website of a grumpy mythical Belgian creature">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,900&f[]=nippo@400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=aktura@400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/cave-icon" href="img/cave.png">
+  
+</head>
+<body>
+  <!--
+    SCRIPT D'INITIALISATION DU DARK MODE — placé tôt dans le <body>
+    On lit localStorage avant que la page s'affiche,
+    ce qui évite un "flash" de thème clair au chargement.
+  -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
+  
+  <nav>
+    <div class="nav-left">
+      <a id="index-nav" href="index.html" class="nav-logo active">
+        <span class="nav-highlight"></span> 
+        The Cave
+      </a>
+      <a id="projects-nav" href="projects.html" class="nav-logo"> 
+        <span class="nav-highlight"></span>
+        Projects 
+      </a>
+      <a id="reading-nav" href="study.html" class="nav-logo"> 
+        Reading 
+        <span class="nav-highlight"></span>
+      </a> 
+      <a id="listening-nav" href="listeningRoom.html" class="nav-logo">
+        Listening
+        <span class="nav-highlight"></span>
+      </a>
+      <a id="blog-nav" href="thoughts.html" class="nav-logo">
+        Thoughts
+        <span class="nav-highlight"></span>
+      </a>
+
+    </div>
+    <ul id= "navigation-links" class="nav-links">
+      <li><a href="about.html">About the Nuton</a></li>
+      <li><a href="https://github.com/ghubin" target="_blank" rel="noopener noreferrer">Github</a></li>
+      <li>
+        <!--
+          BOUTON DARK MODE
+          aria-label = texte pour les lecteurs d'écran (accessibilité)
+          L'icône changera via JavaScript selon le thème actif
+        -->
+        <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
+      </li>
+    </ul>
+  </nav>
+  <main class="room-container">
+    
+    <!-- Décor de la pièce -->
+    <div class="wall"></div>
+    <div class="skirting-board"></div>
+    <div class="floor"></div>
+
+    <!-- Éléments accrochés AU MUR -->
+
+
+    <a href="/a-propos.html" class="room-item item-poster">
+      <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="80" height="100" rx="4" fill="#8C6D58"/>
+        <rect x="6" y="6" width="68" height="88" fill="#F5E5C0"/>
+        <circle cx="40" cy="45" r="18" fill="#E6A18E"/>
+      </svg>
+      <span class="tooltip">À Propos</span>
+    </a>
+
+    <!-- Le Bureau (Ton fichier SVG) -->
+    <img src="img/svg/desk.svg" alt="Bureau" class="bureau-base" />
+    
+    <!-- Deuxième fichier SVG, le Skadis -->
+    <img src="img/svg/skadis.svg" alt="Skadis" class="skadis-base" />
+    
+    <!-- Le whiteboard -->
+    <a href="projects.html" alt="Tableau Blanc" class="room-item whiteboard-base">
+
+     	<img src="img/svg/whiteboard.svg"  >
+      <div class="tableau-content">
+        <h4 class="tableau-titre">Recent Projects</h4>
+        <ul class="tableau-liste">
+          <li><del>Launch the website</del></li>
+          <li>3D printed Coffee filter holder</li>
+          <li>Reuse old mobile CD-player into wall-mounted CD-player</li>
+          <li>Create personal weekly Spotify wrapped</li>
+          <li>CO<sub>2</sub> sensor (ESP Home and Home Assistant)</li>
+          <li>E-ink screen for meteo, agenda,...</li>
+        </ul>
+      </div>
+
+	    <span class="tooltip">Projects</span>
+    </a>
+
+    <a href="listeningRoom.html" class="item-cd-player" title="Current on repeat: The Resistance">
+  
+  	<!-- 1. Le lecteur Muji fixe (arrière-plan) -->
+  	<img src="img/svg/muji-player.svg" class="muji-base" alt="Lecteur CD Muji" />
+
+  	<!-- 2. Le CD actif qui va tourner -->
+  	<img src="img/TheResistance.PNG" class="cd-disc" alt="CD en cours d'écoute" />
+
+    </a>
+
+    <!-- Éléments posés SUR LE BUREAU -->
+
+    <a href="about.html" class="room-item item-laptop">
+      <img src="img/svg/laptop.svg" alt="Laptop">
+      <span class="tooltip">About</span>
+    </a>
+
+    <a href="listeningRoom.html" class="room-item item-vinyl">
+      <img src="img/svg/vinyl.svg" alt="VinylRecords">
+      <span class="tooltip">Records</span> 
+
+    </a>
+
+    <a href="/contact.html" class="room-item item-tasse">
+      <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="15" width="25" height="30" rx="4" fill="#E6A18E"/>
+        <path d="M35 22C38 22 40 24 40 27C40 30 38 32 35 32" stroke="#E6A18E" stroke-width="4"/>
+      </svg>
+      <span class="tooltip">Contact</span>
+    </a>
+
+    <a href="study.html" class="room-item item-books-right">
+      <img src="img/svg/books_right.svg"/>
+      <span class="tooltip">Reading</span>
+    </a>
+
+    
+  </main>
+  <footer>
+      <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
+    </footer>
+
+  <!--
+    SCRIPT DU DARK MODE — placé en bas du <body>
+    Raison : le DOM (les éléments HTML) doit être chargé
+    avant qu'on puisse y accéder avec getElementById.
+    Placer les scripts à la fin est une bonne pratique.
+  -->
+  <script>
+    const btn = document.getElementById('dark-toggle');
+    // getElementById cherche l'élément avec id="dark-toggle"
+
+    // Fonction qui met à jour l'icône selon le thème actif
+    function updateIcon() {
+      // body.classList.contains('dark') renvoie true ou false
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      // Si dark → afficher le soleil (pour repasser au clair)
+      // Sinon → afficher la lune (pour passer au sombre)
+    }
+
+    updateIcon(); // appel immédiat pour afficher la bonne icône au chargement
+
+    btn.addEventListener('click', function () {
+      // addEventListener écoute les clics sur le bouton
+      // À chaque clic, on bascule la classe "dark" sur le <body>
+      document.body.classList.toggle('dark');
+      // toggle = ajoute la classe si absente, la retire si présente
+
+      // On sauvegarde le choix dans localStorage
+      // localStorage = stockage persistant dans le navigateur (survit à la fermeture)
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+
+      updateIcon(); // met à jour l'icône après le changement
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const item = document.getElementById('navigation-links');
+      if(!item) return;
+      
+      const currentScroll = window.scrollY;
+      const scrollThreshold = 75;
+
+      if(currentScroll >= scrollThreshold){
+        item.style.opacity = '0';
+        item.style.visibility='none';
+        item.style.pointerEvents = 'none';
+      }
+      else{
+        item.style.opacity = 1-(currentScroll/scrollThreshold);
+        item.style.visibility = 'visible';
+        item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+</body>
+</html>
