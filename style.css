@@ -319,8 +319,69 @@ nav {
     left: 12.1%;
     width: 10.5%;
   }
-    
-    /* Le conteneur du lecteur dans ta pièce */
+
+  .item-desklamp{
+    position: absolute;
+    cursor: pointer;
+    pointer-events: none;
+    bottom: 52.8%;
+    left: 30.5%;
+    width: 16%;
+  }
+  .item-desklamp path,
+  .item-desklamp rect,
+  .item-desklamp circle {
+  pointer-events: visiblePainted;
+  }
+  .item-desklamp:focus {
+    outline: none;
+  }
+  .item-desklamp:focus-visible {
+    outline: 2px solid #4a90d9;
+    outline-offset: 2px;
+  }
+
+  /* Faisceau : invisible par défaut, apparaît en fondu en mode sombre */
+  .lamp-beam {
+    fill: #ffe680;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none; /* le faisceau ne doit pas lui-même capter les clics */
+  }
+  body.dark .lamp-beam {
+    opacity: 0.35;
+  }
+
+  /* La bande jaune s'intensifie aussi quand la lampe est "allumée" */
+  .lamp-glow {
+    transition: filter 0.4s ease;
+  }
+
+  body.dark .lamp-glow {
+    filter: brightness(1.4);
+  }
+
+  /* Effet d'intensification au survol de la tête */
+  .item-desklamp:hover .lamp-glow {
+    filter: brightness(1.3);
+    transition: filter 0.2s ease;
+  }    
+
+  .lamp-beam {
+    position: absolute;
+    bottom: 52.8%;
+    left: 37.9%;
+    width: 17%;
+    opacity: 0;
+    pointer-events: none; /* purement décoratif, ne doit jamais capter le clic/hover */
+    filter: blur(2.5px) drop-shadow(0 0 6px rgba(232, 207, 122, 0.25));
+    transition: opacity 0.5s ease;
+  }
+  body.dark .lamp-beam {
+    opacity: 0.3;
+  }
+
+      /* Le conteneur du lecteur dans ta pièce */
 	.item-cd-player {
 	  position: absolute;
 	  top: 10%;

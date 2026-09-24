@@ -127,6 +127,24 @@
       <span class="tooltip">About</span>
     </a>
 
+    <svg class="item-desklamp" viewBox="0 0 83.217773 62.292526" xmlns="http://www.w3.org/2000/svg" role="button" tabindex="0" aria-label="Basculer le mode sombre">
+      <g transform="translate(-75.986989,-47.674764)">
+        <path class="lamp-metal lamp-base" fill="#7e7e7e" d="m 79.694322,106.21231 h 31.742418 a 0.9444636,0.9444636 45 0 1 0.94447,0.94446 v 2.81052 H 78.854591 v -2.91525 a 0.83973048,0.83973048 135 0 1 0.839731,-0.83973 z" />
+        <path class="lamp-metal lamp-shade" fill="#616161" d="m 84.674751,102.04025 h 5.737069 l 2.987069,4.17242 h -8.724138 z" />
+        <rect class="lamp-metal lamp-arm" fill="#616161" width="2.6148694" height="24.456722" x="50.739292" y="96.493492" transform="rotate(-17.734403)" />
+        <rect class="lamp-metal lamp-arm" fill="#616161" width="2.6149292" height="40.568481" x="103.57706" y="-69.559692" transform="matrix(0.49874852,0.86674674,-0.86404296,0.50341808,0,0)" />
+        <rect class="lamp-glow" fill="#ffe680" width="2.3762197" height="43.559086" x="73.901146" y="-148.95836" transform="matrix(0.14850347,0.98891189,-0.98745052,0.15792866,0,0)" ry="1.1881099" />
+        <path class="lamp-metal lamp-arm" fill="#616161" transform="matrix(0.14850347,0.98891189,-0.98745052,0.15792866,0,0)" d="m 72.781659,-150.09882 h 1.165023 a 0.74466234,0.74466234 45 0 1 0.744663,0.74467 l 0,47.19235 h -2.615043 v -47.23166 a 0.70535747,0.70535747 135 0 1 0.705357,-0.70536 z" />
+        <circle class="lamp-metal lamp-joint" fill="#7a7a7a" cx="87.359909" cy="100.63577" r="3.864224" />
+        <circle class="lamp-metal lamp-joint" fill="#7a7a7a" cx="78.760696" cy="75.817596" r="2.7737069" />
+        <circle class="lamp-metal lamp-joint" fill="#7a7a7a" cx="111.35094" cy="56.738361" r="2.7737069" />
+      </g>
+    </svg>
+
+    <svg class="lamp-beam" viewBox="0 0 88.474129 59.172409" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#e8cf7a" d="m 0,6.543104 42.6724,-6.543104 45.80173,59.172409 h -87.62068 z" />
+    </svg>
+
     <a href="listeningRoom.html" class="room-item item-vinyl">
       <img src="img/svg/vinyl.svg" alt="VinylRecords">
       <span class="tooltip">Records</span> 
@@ -159,32 +177,35 @@
     Placer les scripts à la fin est une bonne pratique.
   -->
   <script>
-    const btn = document.getElementById('dark-toggle');
-    // getElementById cherche l'élément avec id="dark-toggle"
-
+  const btn = document.getElementById('dark-toggle');
+  const lamp = document.querySelector('.item-desklamp');
+  
     // Fonction qui met à jour l'icône selon le thème actif
-    function updateIcon() {
-      // body.classList.contains('dark') renvoie true ou false
-      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-      // Si dark → afficher le soleil (pour repasser au clair)
-      // Sinon → afficher la lune (pour passer au sombre)
+  function updateIcon() {
+    btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    updateIcon();
+  }
+
+  updateIcon();
+
+  btn.addEventListener('click', toggleDarkMode);
+
+  // La lampe déclenche la même fonction
+  lamp.addEventListener('click', toggleDarkMode);
+
+  // Accessibilité clavier : Entrée ou Espace, comme un vrai bouton
+  lamp.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleDarkMode();
     }
-
-    updateIcon(); // appel immédiat pour afficher la bonne icône au chargement
-
-    btn.addEventListener('click', function () {
-      // addEventListener écoute les clics sur le bouton
-      // À chaque clic, on bascule la classe "dark" sur le <body>
-      document.body.classList.toggle('dark');
-      // toggle = ajoute la classe si absente, la retire si présente
-
-      // On sauvegarde le choix dans localStorage
-      // localStorage = stockage persistant dans le navigateur (survit à la fermeture)
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-
-      updateIcon(); // met à jour l'icône après le changement
-    });
-  </script>
+  });
+</script>
 
   <script>
     window.addEventListener('scroll', () => {
