@@ -308,12 +308,89 @@ nav {
       display: block;
     }
 
-  
+  /* Réinitialise l'apparence par défaut du <button>, pour qu'il se comporte visuellement comme l'ancien <a> */
   .item-laptop{
     bottom: 52.8%;
     left: 40.5%;
     width: 16%;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
   }
+  .item-laptop:focus {
+    outline: none;
+  }
+  .item-laptop:focus-visible {
+    outline: 2px solid #4a90d9;
+    outline-offset: 2px;
+  }
+
+  /* Boîte de dialogue */
+  .about-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    max-width: 1000px;
+    width: 90%;
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    background: #fdfdfd;
+    color: #222;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease, overlay 0.5s ease allow-discrete, display 0.5s ease allow-discrete;
+  }
+  .about-dialog[open] {
+    opacity: 1;
+    transform: scale(1);
+  }
+  @starting-style {
+    .about-dialog[open] {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+
+  body.dark .about-dialog {
+    background: #2b2b2b;
+    color: #eee;
+  }
+  .about-dialog::backdrop {
+    opacity: 0;
+    transition: opacity 0.25s ease, overlay 0.25s ease allow-discrete, display 0.25s ease allow-discrete;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .about-dialog[open]::backdrop {
+    opacity: 1;
+  }
+  @starting-style {
+    .about-dialog[open]::backdrop {
+      opacity: 0;
+    }
+  }
+  .about-dialog .home-text {
+    line-height: 1.6;
+  }
+  .about-dialog[open] {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .dialog-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: inherit;
+  }
+
+
   .item-vinyl{
     bottom: 30%;
     left: 12.1%;

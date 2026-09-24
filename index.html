@@ -73,6 +73,20 @@
     <div class="skirting-board"></div>
     <div class="floor"></div>
 
+    <dialog id="about-dialog" class="about-dialog">
+      <button type="button" class="dialog-close" aria-label="Fermer">&times;</button>
+      <div class="home-text">
+          <a href="https://youtu.be/rEq1Z0bjdwc?t=6" target="_blank" rel="noopener noreferrer">Hello there</a>,
+          I'm Géraud and welcome to the <a href="about.html" target="_blank" rel="noopener noreferrer">Nuton</a> Cave.
+          Here I try to track what I like to
+          <a href="projects.html" target="_blank" rel="noopener noreferrer">do</a>,
+          <a href="study.html" target="_blank" rel="noopener noreferrer">read</a>
+          and <a href="listeningRoom.html" target="_blank" rel="noopener noreferrer">listen to</a>.
+          <br><br>
+          I am very curious and often tend to dive in rabbit holes that I come across.
+          This website and the disparity in subjects covered are just evidence of this tendency.
+      </div>
+    </dialog>
     <!-- Éléments accrochés AU MUR -->
 
 
@@ -122,10 +136,11 @@
 
     <!-- Éléments posés SUR LE BUREAU -->
 
-    <a href="about.html" class="room-item item-laptop">
+    
+    <button type="button" class="room-item item-laptop" id="laptop-trigger" aria-haspopup="dialog">
       <img src="img/svg/laptop.svg" alt="Laptop">
-      <span class="tooltip">About</span>
-    </a>
+      <span class="tooltip">?</span>
+    </button>
 
     <svg class="item-desklamp" viewBox="0 0 83.217773 62.292526" xmlns="http://www.w3.org/2000/svg" role="button" tabindex="0" aria-label="Basculer le mode sombre">
       <g transform="translate(-75.986989,-47.674764)">
@@ -150,14 +165,7 @@
       <span class="tooltip">Records</span> 
 
     </a>
-
-    <a href="/contact.html" class="room-item item-tasse">
-      <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="15" width="25" height="30" rx="4" fill="#E6A18E"/>
-        <path d="M35 22C38 22 40 24 40 27C40 30 38 32 35 32" stroke="#E6A18E" stroke-width="4"/>
-      </svg>
-      <span class="tooltip">Contact</span>
-    </a>
+    
 
     <a href="study.html" class="room-item item-books-right">
       <img src="img/svg/books_right.svg"/>
@@ -179,7 +187,7 @@
   <script>
   const btn = document.getElementById('dark-toggle');
   const lamp = document.querySelector('.item-desklamp');
-  
+
     // Fonction qui met à jour l'icône selon le thème actif
   function updateIcon() {
     btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
@@ -224,6 +232,26 @@
         item.style.opacity = 1-(currentScroll/scrollThreshold);
         item.style.visibility = 'visible';
         item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+  <script>
+    const laptopTrigger = document.getElementById('laptop-trigger');
+    const aboutDialog = document.getElementById('about-dialog');
+    const closeBtn = aboutDialog.querySelector('.dialog-close');
+
+    laptopTrigger.addEventListener('click', () => {
+      aboutDialog.showModal();
+    });
+
+    closeBtn.addEventListener('click', () => {
+      aboutDialog.close();
+    });
+
+    // Ferme en cliquant sur le fond assombri (en dehors de la boîte)
+    aboutDialog.addEventListener('click', (e) => {
+      if (e.target === aboutDialog) {
+        aboutDialog.close();
       }
     });
   </script>
