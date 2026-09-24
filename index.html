@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +12,12 @@
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,900&f[]=nippo@400&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=aktura@400&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=chillax@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/cave-icon" href="img/cave.png">
+  
 </head>
-
 <body>
-
   <!--
     SCRIPT D'INITIALISATION DU DARK MODE — placé tôt dans le <body>
     On lit localStorage avant que la page s'affiche,
@@ -30,7 +29,6 @@
     }
   </script>
   
-<div class="wrapper">
   <nav>
     <div class="nav-left">
       <a id="index-nav" href="index.html" class="nav-logo active">
@@ -59,150 +57,197 @@
       <li><a href="about.html">About the Nuton</a></li>
       <li><a href="https://github.com/ghubin" target="_blank" rel="noopener noreferrer">Github</a></li>
       <li>
-        <!--
-          BOUTON DARK MODE
-          aria-label = texte pour les lecteurs d'écran (accessibilité)
-          L'icône changera via JavaScript selon le thème actif
-        -->
         <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
       </li>
     </ul>
   </nav>
-
-  <div class="home-grid">
-    <div class="home-text">
-      <a href="https://youtu.be/rEq1Z0bjdwc?t=6" target="_blank" rel="noopener noreferrer">
-        Hello there</a>, I'm Géraud and welcome to the <a href="about.html" target="_blank" rel="noopener noreferrer">Nuton</a> Cave. 
-        Here I try to track what I like to 
-        <a href="projects.html" target="_blank" rel="noopener noreferrer">do</a>, 
-        <a href="study.html" target="_blank" rel="noopener noreferrer">read</a> 
-        and  <a href="listeningRoom.html" target="_blank" rel="noopener noreferrer">listen to</a>.
-        <br>
-        <br>
-        I am very curious and often tend to dive in rabbit holes that I come across.
-        This website and the disparity in subjects covered are just evidences of this tendency. 
-        <br>
-        <br>
-        The design is currently (more than inspired by) <a href="https://www.chester.how" target="_blank" rel="noopener noreferrer">chester.how</a>
-        as I enjoy its simplicity and needed a starting point to discover website creation, but it will evolve as I learn.
-    </div>
-
-    <a href="projects.html" class="home-show-stickyNote">
-      <p style="font-size: 1.6rem; text-decoration: underline; text-align: center;">Ideas and projects</p>
-      <ul>
-        <li>Launch the website</li>
-        <li>3D printed Coffee filter holder</li>
-        <li>Reuse old mobile CD-player into wall-mounted CD-player</li>
-        <li>Create personal weekly Spotify wrapped</li>
-        <li>CO<sub>2</sub> sensor (ESP Home and Home Assistant)</li>
-        <li>E-ink screen for meteo, agenda,...</li>
-      </ul>
-    </a>
-
-    <div class="home-show-2by1">
-      <img src="img/Sunset.JPG" alt="Sunset at home">
-    </div>
+  <main class="room-container">
     
-
-  </div>
-
-  <!-- 
-  <header class="hero">
-    <span class="hero-tag">— Journal personnel</span>
-    <h1>Idées, notes<br>& explorations</h1>
-    <p>Un espace pour écrire librement sur la tech, la culture et tout ce qui m'interpelle.</p>
-  </header>
-  -->
-  
-  <!--
-  <main class="articles-grid">
-     ARTICLE 1 — lien vers la page article complète 
-    <a href="articles/article-reseaux-sociaux.html" class="article-card">
-      <span class="tag">Technologie</span>
-      <h2>Pourquoi j'ai arrêté d'utiliser les réseaux sociaux</h2>
-      <p class="excerpt">
-        Après deux ans d'expérience, voici ce que j'ai gagné — et ce que j'ai perdu — en quittant les plateformes.
-      </p>
-      <div class="meta">
-        <span>12 mai 2025</span>
-         Ce lien pointe désormais vers la vraie page de l'article
-        <span class="read-more">Lire →</span>
+    <!-- Room Background -->
+    <div class="wall"></div>
+    <div class="skirting-board"></div>
+    <div class="floor"></div>
+    
+    <!-- Dialog box content -->
+    <dialog id="about-dialog" class="about-dialog">
+      <button type="button" class="dialog-close" aria-label="Close">&times;</button>
+      <div class="home-text">
+          <a href="https://youtu.be/rEq1Z0bjdwc?t=6" target="_blank" rel="noopener noreferrer">Hello there</a>,
+          I'm Géraud and welcome to the <a href="about.html" target="_blank" rel="noopener noreferrer">Nuton</a> Cave.
+          Here I try to track what I like to
+          <a href="projects.html" target="_blank" rel="noopener noreferrer">do</a>,
+          <a href="study.html" target="_blank" rel="noopener noreferrer">read</a>
+          and <a href="listeningRoom.html" target="_blank" rel="noopener noreferrer">listen to</a>.
+          <br><br>
+          I am very curious and often tend to dive in rabbit holes that I come across.
+          This website and the disparity in subjects covered are just evidence of this tendency.
       </div>
+    </dialog>
+
+    <!-- Wall items -->
+
+    <!-- Poster -->
+    <a href="about.html" class="room-item item-poster">
+      <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="80" height="100" rx="4" fill="#8C6D58"/>
+        <rect x="6" y="6" width="68" height="88" fill="#F5E5C0"/>
+        <circle cx="40" cy="45" r="18" fill="#E6A18E"/>
+      </svg>
+      <span class="tooltip">About</span>
     </a>
 
-    <a href="https://www.google.com/search?q=NON+Y%27A+ENCORE+RIEN&ie=UTF-8" class="article-card">
-      <span class="tag">Écriture</span>
-      <h2>Comment le journaling a changé ma façon de penser</h2>
-      <p class="excerpt">
-        Tenir un journal quotidien depuis 18 mois m'a appris des choses sur moi-même que je n'aurais jamais découvertes autrement.
-      </p>
-      <div class="meta">
-        <span>3 avril 2025</span>
-        <span href="#" class="read-more">Lire →</span>
+    
+    <!-- Skadis -->
+    <img src="img/svg/skadis.svg" alt="Skadis" class="skadis-base" />
+    
+    <!-- Whiteboard -->
+    <a href="projects.html" alt="Tableau Blanc" class="room-item whiteboard-base">
+
+     	<img src="img/svg/whiteboard.svg"  >
+      <div class="tableau-content">
+        <h4 class="tableau-titre">Recent Projects</h4>
+        <ul class="tableau-liste">
+          <li><del>Launch the website</del></li>
+          <li>3D printed Coffee filter holder</li>
+          <li>Reuse old mobile CD-player into wall-mounted CD-player</li>
+          <li>Create personal weekly Spotify wrapped</li>
+          <li>CO<sub>2</sub> sensor (ESP Home and Home Assistant)</li>
+          <li>E-ink screen for meteo, agenda,...</li>
+        </ul>
       </div>
+
+	    <span class="tooltip">Projects</span>
     </a>
+
+    <!-- CD player -->
+
+    <a href="listeningRoom.html" class="item-cd-player" title="Current on repeat: The Resistance">
+  	<!-- 1. Le lecteur Muji fixe (arrière-plan) -->
+  	<img src="img/svg/muji-player.svg" class="muji-base" alt="Lecteur CD Muji" />
+  	<!-- 2. Le CD actif qui va tourner -->
+  	<img src="img/TheResistance.PNG" class="cd-disc" alt="CD en cours d'écoute" />
+    </a>
+
+    <!-- Desk -->
+    <img src="img/svg/desk.svg" alt="Bureau" class="bureau-base" />
+
+    <!-- Item on/in the desk -->
+    
+    <!-- Laptop -->
+    <button type="button" class="room-item item-laptop" id="laptop-trigger" aria-haspopup="dialog">
+      <img src="img/svg/laptop.svg" alt="Laptop">
+      <span class="tooltip">?</span>
+    </button>
+
+    <!-- Desk Lamp -->
+    <svg class="item-desklamp" viewBox="0 0 83.217773 62.292526" xmlns="http://www.w3.org/2000/svg" role="button" tabindex="0" aria-label="Basculer le mode sombre">
+      <g transform="translate(-75.986989,-47.674764)">
+        <path class="lamp-metal lamp-base" fill="#7e7e7e" d="m 79.694322,106.21231 h 31.742418 a 0.9444636,0.9444636 45 0 1 0.94447,0.94446 v 2.81052 H 78.854591 v -2.91525 a 0.83973048,0.83973048 135 0 1 0.839731,-0.83973 z" />
+        <path class="lamp-metal lamp-shade" fill="#616161" d="m 84.674751,102.04025 h 5.737069 l 2.987069,4.17242 h -8.724138 z" />
+        <rect class="lamp-metal lamp-arm" fill="#616161" width="2.6148694" height="24.456722" x="50.739292" y="96.493492" transform="rotate(-17.734403)" />
+        <rect class="lamp-metal lamp-arm" fill="#616161" width="2.6149292" height="40.568481" x="103.57706" y="-69.559692" transform="matrix(0.49874852,0.86674674,-0.86404296,0.50341808,0,0)" />
+        <rect class="lamp-glow" fill="#ffe680" width="2.3762197" height="43.559086" x="73.901146" y="-148.95836" transform="matrix(0.14850347,0.98891189,-0.98745052,0.15792866,0,0)" ry="1.1881099" />
+        <path class="lamp-metal lamp-arm" fill="#616161" transform="matrix(0.14850347,0.98891189,-0.98745052,0.15792866,0,0)" d="m 72.781659,-150.09882 h 1.165023 a 0.74466234,0.74466234 45 0 1 0.744663,0.74467 l 0,47.19235 h -2.615043 v -47.23166 a 0.70535747,0.70535747 135 0 1 0.705357,-0.70536 z" />
+        <circle class="lamp-metal lamp-joint" fill="#7a7a7a" cx="87.359909" cy="100.63577" r="3.864224" />
+        <circle class="lamp-metal lamp-joint" fill="#7a7a7a" cx="78.760696" cy="75.817596" r="2.7737069" />
+        <circle class="lamp-metal lamp-joint" fill="#7a7a7a" cx="111.35094" cy="56.738361" r="2.7737069" />
+      </g>
+    </svg>
+
+    <svg class="lamp-beam" viewBox="0 0 88.474129 59.172409" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#e8cf7a" d="m 0,6.543104 42.6724,-6.543104 45.80173,59.172409 h -87.62068 z" />
+    </svg>
+
+    <!-- Vinyl Records -->
+    <a href="listeningRoom.html" class="room-item item-vinyl">
+      <img src="img/svg/vinyl.svg" alt="VinylRecords">
+      <span class="tooltip">Records</span> 
+    </a>
+
+    <!-- Books -->
+    <a href="study.html" class="room-item item-books-right">
+      <img src="img/svg/books_right.svg"/>
+      <span class="tooltip">Reading</span>
+    </a>
+
   </main>
-  -->
 
   <footer>
-    <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
+      <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
   </footer>
 
-  <!--
-    SCRIPT DU DARK MODE — placé en bas du <body>
-    Raison : le DOM (les éléments HTML) doit être chargé
-    avant qu'on puisse y accéder avec getElementById.
-    Placer les scripts à la fin est une bonne pratique.
-  -->
-  <script>
-    const btn = document.getElementById('dark-toggle');
-    // getElementById cherche l'élément avec id="dark-toggle"
+  <!-- DARK MODE Script -->
+<script>
+const btn = document.getElementById('dark-toggle');
+const lamp = document.querySelector('.item-desklamp');
 
-    // Fonction qui met à jour l'icône selon le thème actif
-    function updateIcon() {
-      // body.classList.contains('dark') renvoie true ou false
-      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-      // Si dark → afficher le soleil (pour repasser au clair)
-      // Sinon → afficher la lune (pour passer au sombre)
+  // Fonction qui met à jour l'icône selon le thème actif
+function updateIcon() {
+  btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  updateIcon();
+}
+
+updateIcon();
+
+btn.addEventListener('click', toggleDarkMode);
+
+// La lampe déclenche la même fonction
+lamp.addEventListener('click', toggleDarkMode);
+
+// Accessibilité clavier : Entrée ou Espace, comme un vrai bouton
+lamp.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    toggleDarkMode();
+  }
+});
+</script>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const item = document.getElementById('navigation-links');
+    if(!item) return;
+    
+    const currentScroll = window.scrollY;
+    const scrollThreshold = 75;
+
+    if(currentScroll >= scrollThreshold){
+      item.style.opacity = '0';
+      item.style.visibility='none';
+      item.style.pointerEvents = 'none';
     }
+    else{
+      item.style.opacity = 1-(currentScroll/scrollThreshold);
+      item.style.visibility = 'visible';
+      item.style.pointerEvents = 'auto';
+    }
+  });
+</script>
+<!-- Buttons -->
+<script>
+  const laptopTrigger = document.getElementById('laptop-trigger');
+  const aboutDialog = document.getElementById('about-dialog');
+  const closeBtn = aboutDialog.querySelector('.dialog-close');
 
-    updateIcon(); // appel immédiat pour afficher la bonne icône au chargement
+  laptopTrigger.addEventListener('click', () => {
+    aboutDialog.showModal();
+  });
 
-    btn.addEventListener('click', function () {
-      // addEventListener écoute les clics sur le bouton
-      // À chaque clic, on bascule la classe "dark" sur le <body>
-      document.body.classList.toggle('dark');
-      // toggle = ajoute la classe si absente, la retire si présente
+  closeBtn.addEventListener('click', () => {
+    aboutDialog.close();
+  });
 
-      // On sauvegarde le choix dans localStorage
-      // localStorage = stockage persistant dans le navigateur (survit à la fermeture)
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-
-      updateIcon(); // met à jour l'icône après le changement
-    });
-  </script>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      const item = document.getElementById('navigation-links');
-      if(!item) return;
-      
-      const currentScroll = window.scrollY;
-      const scrollThreshold = 75;
-
-      if(currentScroll >= scrollThreshold){
-        item.style.opacity = '0';
-        item.style.visibility='none';
-        item.style.pointerEvents = 'none';
-      }
-      else{
-        item.style.opacity = 1-(currentScroll/scrollThreshold);
-        item.style.visibility = 'visible';
-        item.style.pointerEvents = 'auto';
-      }
-    });
-  </script>
-
-</div>
+  // Close when clicking outside dialog box
+  aboutDialog.addEventListener('click', (e) => {
+    if (e.target === aboutDialog) {
+      aboutDialog.close();
+    }
+  });
+</script>
 </body>
 </html>
