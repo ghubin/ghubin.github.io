@@ -216,279 +216,330 @@ nav {
   font-size: 1rem;
 }
 
+/* =========================================
+   Room Container - Where the desk appears
+   ========================================= */
+
 .room-container {
-      position: relative;
-      justify-self: center;
-      width: 90vw;
-      max-width: 1400px;
-      aspect-ratio: 16 / 10; /* Proportion fixe pour garder l'alignement */
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-      border: 1px solid;
-      border-color: var(--nav-left);
-      
-    }
+  position: relative;
+  justify-self: center;
+  width: 90vw;
+  max-width: 1400px;
+  aspect-ratio: 16 / 10; /* Proportion fixe pour garder l'alignement */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid;
+  border-color: var(--nav-left);
+  
+}
 
-    /* 3. Les éléments de décor de la pièce */
-    .wall {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90%;
-      background-color: var(--wall); /* Sauge pastel doux */
-      transition: background-color 0.3s ease;
-    }
+/* =========================================
+   Background elements of the room
+   ========================================= */
 
-    .skirting-board {
-      position: absolute;
-      top: 88%;
-      left: 0;
-      width: 100%;
-      height: 2%;
-      background-color: var(--plinthe); /* Plinthe */
-    }
+.wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: var(--wall); /* Sauge pastel doux */
+  transition: background-color 0.3s ease;
+}
 
-    .floor {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 10%;
-      background-color: var(--floor); /* Sol Parquet */
-    }
+.skirting-board {
+  position: absolute;
+  top: 88%;
+  left: 0;
+  width: 100%;
+  height: 2%;
+  background-color: var(--plinthe); /* Plinthe */
+}
 
-    /* 4. Ton bureau (Image de fond posée sur le sol) */
-    .bureau-base {
-      position: absolute;
-      bottom: 8.5%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-      height: auto;
-      pointer-events: none; /* Les clics traversent l'image du bureau */
-      filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
-    }
+.floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: var(--floor); /* Sol Parquet */
+}
+/* =========================================
+   Static elements inside the room
+   ========================================= */
 
-    /* Whiteboard */
-    .whiteboard-base {
-    position: absolute;
-    bottom: 60%;
-    left: 5%;
-    width: 35%;
-    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
-    }
+/* Desk */
+.bureau-base {
+  position: absolute;
+  bottom: 8.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: auto;
+  pointer-events: none; /* Les clics traversent l'image du bureau */
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
 
-    .whiteboard-base img {
-    width: 100%;
-    }
+/* =========================================
+   Interactive elements inside the room
+   ========================================= */
 
-    /* le Skadis au milieu */
-    .skadis-base {
-     position: absolute;
-     bottom: 65%;
-     left: 57%;
-     width: 12%;
-     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
-    }
+/* Style for interactive items */
+.room-item {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
+  text-decoration: none;
+}
 
-    /* 5. Style de base pour TOUS les objets interactifs */
-    .room-item {
-      position: absolute;
-      display: inline-block;
-      cursor: pointer;
-      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
-      text-decoration: none;
-    }
+.room-item img, .room-item svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-    .room-item img, .room-item svg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+/* Animation */
+.room-item:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
+}
 
-  /* Réinitialise l'apparence par défaut du <button>, pour qu'il se comporte visuellement comme l'ancien <a> */
-  .item-laptop{
-    bottom: 52.8%;
-    left: 40.5%;
-    width: 16%;
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-  }
-  .item-laptop:focus {
-    outline: none;
-  }
-  .item-laptop:focus-visible {
-    outline: 2px solid #4a90d9;
-    outline-offset: 2px;
-  }
+/* Whiteboard */
+.whiteboard-base {
+position: absolute;
+bottom: 60%;
+left: 5%;
+width: 35%;
+filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
 
-  /* Boîte de dialogue */
-  .about-dialog {
-    position: fixed;
-    inset: 0;
-    margin: auto;
-    max-width: 1000px;
-    width: 90%;
-    padding: 2rem;
-    border: none;
-    border-radius: 8px;
-    background: #fdfdfd;
-    color: #222;
+.whiteboard-base img {
+width: 100%;
+}
+
+/* Text on whiteboard */
+.tableau-content {
+  position: absolute;
+  top: 8%;    
+  left: 8%;
+  width: 88%;
+  height: 85%;
+  overflow: hidden; 
+  color: #2e465d;
+  font-family: 'Permanent Marker', cursive, sans-serif; 
+  transform: rotate(-1deg);
+}
+
+.tableau-titre {
+  font-size: 1.1vw; 
+  padding-bottom: 4px;
+}
+
+.tableau-liste {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 0.85vw;
+}
+
+.tableau-liste li {
+  margin-bottom: 2px;
+}
+
+/* Skadis */
+.skadis-base {
+  position: absolute;
+  bottom: 65%;
+  left: 57%;
+  width: 12%;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+
+/* Laptop */
+.item-laptop{
+  bottom: 52.8%;
+  left: 40.5%;
+  width: 16%;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+.item-laptop:focus {
+  outline: none;
+}
+.item-laptop:focus-visible {
+  outline: 2px solid #4a90d9;
+  outline-offset: 2px;
+}
+
+/* Dialog Box */
+.about-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  max-width: 1000px;
+  width: 90%;
+  padding: 2rem;
+  border: none;
+  border-radius: 8px;
+  background: #fdfdfd;
+  color: #222;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease, overlay 0.5s ease allow-discrete, display 0.5s ease allow-discrete;
+}
+
+.about-dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@starting-style {
+  .about-dialog[open] {
     opacity: 0;
     transform: scale(0.95);
-    transition: opacity 0.5s ease, transform 0.5s ease, overlay 0.5s ease allow-discrete, display 0.5s ease allow-discrete;
   }
-  .about-dialog[open] {
-    opacity: 1;
-    transform: scale(1);
-  }
-  @starting-style {
-    .about-dialog[open] {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-  }
+}
 
-  body.dark .about-dialog {
-    background: #2b2b2b;
-    color: #eee;
-  }
-  .about-dialog::backdrop {
-    opacity: 0;
-    transition: opacity 0.25s ease, overlay 0.25s ease allow-discrete, display 0.25s ease allow-discrete;
-    background: rgba(0, 0, 0, 0.5);
-  }
+body.dark .about-dialog {
+  background: #2b2b2b;
+  color: #eee;
+}
+
+.about-dialog::backdrop {
+  opacity: 0;
+  transition: opacity 0.25s ease, overlay 0.25s ease allow-discrete, display 0.25s ease allow-discrete;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.about-dialog[open]::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
   .about-dialog[open]::backdrop {
-    opacity: 1;
-  }
-  @starting-style {
-    .about-dialog[open]::backdrop {
-      opacity: 0;
-    }
-  }
-  .about-dialog .home-text {
-    line-height: 1.6;
-  }
-  .about-dialog[open] {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .dialog-close {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    line-height: 1;
-    cursor: pointer;
-    color: inherit;
-  }
-
-
-  .item-vinyl{
-    bottom: 30%;
-    left: 12.1%;
-    width: 10.5%;
-  }
-
-  .item-desklamp{
-    position: absolute;
-    cursor: pointer;
-    pointer-events: none;
-    bottom: 52.8%;
-    left: 30.5%;
-    width: 16%;
-  }
-  .item-desklamp path,
-  .item-desklamp rect,
-  .item-desklamp circle {
-  pointer-events: visiblePainted;
-  }
-  .item-desklamp:focus {
-    outline: none;
-  }
-  .item-desklamp:focus-visible {
-    outline: 2px solid #4a90d9;
-    outline-offset: 2px;
-  }
-
-  /* Faisceau : invisible par défaut, apparaît en fondu en mode sombre */
-  .lamp-beam {
-    fill: #ffe680;
     opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none; /* le faisceau ne doit pas lui-même capter les clics */
   }
-  body.dark .lamp-beam {
-    opacity: 0.35;
-  }
+}
 
-  /* La bande jaune s'intensifie aussi quand la lampe est "allumée" */
-  .lamp-glow {
-    transition: filter 0.4s ease;
-  }
+.about-dialog .home-text {
+  line-height: 1.6;
+}
 
-  body.dark .lamp-glow {
-    filter: brightness(1.4);
-  }
+.about-dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+}
 
-  /* Effet d'intensification au survol de la tête */
-  .item-desklamp:hover .lamp-glow {
-    filter: brightness(1.3);
-    transition: filter 0.2s ease;
-  }    
+.dialog-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+}
 
-  .lamp-beam {
-    position: absolute;
-    bottom: 52.8%;
-    left: 37.9%;
-    width: 17%;
-    opacity: 0;
-    pointer-events: none; /* purement décoratif, ne doit jamais capter le clic/hover */
-    filter: blur(2.5px) drop-shadow(0 0 6px rgba(232, 207, 122, 0.25));
-    transition: opacity 0.5s ease;
-  }
-  body.dark .lamp-beam {
-    opacity: 0.3;
-  }
+/* Vinyl Records */
+.item-vinyl{
+  bottom: 30%;
+  left: 12.1%;
+  width: 10.5%;
+}
 
-      /* Le conteneur du lecteur dans ta pièce */
-	.item-cd-player {
-	  position: absolute;
-	  top: 10%;
-	  right: 50%;
-	  width: 8%;
-	  aspect-ratio: 1 / 2; /* Garde le ratio avec la cordelette */
-	  cursor: pointer;
-	}
+.item-desklamp{
+  position: absolute;
+  cursor: pointer;
+  pointer-events: none;
+  bottom: 52.8%;
+  left: 30.5%;
+  width: 16%;
+}
 
-	/* Le lecteur fixe */
-	.muji-base {
-	  width: 100%;
-	  height: auto;
-	  display: block;
-	}
+/* Desk Lamp */
+.item-desklamp path,
+.item-desklamp rect,
+.item-desklamp circle {
+pointer-events: visiblePainted;
+}
+.item-desklamp:focus {
+  outline: none;
+}
+.item-desklamp:focus-visible {
+  outline: 2px solid #4a90d9;
+  outline-offset: 2px;
+}
 
-	/* Le CD superposé sur le plateau */
-	.cd-disc {
-	  position: absolute;
-	  top: 5%;    /* Ajuste le % pour centrer le CD sur le carré du Muji */
-	  left: 10%;   /* Ajuste selon les marges de ton fichier Muji */
-	  width: 80%;  /* Le CD occupe 80% de la largeur du lecteur */
-	  height: auto;
-	  border-radius: 40%; /* Sécurité si ton image de CD est carrée */
-  
-  /* Transition pour un arrêt fluide */
+/* Light Beam */
+.lamp-beam {
+  fill: #ffe680;
+  opacity: 0;
+  pointer-events: none; 
+  position: absolute;
+  bottom: 52.8%;
+  left: 37.9%;
+  width: 17%;
+  filter: blur(2.5px) drop-shadow(0 0 6px rgba(232, 207, 122, 0.25));
+  transition: opacity 0.5s ease;
+}
+
+body.dark .lamp-beam {
+  opacity: 0.35;
+}
+
+
+/* Lamp Glow */
+.lamp-glow {
+  transition: filter 0.4s ease;
+}
+
+body.dark .lamp-glow {
+  filter: brightness(1.4);
+}
+
+.item-desklamp:hover .lamp-glow {
+  filter: brightness(1.3);
+  transition: filter 0.2s ease;
+}    
+
+/* CD Player */
+.item-cd-player {
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  width: 8%;
+  aspect-ratio: 1 / 2; /* Garde le ratio avec la cordelette */
+  cursor: pointer;
+}
+
+/* MUJI Player */
+.muji-base {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CD on player */
+.cd-disc {
+  position: absolute;
+  top: 5%;    
+  left: 10%;   
+  width: 80%;  
+  height: auto;
+  border-radius: 40%; 
+
+  /* Transition */
   transition: transform 0.6s ease-out;
 }
 
-/* Animation de rotation */
+/* Spinning animation */
 @keyframes spinCD {
   from {
     transform: rotate(0deg);
@@ -498,105 +549,53 @@ nav {
   }
 }
 
-/* Déclenchement de la rotation au survol */
 .item-cd-player:hover .cd-disc {
   animation: spinCD 3.5s linear infinite;
 } 
-    /* Effet d'animation au survol sur n'importe quel objet */
-    .room-item:hover {
-      transform: scale(1.05) translateY(-5px);
-      filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
-    }
 
-/* Style des info-bulles (Tooltips) */
-  .tooltip {
-    position: absolute;
-    bottom: -32px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #8C6D58; /* Couleur Noyer de ta palette */
-    color: #FFFFFF;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-family: var(--font-tooltip);
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-
-   .room-item:hover .tooltip {
-     opacity: 1;
-     transform: translateX(-50%) translateY(3px);
-   }
-
-/* 6. Placement précis des objets (Exemples) */
-   
+/* Books */
 .item-books-right {
   bottom: 29.88%;
   left: 76.94%;
   width: 10%;
 }
 
-/* La Fenêtre au mur (Haut Gauche) */
-.item-fenetre {
-  top: 10%;
-  left: 10%;
-  width: 20%;
+
+/* Tooltips when hovering interactive items */
+.tooltip {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #8C6D58; /* Couleur Noyer de ta palette */
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: var(--font-tooltip);
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* Un Cadre/Poster au mur (Haut Droit) */
+.room-item:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(3px);
+}
+
+
+
+
+/* Poster */
 .item-poster {
   top: 12%;
   right: 12%;
   width: 14%;
 }
 
-/* L'Ordinateur posé au centre du plateau du bureau */
-.item-ordinateur {
-  bottom: 51.9%;
-  left: 42%;
-  width: 16%;
-}
+   
 
-    /* La Tasse posée à droite sur le plateau */
-    .item-tasse {
-      bottom: 53.2%;
-      left: 62%;
-      width: 6%;
-    }
-
-    
-    
-    /* Zone de texte superposée sur le tableau */
-    .tableau-content {
-      position: absolute;
-      top: 8%;    /* Ajuste en % pour que le texte rentre bien dans le cadre */
-      left: 8%;
-      width: 88%;
-      height: 85%;
-      overflow: hidden; /* Évite que le texte dépasse du tableau */
-      color: #2e465d;
-      font-family: 'Permanent Marker', cursive, sans-serif; /* Style "écrit à la main" */
-      transform: rotate(-1deg); /* Donne un petit effet écrit à la main */
-       /* Les clics traversent directement vers le lien <a> */
-    }
-
-    .tableau-titre {
-      font-size: 1.1vw; /* Taille responsive basée sur la largeur de l'écran */
-      padding-bottom: 4px;
-    }
-
-    .tableau-liste {
-      margin: 0;
-      padding-left: 16px;
-      font-size: 0.85vw;
-    }
-
-    .tableau-liste li {
-      margin-bottom: 2px;
-    }
 
 /* ==========================================
   HOME GRID

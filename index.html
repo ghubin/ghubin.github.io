@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Nuton Cave</title>
   <meta name="description" content="Personal website of a grumpy mythical Belgian creature">
@@ -57,24 +57,20 @@
       <li><a href="about.html">About the Nuton</a></li>
       <li><a href="https://github.com/ghubin" target="_blank" rel="noopener noreferrer">Github</a></li>
       <li>
-        <!--
-          BOUTON DARK MODE
-          aria-label = texte pour les lecteurs d'écran (accessibilité)
-          L'icône changera via JavaScript selon le thème actif
-        -->
         <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
       </li>
     </ul>
   </nav>
   <main class="room-container">
     
-    <!-- Décor de la pièce -->
+    <!-- Room Background -->
     <div class="wall"></div>
     <div class="skirting-board"></div>
     <div class="floor"></div>
-
+    
+    <!-- Dialog box content -->
     <dialog id="about-dialog" class="about-dialog">
-      <button type="button" class="dialog-close" aria-label="Fermer">&times;</button>
+      <button type="button" class="dialog-close" aria-label="Close">&times;</button>
       <div class="home-text">
           <a href="https://youtu.be/rEq1Z0bjdwc?t=6" target="_blank" rel="noopener noreferrer">Hello there</a>,
           I'm Géraud and welcome to the <a href="about.html" target="_blank" rel="noopener noreferrer">Nuton</a> Cave.
@@ -87,25 +83,24 @@
           This website and the disparity in subjects covered are just evidence of this tendency.
       </div>
     </dialog>
-    <!-- Éléments accrochés AU MUR -->
 
+    <!-- Wall items -->
 
-    <a href="/a-propos.html" class="room-item item-poster">
+    <!-- Poster -->
+    <a href="about.html" class="room-item item-poster">
       <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="80" height="100" rx="4" fill="#8C6D58"/>
         <rect x="6" y="6" width="68" height="88" fill="#F5E5C0"/>
         <circle cx="40" cy="45" r="18" fill="#E6A18E"/>
       </svg>
-      <span class="tooltip">À Propos</span>
+      <span class="tooltip">About</span>
     </a>
 
-    <!-- Le Bureau (Ton fichier SVG) -->
-    <img src="img/svg/desk.svg" alt="Bureau" class="bureau-base" />
     
-    <!-- Deuxième fichier SVG, le Skadis -->
+    <!-- Skadis -->
     <img src="img/svg/skadis.svg" alt="Skadis" class="skadis-base" />
     
-    <!-- Le whiteboard -->
+    <!-- Whiteboard -->
     <a href="projects.html" alt="Tableau Blanc" class="room-item whiteboard-base">
 
      	<img src="img/svg/whiteboard.svg"  >
@@ -124,24 +119,27 @@
 	    <span class="tooltip">Projects</span>
     </a>
 
+    <!-- CD player -->
+
     <a href="listeningRoom.html" class="item-cd-player" title="Current on repeat: The Resistance">
-  
   	<!-- 1. Le lecteur Muji fixe (arrière-plan) -->
   	<img src="img/svg/muji-player.svg" class="muji-base" alt="Lecteur CD Muji" />
-
   	<!-- 2. Le CD actif qui va tourner -->
   	<img src="img/TheResistance.PNG" class="cd-disc" alt="CD en cours d'écoute" />
-
     </a>
 
-    <!-- Éléments posés SUR LE BUREAU -->
+    <!-- Desk -->
+    <img src="img/svg/desk.svg" alt="Bureau" class="bureau-base" />
 
+    <!-- Item on/in the desk -->
     
+    <!-- Laptop -->
     <button type="button" class="room-item item-laptop" id="laptop-trigger" aria-haspopup="dialog">
       <img src="img/svg/laptop.svg" alt="Laptop">
       <span class="tooltip">?</span>
     </button>
 
+    <!-- Desk Lamp -->
     <svg class="item-desklamp" viewBox="0 0 83.217773 62.292526" xmlns="http://www.w3.org/2000/svg" role="button" tabindex="0" aria-label="Basculer le mode sombre">
       <g transform="translate(-75.986989,-47.674764)">
         <path class="lamp-metal lamp-base" fill="#7e7e7e" d="m 79.694322,106.21231 h 31.742418 a 0.9444636,0.9444636 45 0 1 0.94447,0.94446 v 2.81052 H 78.854591 v -2.91525 a 0.83973048,0.83973048 135 0 1 0.839731,-0.83973 z" />
@@ -160,100 +158,96 @@
       <path fill="#e8cf7a" d="m 0,6.543104 42.6724,-6.543104 45.80173,59.172409 h -87.62068 z" />
     </svg>
 
+    <!-- Vinyl Records -->
     <a href="listeningRoom.html" class="room-item item-vinyl">
       <img src="img/svg/vinyl.svg" alt="VinylRecords">
       <span class="tooltip">Records</span> 
-
     </a>
-    
 
+    <!-- Books -->
     <a href="study.html" class="room-item item-books-right">
       <img src="img/svg/books_right.svg"/>
       <span class="tooltip">Reading</span>
     </a>
 
-    
   </main>
+
   <footer>
       <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
-    </footer>
+  </footer>
 
-  <!--
-    SCRIPT DU DARK MODE — placé en bas du <body>
-    Raison : le DOM (les éléments HTML) doit être chargé
-    avant qu'on puisse y accéder avec getElementById.
-    Placer les scripts à la fin est une bonne pratique.
-  -->
-  <script>
-  const btn = document.getElementById('dark-toggle');
-  const lamp = document.querySelector('.item-desklamp');
+  <!-- DARK MODE Script -->
+<script>
+const btn = document.getElementById('dark-toggle');
+const lamp = document.querySelector('.item-desklamp');
 
-    // Fonction qui met à jour l'icône selon le thème actif
-  function updateIcon() {
-    btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-  }
+  // Fonction qui met à jour l'icône selon le thème actif
+function updateIcon() {
+  btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+}
 
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark');
-    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-    updateIcon();
-  }
-
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
   updateIcon();
+}
 
-  btn.addEventListener('click', toggleDarkMode);
+updateIcon();
 
-  // La lampe déclenche la même fonction
-  lamp.addEventListener('click', toggleDarkMode);
+btn.addEventListener('click', toggleDarkMode);
 
-  // Accessibilité clavier : Entrée ou Espace, comme un vrai bouton
-  lamp.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggleDarkMode();
+// La lampe déclenche la même fonction
+lamp.addEventListener('click', toggleDarkMode);
+
+// Accessibilité clavier : Entrée ou Espace, comme un vrai bouton
+lamp.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    toggleDarkMode();
+  }
+});
+</script>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const item = document.getElementById('navigation-links');
+    if(!item) return;
+    
+    const currentScroll = window.scrollY;
+    const scrollThreshold = 75;
+
+    if(currentScroll >= scrollThreshold){
+      item.style.opacity = '0';
+      item.style.visibility='none';
+      item.style.pointerEvents = 'none';
+    }
+    else{
+      item.style.opacity = 1-(currentScroll/scrollThreshold);
+      item.style.visibility = 'visible';
+      item.style.pointerEvents = 'auto';
     }
   });
 </script>
+<!-- Buttons -->
+<script>
+  const laptopTrigger = document.getElementById('laptop-trigger');
+  const aboutDialog = document.getElementById('about-dialog');
+  const closeBtn = aboutDialog.querySelector('.dialog-close');
 
-  <script>
-    window.addEventListener('scroll', () => {
-      const item = document.getElementById('navigation-links');
-      if(!item) return;
-      
-      const currentScroll = window.scrollY;
-      const scrollThreshold = 75;
+  laptopTrigger.addEventListener('click', () => {
+    aboutDialog.showModal();
+  });
 
-      if(currentScroll >= scrollThreshold){
-        item.style.opacity = '0';
-        item.style.visibility='none';
-        item.style.pointerEvents = 'none';
-      }
-      else{
-        item.style.opacity = 1-(currentScroll/scrollThreshold);
-        item.style.visibility = 'visible';
-        item.style.pointerEvents = 'auto';
-      }
-    });
-  </script>
-  <script>
-    const laptopTrigger = document.getElementById('laptop-trigger');
-    const aboutDialog = document.getElementById('about-dialog');
-    const closeBtn = aboutDialog.querySelector('.dialog-close');
+  closeBtn.addEventListener('click', () => {
+    aboutDialog.close();
+  });
 
-    laptopTrigger.addEventListener('click', () => {
-      aboutDialog.showModal();
-    });
-
-    closeBtn.addEventListener('click', () => {
+  // Close when clicking outside dialog box
+  aboutDialog.addEventListener('click', (e) => {
+    if (e.target === aboutDialog) {
       aboutDialog.close();
-    });
-
-    // Ferme en cliquant sur le fond assombri (en dehors de la boîte)
-    aboutDialog.addEventListener('click', (e) => {
-      if (e.target === aboutDialog) {
-        aboutDialog.close();
-      }
-    });
-  </script>
+    }
+  });
+</script>
 </body>
 </html>
