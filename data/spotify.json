@@ -1,112 +1,125 @@
 {
-  "week": "2026-06-17/2026-06-24",
+  "week": "2026-09-14/2026-09-21",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "You've Got Everything Now - 2011 Remaster",
-      "artist": "The Smiths",
+      "name": "Over Each Other",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
       "plays": 2
     },
     {
       "rank": 2,
-      "name": "Wow.",
-      "artist": "Post Malone",
-      "plays": 1
+      "name": "My Hero",
+      "artist": "Foo Fighters",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024bc9bcdbdc9ac34e37d8b6bb",
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "Shape Of My Heart",
-      "artist": "Sting",
-      "plays": 1
+      "name": "Obstacle 1",
+      "artist": "Interpol",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0249240ebf0c49e2d758fe6373",
+      "plays": 2
     },
     {
       "rank": 4,
-      "name": "Call Me",
-      "artist": "Blondie",
-      "plays": 1
+      "name": "American Idiot",
+      "artist": "Green Day",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0208a1b1e0674086d3f1995e1b",
+      "plays": 2
     },
     {
       "rank": 5,
-      "name": "When You Know",
-      "artist": "Puggy",
-      "plays": 1
+      "name": "How You Remind Me",
+      "artist": "Nickelback",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02699a422d25adc550dc5aa11c",
+      "plays": 2
     },
     {
       "rank": 6,
-      "name": "Bette Davis Eyes",
-      "artist": "Kim Carnes",
-      "plays": 1
+      "name": "Heavy Is the Crown",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "plays": 2
     },
     {
       "rank": 7,
-      "name": "Livin' On A Prayer",
-      "artist": "Bon Jovi",
-      "plays": 1
+      "name": "Go With The Flow",
+      "artist": "Queens of the Stone Age",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029eec33b045d88f87b9b06e67",
+      "plays": 2
     },
     {
       "rank": 8,
-      "name": "Born to Run",
-      "artist": "Bruce Springsteen",
-      "plays": 1
+      "name": "Dine N'Dash",
+      "artist": "The Strokes",
+      "cover": "https://i.scdn.co/image/ab67616d00001e026b458d1409d938dad4e3ba2c",
+      "plays": 2
     },
     {
       "rank": 9,
-      "name": "Le Soldat Rose",
-      "artist": "-M-",
-      "plays": 1
+      "name": "In the End",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02e2f039481babe23658fc719a",
+      "plays": 2
     },
     {
       "rank": 10,
-      "name": "Get Down On It - Single Version",
-      "artist": "Kool & The Gang",
-      "plays": 1
+      "name": "Dying In Reverse",
+      "artist": "Cage The Elephant",
+      "cover": "https://i.scdn.co/image/ab67616d00001e026b0bbf9f0f91be527104ca6e",
+      "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Buena Vista Social Club",
-      "plays": 13
+      "name": "Sade",
+      "plays": 12
     },
     {
       "rank": 2,
-      "name": "The Smiths",
-      "plays": 2
+      "name": "Linkin Park",
+      "plays": 10
     },
     {
       "rank": 3,
-      "name": "Lykke Li",
-      "plays": 2
+      "name": "Muse",
+      "plays": 8
     },
     {
       "rank": 4,
-      "name": "Post Malone",
-      "plays": 1
+      "name": "The Strokes",
+      "plays": 6
     },
     {
       "rank": 5,
-      "name": "Sting",
-      "plays": 1
+      "name": "Queens of the Stone Age",
+      "plays": 3
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Buena Vista Social Club",
-      "artist": "Buena Vista Social Club",
-      "plays": 13
+      "name": "The Best of Sade",
+      "artist": "Sade",
+      "cover": "https://i.scdn.co/image/ab67616d00001e025e25e034e25258b356774c79",
+      "plays": 12
     },
     {
       "rank": 2,
-      "name": "The Smiths",
-      "artist": "The Smiths",
-      "plays": 2
+      "name": "From Zero",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "plays": 6
     },
     {
       "rank": 3,
-      "name": "Hollywood's Bleeding",
-      "artist": "Post Malone",
-      "plays": 1
+      "name": "American Idiot",
+      "artist": "Green Day",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0208a1b1e0674086d3f1995e1b",
+      "plays": 3
     }
   ]
 }
