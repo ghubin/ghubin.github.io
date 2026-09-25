@@ -1060,6 +1060,29 @@ footer {
 }
 
 /* =========================================
+   Error Page
+   ========================================= */
+.error-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.error-page h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.error-page p {
+  font-size: 1.2rem;
+  max-width: 40ch;
+}
+
+/* =========================================
    RESPONSIVE — mobile
    ========================================= */
 @media (max-width: 600px) {
