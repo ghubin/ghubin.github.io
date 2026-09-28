@@ -1,125 +1,125 @@
 {
-  "week": "2026-09-14/2026-09-21",
+  "week": "2026-09-21/2026-09-28",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Over Each Other",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "name": "Uprising",
+      "artist": "Muse",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b6d4566db0d12894a1a3b7a2",
       "plays": 2
     },
     {
       "rank": 2,
-      "name": "My Hero",
-      "artist": "Foo Fighters",
-      "cover": "https://i.scdn.co/image/ab67616d00001e024bc9bcdbdc9ac34e37d8b6bb",
+      "name": "Psycho",
+      "artist": "Muse",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02808846f0223d97d5963c420d",
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Obstacle 1",
-      "artist": "Interpol",
-      "cover": "https://i.scdn.co/image/ab67616d00001e0249240ebf0c49e2d758fe6373",
+      "name": "Sans Fin",
+      "artist": "Montee",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02600213032dd3d0ef41fca0cb",
       "plays": 2
     },
     {
       "rank": 4,
-      "name": "American Idiot",
-      "artist": "Green Day",
-      "cover": "https://i.scdn.co/image/ab67616d00001e0208a1b1e0674086d3f1995e1b",
+      "name": "Clothes on the Ground - Melting",
+      "artist": "Feldup",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "How You Remind Me",
-      "artist": "Nickelback",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02699a422d25adc550dc5aa11c",
+      "name": "Towards Happiness",
+      "artist": "Feldup",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "Heavy Is the Crown",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "name": "Catch a Breath",
+      "artist": "Feldup",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "Go With The Flow",
-      "artist": "Queens of the Stone Age",
-      "cover": "https://i.scdn.co/image/ab67616d00001e029eec33b045d88f87b9b06e67",
+      "name": "Running on Empty (The Sacrifice)",
+      "artist": "Feldup",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "Dine N'Dash",
-      "artist": "The Strokes",
-      "cover": "https://i.scdn.co/image/ab67616d00001e026b458d1409d938dad4e3ba2c",
+      "name": "Get Up OK",
+      "artist": "Feldup",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
       "plays": 2
     },
     {
       "rank": 9,
-      "name": "In the End",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02e2f039481babe23658fc719a",
+      "name": "Airbag",
+      "artist": "Radiohead",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
       "plays": 2
     },
     {
       "rank": 10,
-      "name": "Dying In Reverse",
-      "artist": "Cage The Elephant",
-      "cover": "https://i.scdn.co/image/ab67616d00001e026b0bbf9f0f91be527104ca6e",
+      "name": "Paranoid Android",
+      "artist": "Radiohead",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
       "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Sade",
-      "plays": 12
+      "name": "Muse",
+      "plays": 21
     },
     {
       "rank": 2,
-      "name": "Linkin Park",
-      "plays": 10
+      "name": "Feldup",
+      "plays": 15
     },
     {
       "rank": 3,
-      "name": "Muse",
-      "plays": 8
+      "name": "Radiohead",
+      "plays": 15
     },
     {
       "rank": 4,
-      "name": "The Strokes",
-      "plays": 6
+      "name": "Linkin Park",
+      "plays": 11
     },
     {
       "rank": 5,
-      "name": "Queens of the Stone Age",
-      "plays": 3
+      "name": "Red Hot Chili Peppers",
+      "plays": 8
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "The Best of Sade",
-      "artist": "Sade",
-      "cover": "https://i.scdn.co/image/ab67616d00001e025e25e034e25258b356774c79",
-      "plays": 12
+      "name": "Towards Happiness",
+      "artist": "Feldup",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
+      "plays": 15
     },
     {
       "rank": 2,
-      "name": "From Zero",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
-      "plays": 6
+      "name": "OK Computer",
+      "artist": "Radiohead",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
+      "plays": 14
     },
     {
       "rank": 3,
-      "name": "American Idiot",
-      "artist": "Green Day",
-      "cover": "https://i.scdn.co/image/ab67616d00001e0208a1b1e0674086d3f1995e1b",
-      "plays": 3
+      "name": "The Resistance",
+      "artist": "Muse",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b6d4566db0d12894a1a3b7a2",
+      "plays": 5
     }
   ]
 }
