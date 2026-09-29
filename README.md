@@ -1,12 +1,48 @@
 # L'Antre du Nuton Grognon
 
+[English](#english) · [Français](#français)
+
+---
+
+## English
+
+A personal website hosted on GitHub Pages: both a space to showcase my projects and a playground for learning web development (HTML, CSS, Git workflows, light backend automation).
+
+[View the live site](https://ghubin.github.io)
+
+### Features
+
+The homepage is an interactive desk: a whiteboard displaying my projects, interactive objects linking to the different pages of the website. Built to add over time different projects, under new interactive objects.
+
+`listeningRoom`, currently under construction, will be dedicated to music listening, with two parts: automatically updated Spotify data, and a hand-curated selection of vinyl records.
+
+### Spotify pipeline
+
+An automated pipeline feeds `listeningRoom` with my recent listening, using the Spotify API to generate and update the data displayed on the site.
+
+### Tech stack
+
+- Plain HTML / CSS, no framework
+- Python for the Spotify automation
+- GitHub Actions for scheduled tasks
+- GitHub Pages for hosting
+
+### Coming soon
+
+- Full visual design of `listeningRoom`, displaying the Spotify data and the vinyl collection
+- First article: a write-up on this website project itself, how it was built and what I learned along the way
+- Project Yggdrasil: DIY home automation, starting with its first sensor, Stribog, a CO₂ sensor
+- Possible move away from GitHub Pages, to a personal server
+
+---
+
 Site personnel hébergé sur GitHub Pages, à la fois un espace pour présenter mes projets et un terrain d'apprentissage du développement web (HTML, CSS, workflows Git, automatisation légère en backend).
 
 [Voir le site en ligne](https://ghubin.github.io)
 
 ## Fonctionnalités
 
-La page d'accueil met en scène un bureau interactif : un tableau blanc affichant mes projets, le bureau lui-même, et un panneau perforé Skadis (Ikea) destiné à accueillir d'autres éléments au fil du temps.
+La page d'accueil met en scène un bureau interactif : un tableau blanc affichant mes projets, des objets interactifs dirigeant vers les différentes pages du site. Construit afin d'accueillir les futurs projets sous forme également d'objets interactifs.
 
 `listeningRoom`, en cours de construction, sera dédiée à l'écoute musicale, avec deux volets : les données Spotify mises à jour automatiquement, et une sélection de vinyles maintenue manuellement.
 
@@ -24,4 +60,6 @@ Un pipeline automatisé alimente `listeningRoom` avec mes écoutes récentes, en
 ## À venir
 
 - Habillage visuel complet de `listeningRoom`, avec affichage des données Spotify et de la collection de vinyles
+- Premier article : un retour sur le projet de site lui-même, comment il a été construit et ce que j'ai appris en chemin
+- Projet Yggdrasil : domotique DIY, en commençant par son premier capteur, Stribog, un capteur de CO₂
 - Migration éventuelle hors de GitHub Pages, vers un serveur personnel
