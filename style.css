@@ -25,8 +25,12 @@
   --wall: #c1ccc4;
   --floor: #C2B29F;
   --plinthe: #D3C5B4;
-
-
+  --wb-dark: #868484;
+  --wb-light: #acaaaa;
+  --wb-surface: #ffffff;
+  --wb-dark-w: clamp(3px, 0.85vw, 9px);
+  --wb-light-w: clamp(4px, 1.3vw, 14px);
+  --wb-radius: clamp(10px, 3.2vw, 36px);
 }
 
 /* =========================================
@@ -595,7 +599,73 @@ body.dark .lamp-glow {
 }
 
    
+/*==========================================
+  Projects Page
+  =========================================== */
 
+/* Whiteboard covering the background */
+.whiteboard {
+  container-type: inline-size;
+  display: block;
+  box-sizing: border-box;
+  padding: var(--wb-dark-w);
+  background: var(--wb-dark);
+  border-radius: var(--wb-radius);
+  color: inherit;
+  text-decoration: none;
+}
+
+.whiteboard_surface {
+  box-sizing: border-box;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: var(--wb-surface);
+  border: var(--wb-light-w) solid var(--wb-light);
+  border-radius: calc(var(--wb-radius) - var(--wb-dark-w));
+}
+
+.whiteboard_surface h1 {
+  text-align: center;
+  font-size: clamp(1.5rem, 5cqw, 3rem);
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  color: #2e465d;
+  margin: 0 0 clamp(1.5rem, 4cqw, 3rem);
+}
+ /* Grid to display the projects looking like magnet stickers */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4.5rem;
+}
+
+.sticker {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.2s ease;
+}
+
+.sticker img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sticker:hover{
+  transform: rotate(0deg) scale(1.05) translateY(-5px);
+  filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
+}
+
+.sticker_title {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  font-family: var(--font-ui);
+  color: #1a1612;
+}
 
 /* ==========================================
   HOME GRID

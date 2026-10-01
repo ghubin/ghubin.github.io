@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/cave-icon" href="img/cave.png">
 </head>
@@ -25,7 +26,7 @@
       document.body.classList.add('dark');
     }
   </script>
-<div class="wrapper">
+
   <nav>
     <div class="nav-left">
       <a id="index-nav" href="index.html" class="nav-logo">
@@ -64,6 +65,32 @@
     </ul>
   </nav>
 
+  <main>
+  <div class="whiteboard">
+    <div class="whiteboard_surface">
+      <h1>Projects</h1>
+
+      <div class="projects-grid">
+        <a class="sticker" href="projects/nutoncaveproject.html" data-tags="web" style="--tilt: -3deg">
+          <img src="img/caveHD.png" alt="NutonCavePNG_HD">
+          <span class="sticker_title">Nuton Cave</span>
+        </a>
+
+        <a class="sticker" href="projects/yggdrasil.html" data-tags="domotique" style="--tilt: 2deg">
+          <img src="img/yggdrasil.png" alt="">
+          <span class="sticker_title">Yggdrasil</span>
+        </a>
+
+        <a class="sticker" href="projects/stribog.html" data-tags="domotique" style="--tilt: 4deg">
+          <img src="img/horn.png" alt="">
+          <span class="sticker_title">Stribog</span>
+        </a>
+
+        <!-- un bloc <a class="sticker"> par projet -->
+      </div>
+    </div>
+  </div>
+</main>
   <footer>
     <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
   </footer>
@@ -123,6 +150,5 @@
     });
   </script>
 
-</div>
 </body>
 </html>
