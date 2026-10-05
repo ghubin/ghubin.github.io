@@ -1,0 +1,322 @@
+/* ==========================================================
+   project.css — mise en page d'une page projet
+   Tout est préfixé par .project pour ne pas interférer avec
+   le reste du site. Convention de nommage : un seul "_".
+   ========================================================== */
+
+/* --- Couleurs et mesures du template (modifiables ici) --- */
+.project {
+  --project_text: #1a1612;
+  --project_muted: #7a6f64;
+  --project_line: #d8dce0;
+  --project_width: 45rem;      /* largeur de la colonne de lecture */
+
+  max-width: var(--project_width);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+  color: var(--project_text);
+  line-height: 1.65;
+}
+
+/* --- Dark Mode ---*/
+body.dark .project {
+  --project_text: #e8e0d5;
+  --project_muted: #8a7f74;
+  --project_line: #3a3f45;
+}
+
+/* --- HEADER --- */
+.project_title {
+  margin: 0 0 0.75rem;
+  font-size: 2.65rem;
+  line-height: 1.2;
+}
+
+.project_summary {
+  margin: 0 0 2rem;
+  font-size: 1.35rem;
+  color: var(--muted);
+}
+
+/* Key infos */
+.project_meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1.5rem;
+  margin: 0 0 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--project_line);
+  border-bottom: 1px solid var(--project_line);
+}
+
+.project_meta dt {
+  color: var(--muted);
+}
+
+.project_meta dd {
+  margin: 0;
+}
+
+/* Tags : les mêmes que ceux utilisés pour filtrer sur projects.html */
+.project_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project_tags li {
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--project_line);
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--project_muted);
+}
+
+/* --- Table of Contents (optionnal, for longer projects) --- */
+.project_toc {
+  margin: 2rem 0 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--project_line);
+}
+ 
+.project_toc p {
+  margin: 0 0 0.5rem;
+  color: var(--project_muted);
+}
+ 
+.project_toc ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+/* Anchored titles do not stick to the top of the window */
+.project_section[id],
+.project_section h3[id] {
+  scroll-margin-top: 1.5rem;
+}
+
+/* --- Cover Image (optional) --- */
+.project_cover,
+.project_figure {
+  margin: 2.5rem 0 1.5rem;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
+}
+
+.project_cover img,
+.project_figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--project_line);
+}
+
+/* Lightbox for enlarged images */
+.project_lightbox {
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+.project_lightbox::backdrop {
+  background: rgb(0 0 0 / 0.85);
+}
+
+.project_lightbox img {
+  display: block;
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+}
+
+.project_cover figcaption,
+.project_figure figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.project_cover, .project_figure:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
+}
+
+/* --- Sections de contenu --- */
+.project_section {
+  margin-top: 2.5rem;
+  transition: text-decoration 0.4s ease;
+}
+
+.project_section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.45rem;
+}
+
+.project_section h3 {
+  margin: 1.75rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.project_section p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+/* Lists in the text (bullets and numbered lists) */
+.project_section ul,
+.project_section ol {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+ 
+.project_section li + li {
+  margin-top: 0.25rem;
+}
+
+.project_section a {
+  text-decoration: none;
+  color: var(--lacostegreen);
+}
+
+.project_section a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--lacostegreen);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+ 
+/* Citations */
+.project_section blockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--project_line);
+  color: var(--project_muted);
+}
+ 
+/* --- Code --- */
+.project code {
+  padding: 0.1em 0.35em;
+  border-radius: 0.2rem;
+  background: var(--project_code_bg);
+  font-size: 0.9em;
+}
+ 
+/* Code block : scrolls horizontally instead of breaking the page */
+.project pre {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 0.25rem;
+  background: var(--project_code_bg);
+  line-height: 1.5;
+}
+ 
+/* In a code block, the <code> element doesn't need its own background */
+.project pre code {
+  padding: 0;
+  background: none;
+  font-size: 0.875rem;
+}
+ 
+/* --- Tables (envelopped in .project_table for scrolling) --- */
+.project_table {
+  margin: 0 0 1rem;
+  overflow-x: auto;
+}
+ 
+.project_table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+ 
+.project_table th,
+.project_table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--project_line);
+  text-align: left;
+}
+ 
+.project_table th {
+  color: var(--project_muted);
+  font-weight: 600;
+}
+ 
+/* --- Evolutions : Dates on left --- */
+.project_updates {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem 1.5rem;
+  margin: 0;
+}
+ 
+.project_updates dt {
+  color: var(--project_muted);
+  white-space: nowrap;
+}
+ 
+.project_updates dd {
+  margin: 0;
+}
+ 
+/* --- Links (repository, article, demo...) --- */
+.project_links {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.project a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+.project a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* --- Return to the list of projects --- */
+.project_back {
+  text-align: center;
+  font-size: 1.15rem;
+  font-family: var(--font-ui);
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
+}
+
+.project_back a {
+  color: var(--lacostegreen);
+  text-decoration: none;
+}
+
+.project_back a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--lacostegreen);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+.project_back:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* --- Small screens : key info moves to a single column --- */
+@media (max-width: 30rem) {
+  .project_meta {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .project_meta dd {
+    margin-bottom: 0.6rem;
+  }
+}

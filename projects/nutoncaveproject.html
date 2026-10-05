@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- TITLE OF THE PROJECT -->
+  <title>Nuton Cave</title>
+  <meta name="description" content="Creation of a personal website to showcase the projects.">
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../style.css">
+  <!-- CSS PROJECTS -->
+  <link rel="stylesheet" href="project.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/cave-icon" href="../img/cave.png">
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a id="index-nav" href="/index.html" class="nav-logo">
+      <span class="nav-highlight"></span> 
+      The Cave
+    </a>
+    <a id="projects-nav" href="/projects.html" class="nav-logo"> 
+      <span class="nav-highlight"></span>
+      Projects 
+    </a>
+    <a id="reading-nav" href="/study.html" class="nav-logo"> 
+      Reading 
+      <span class="nav-highlight"></span>
+    </a> 
+    <a id="listening-nav" href="/listeningRoom.html" class="nav-logo">
+      Listening
+      <span class="nav-highlight"></span>
+    </a>
+    <a id="blog-nav" href="/thoughts.html" class="nav-logo">
+      Thoughts
+      <span class="nav-highlight"></span>
+    </a>
+
+  </div>
+  <ul id= "navigation-links" class="nav-links">
+    <li><a href="/about.html">About the Nuton</a></li>
+    <li><a href="https://github.com/ghubin" target="_blank" rel="noopener noreferrer">Github</a></li>
+    <li>
+      <!--
+        BOUTON DARK MODE
+        aria-label = texte pour les lecteurs d'écran (accessibilité)
+        L'icône changera via JavaScript selon le thème actif
+      -->
+      <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
+    </li>
+  </ul>
+</nav>
+
+<main class="project">
+  <article>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+      <h1 class="project_title">Nuton Cave Website</h1>
+      <p class="project_summary">
+        Personal website to showcase my projects and in the same time learn the basics of web development.
+      </p>
+
+      <!-- KEY INFO -->
+      <dl class="project_meta">
+        <dt>Status</dt>
+        <dd>In Progress</dd>
+        <dt>Start Date</dt>
+        <dd>June 2026</dd>
+        <dt>Tools</dt>
+        <dd>Python, GitHub Actions, Spotify API</dd>
+      </dl>
+
+      <!-- Tags : same words as for the projects.html filter -->
+      <ul class="skills-list">
+        <li>web development</li>
+        <li>personal project</li>
+      </ul>
+    </header>
+
+
+    <!-- ========== SECTIONS ========== -->
+    <!-- Every section = a <section class="project_section"> with an <h2>.
+          Duplicate, rename, or remove as needed for the project. -->
+
+    <section class="project_section">
+      <h2>Context</h2>
+      <p>While looking for a job (still looking btw, connect with <a href="https://www.linkedin.com/in/géraud-hubin-8a73ba354" target="_blank" rel="noopener noreferrer">me!</a>) I wanted to keep learning and building new skills. That's when I started playing with web development. </p>
+    </section>
+
+    <section class="project_section">
+      <h2>Realization</h2>
+      <p>I started playing with AI and web development, this site as almost everything nowadays is built with the help of AI. However I did not simply ask to build this website, I kept asking for information and tried to build as much as possible myself, because that's my view on AI, a powerful tool that needs first to understand what is done to be effective.</p>
+
+      <p>In the beginning, I focused on learning the fundamentals of web development and how to integrate AI tools into my workflow. I made a first page highly inspired by <a href="https://chester.how" rel="noopener noreferrer">Chester.How</a>, with a grid system that would able me to show different projects. I tried to integrate a simple design in the shape of a post-it, but was not completely convinced by the result. In the meantime, I also started to construction of a personal Spotify weekly wrapped, as the company only provides this kind of information on a year time.</p>
+
+      <figure class="project_figure">
+        <img src="../img/projects/NutonCave/OldHomepage.PNG" alt="Old homepage of the Nuton Cave website">
+        <figcaption>Old Homepage with a personal touch, the post-it.</figcaption>
+      </figure>
+
+      <p>After a few months, I decided to rebuild the homepage to create a more interactive experience. I wanted to create a desk where the user could find different projects and information about me. This is how the current design of the homepage came about; it is designed to be adaptable, where the new projects will be added over time in the shape on new objects placed on the walls or the desk.</p>
+    
+    </section>
+
+
+    <!-- Evolutions : to complete -->
+    <section class="project_section" id="evolutions">
+      <h2>Evolutions</h2>
+      <dl class="project_updates">
+        <dt>September 2026</dt>
+        <dd>Rebuilding of the homepage to create an interactive desk.</dd>
+        <dt>June 2026</dt>
+        <dd>Start of the project and first design of homepage.</dd>
+      </dl>
+    </section>
+
+    <section class="project_section">
+      <h2>Links</h2>
+      <ul class="project_links">
+        <li><a href="https://github.com/ghubin">GitHub Repository</a></li>
+      </ul>
+    </section>
+
+    <!-- ========== RETURN ========== -->
+    <p class="project_back">
+      <a href="../projects.html">Back to projects &#8617</a>
+    </p>
+
+  </article>
+</main>
+  <footer>
+    <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('dark-toggle');
+    // getElementById cherche l'élément avec id="dark-toggle"
+
+    // Fonction qui met à jour l'icône selon le thème actif
+    function updateIcon() {
+      // body.classList.contains('dark') renvoie true ou false
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      // Si dark → afficher le soleil (pour repasser au clair)
+      // Sinon → afficher la lune (pour passer au sombre)
+    }
+
+    updateIcon(); // appel immédiat pour afficher la bonne icône au chargement
+
+    btn.addEventListener('click', function () {
+      // addEventListener écoute les clics sur le bouton
+      // À chaque clic, on bascule la classe "dark" sur le <body>
+      document.body.classList.toggle('dark');
+      // toggle = ajoute la classe si absente, la retire si présente
+
+      // On sauvegarde le choix dans localStorage
+      // localStorage = stockage persistant dans le navigateur (survit à la fermeture)
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+
+      updateIcon(); // met à jour l'icône après le changement
+    });
+  </script>
+  
+  <script>
+    window.addEventListener('scroll', () => {
+      const item = document.getElementById('navigation-links');
+      if(!item) return;
+      
+      const currentScroll = window.scrollY;
+      const scrollThreshold = 75;
+
+      if(currentScroll >= scrollThreshold){
+        item.style.opacity = '0';
+        item.style.visibility='none';
+        item.style.pointerEvents = 'none';
+      }
+      else{
+        item.style.opacity = 1-(currentScroll/scrollThreshold);
+        item.style.visibility = 'visible';
+        item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+  <dialog class="project_lightbox"><img alt=""></dialog>
+  <script src="project.js" defer></script>
+</body>
+</html>
