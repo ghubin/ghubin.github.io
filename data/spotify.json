@@ -1,125 +1,125 @@
 {
-  "week": "2026-09-21/2026-09-28",
+  "week": "2026-09-28/2026-10-05",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Uprising",
-      "artist": "Muse",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02b6d4566db0d12894a1a3b7a2",
+      "name": "The Pretender",
+      "artist": "Foo Fighters",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029d957247c6c610cb7c4da1c5",
       "plays": 2
     },
     {
       "rank": 2,
-      "name": "Psycho",
-      "artist": "Muse",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02808846f0223d97d5963c420d",
-      "plays": 2
+      "name": "Free Bird",
+      "artist": "Lynyrd Skynyrd",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02128450651c9f0442780d8eb8",
+      "plays": 1
     },
     {
       "rank": 3,
-      "name": "Sans Fin",
-      "artist": "Montee",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02600213032dd3d0ef41fca0cb",
-      "plays": 2
+      "name": "Perfect",
+      "artist": "Simple Plan",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02fbee462a3aa4e7ea05e07aa5",
+      "plays": 1
     },
     {
       "rank": 4,
-      "name": "Clothes on the Ground - Melting",
-      "artist": "Feldup",
-      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
-      "plays": 2
+      "name": "T.N.T.",
+      "artist": "AC/DC",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028c7f355d649e0a3cfcf6fc39",
+      "plays": 1
     },
     {
       "rank": 5,
-      "name": "Towards Happiness",
-      "artist": "Feldup",
-      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
-      "plays": 2
+      "name": "IGYEIH",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "plays": 1
     },
     {
       "rank": 6,
-      "name": "Catch a Breath",
-      "artist": "Feldup",
-      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
-      "plays": 2
+      "name": "Roxanne",
+      "artist": "The Police",
+      "cover": "https://i.scdn.co/image/ab67616d00001e022043dd3544a339547d04b436",
+      "plays": 1
     },
     {
       "rank": 7,
-      "name": "Running on Empty (The Sacrifice)",
-      "artist": "Feldup",
-      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
-      "plays": 2
+      "name": "Selfless",
+      "artist": "The Strokes",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39",
+      "plays": 1
     },
     {
       "rank": 8,
-      "name": "Get Up OK",
-      "artist": "Feldup",
-      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
-      "plays": 2
+      "name": "Beautiful Day",
+      "artist": "U2",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0238fa0dfe55b1ff2e8c962bae",
+      "plays": 1
     },
     {
       "rank": 9,
-      "name": "Airbag",
-      "artist": "Radiohead",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
-      "plays": 2
+      "name": "Under Pressure (feat. David Bowie)",
+      "artist": "Queen",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0244c0a9843fac69db4d56d14e",
+      "plays": 1
     },
     {
       "rank": 10,
-      "name": "Paranoid Android",
-      "artist": "Radiohead",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
-      "plays": 2
+      "name": "In the End",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02e2f039481babe23658fc719a",
+      "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Muse",
-      "plays": 21
+      "name": "Danish National Symphony Orchestra",
+      "plays": 15
     },
     {
       "rank": 2,
-      "name": "Feldup",
+      "name": "Christian Schumann",
       "plays": 15
     },
     {
       "rank": 3,
-      "name": "Radiohead",
-      "plays": 15
+      "name": "Dire Straits",
+      "plays": 8
     },
     {
       "rank": 4,
-      "name": "Linkin Park",
-      "plays": 11
+      "name": "Muse",
+      "plays": 6
     },
     {
       "rank": 5,
-      "name": "Red Hot Chili Peppers",
-      "plays": 8
+      "name": "Linkin Park",
+      "plays": 5
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Towards Happiness",
-      "artist": "Feldup",
-      "cover": "https://i.scdn.co/image/ab67616d00001e024db1e24f6f18d1dac16184e6",
+      "name": "Fantasymphony",
+      "artist": "Ramin Djawadi",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0230edd9d9b21dff8892b6a7eb",
       "plays": 15
     },
     {
       "rank": 2,
-      "name": "OK Computer",
-      "artist": "Radiohead",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856",
-      "plays": 14
+      "name": "Brothers In Arms (Remastered 1996)",
+      "artist": "Dire Straits",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0258c4e9c84ece7d31f51636f3",
+      "plays": 8
     },
     {
       "rank": 3,
-      "name": "The Resistance",
-      "artist": "Muse",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02b6d4566db0d12894a1a3b7a2",
-      "plays": 5
+      "name": "From Zero",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "plays": 2
     }
   ]
 }
