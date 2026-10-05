@@ -63,10 +63,8 @@
     <li>
       <!--
         BOUTON DARK MODE
-        aria-label = texte pour les lecteurs d'écran (accessibilité)
-        L'icône changera via JavaScript selon le thème actif
       -->
-      <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
+      <button id="dark-toggle" aria-label="Switch theme">🌙</button>
     </li>
   </ul>
 </nav>
@@ -103,12 +101,12 @@
     <!-- Every section = a <section class="project_section"> with an <h2>.
           Duplicate, rename, or remove as needed for the project. -->
 
-    <section class="project_section">
+    <section class="project_section" id="context">
       <h2>Context</h2>
       <p>While looking for a job (still looking btw, connect with <a href="https://www.linkedin.com/in/géraud-hubin-8a73ba354" target="_blank" rel="noopener noreferrer">me!</a>) I wanted to keep learning and building new skills. That's when I started playing with web development. </p>
     </section>
 
-    <section class="project_section">
+    <section class="project_section" id="realization">
       <h2>Realization</h2>
       <p>I started playing with AI and web development, this site as almost everything nowadays is built with the help of AI. However I did not simply ask to build this website, I kept asking for information and tried to build as much as possible myself, because that's my view on AI, a powerful tool that needs first to understand what is done to be effective.</p>
 
@@ -123,10 +121,19 @@
     
     </section>
 
+    <section class="project_section" id="future">
+      <h2>Future</h2>
+      <p>There are a few ideas and projects that I want to create and implement in the future.</p>
+      <ul>
+        <li>Finish the implementation of the personal Spotify wrapped feature, the data recovery process is ready (explained <a href="spotifywrapped.html">here</a>), but I still need to find a satisfactory way to show them.</li>
+        <li>Create the reading section, with a display of the books I've read and a sorting mechanism.</li>
+        <li>Develop the thought section, type of a blog/journal, but still in brainstorming phase.</li>
+      </ul>
+    </section>
 
-    <!-- Evolutions : to complete -->
-    <section class="project_section" id="evolutions">
-      <h2>Evolutions</h2>
+    <!-- History : to complete -->
+    <section class="project_section" id="history">
+      <h2>History</h2>
       <dl class="project_updates">
         <dt>September 2026</dt>
         <dd>Rebuilding of the homepage to create an interactive desk.</dd>

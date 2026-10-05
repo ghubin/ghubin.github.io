@@ -182,12 +182,12 @@ body.dark .project {
 
 .project_section a {
   text-decoration: none;
-  color: var(--lacostegreen);
+  color: var(--BIC);
 }
 
 .project_section a:hover {
   text-decoration: underline;
-  text-decoration-color: var(--lacostegreen);
+  text-decoration-color: var(--BIC);
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
 }
@@ -273,7 +273,6 @@ body.dark .project {
 }
 
 .project a {
-  color: inherit;
   text-underline-offset: 0.2em;
 }
 
