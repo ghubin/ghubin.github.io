@@ -4,24 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About the Nuton — The Nuton Cave</title>
+  <title>About the Nuton - The Nuton Cave</title>
   <meta name="description" content="Who is the Nuton ? And what is it ?">
+  <meta name="author" content="Géraud Hubin">
+  <meta name="keywords" content="Nuton, Belgian creature, personal website, projects, electronics, engineering, domotics, music">
+  <meta name="robots" content="index, follow">
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+  <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
+  <!-- FAVICON -->
   <link rel="icon" type="image/cave-icon" href="img/cave.png">
 </head>
 
 <body>
-
+  <!--
+    INITIALISATION OF DARK MODE
+    Reading localStorage before the page is displayed,
+    which avoids a "flash" of light theme on load.
+  -->
   <script>
     if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark');
     }
   </script>
 
-  <div class="wrapper">
+
   <nav>
     <div class="nav-left">
       <a id="index-nav" href="index.html" class="nav-logo active">
@@ -198,6 +208,5 @@
     });
   </script>
 
-</div>
 </body>
 </html>

@@ -4,21 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Nuton Cave</title>
+  <title>Reading - The Nuton Cave</title>
   <meta name="description" content="Readings of grumpy mythical Belgian creature">
+  <meta name="author" content="Géraud Hubin">
+  <meta name="keywords" content="Nuton Cave, personal website, projects, reading">
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+  <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
+  <!-- FAVICON -->
   <link rel="icon" type="image/cave-icon" href="img/cave.png">
 </head>
 
 <body>
 
   <!--
-    SCRIPT D'INITIALISATION DU DARK MODE — placé tôt dans le <body>
-    On lit localStorage avant que la page s'affiche,
-    ce qui évite un "flash" de thème clair au chargement.
+    INITIALISATION OF DARK MODE
+    Reading localStorage before the page is displayed,
+    which avoids a "flash" of light theme on load.
   -->
   <script>
     if (localStorage.getItem('theme') === 'dark') {
