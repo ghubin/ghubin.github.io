@@ -22,7 +22,16 @@
   
 </head>
 <body>
-
+<!--
+  INITIALISATION OF DARK MODE
+  Reading localStorage before the page is displayed,
+  which avoids a "flash" of light theme on load.
+-->
+<script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
 <nav>
   <div class="nav-left">
     <a id="index-nav" href="/index.html" class="nav-logo">

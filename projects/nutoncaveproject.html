@@ -21,6 +21,17 @@
   <link rel="icon" type="image/cave-icon" href="../img/cave.png">
 </head>
 <body>
+  
+<!--
+  INITIALISATION OF DARK MODE
+  Reading localStorage before the page is displayed,
+  which avoids a "flash" of light theme on load.
+-->
+<script>
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+  }
+</script>
 
 <nav>
   <div class="nav-left">
