@@ -127,5 +127,31 @@
       "plays": 5
     }
   ],
-  "top_genres": []
+  "top_genres": [
+    {
+      "rank": 1,
+      "name": "rock",
+      "plays": 1898
+    },
+    {
+      "rank": 2,
+      "name": "alternative rock",
+      "plays": 1137
+    },
+    {
+      "rank": 3,
+      "name": "arabic",
+      "plays": 1132
+    },
+    {
+      "rank": 4,
+      "name": "classic rock",
+      "plays": 988
+    },
+    {
+      "rank": 5,
+      "name": "lebanese",
+      "plays": 862
+    }
+  ]
 }
