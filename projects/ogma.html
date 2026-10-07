@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- TITLE OF THE PROJECT -->
-  <title>Nuton Cave</title>
-  <meta name="description" content="Creation of a personal website to showcase the projects.">
+  <title>Ogma - Spotify Wrapped</title>
+  <meta name="description" content="Ogma is a simple github repository activated by a GitHub Action that generates a Spotify Wrapped-like summary of my listening habits (weekly and monthly).">
   <meta name="author" content="Géraud Hubin">
-  <meta name="keywords" content="Nuton Cave, personal website, projects, engineering, web development">
+  <meta name="keywords" content="Nuton Cave, personal website, projects, engineering, web development, Spotify API, Github, Github Actions, Python, Spotify Wrapped">
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,20 +21,19 @@
   <link rel="stylesheet" href="project.css">
   <!-- FAVICON -->
   <link rel="icon" type="image/cave-icon" href="../img/cave.png">
+  
 </head>
 <body>
-  
 <!--
   INITIALISATION OF DARK MODE
   Reading localStorage before the page is displayed,
   which avoids a "flash" of light theme on load.
 -->
 <script>
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-  }
-</script>
-
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
 <nav>
   <div class="nav-left">
     <a id="index-nav" href="/index.html" class="nav-logo">
@@ -65,8 +64,10 @@
     <li>
       <!--
         BOUTON DARK MODE
+        aria-label = texte pour les lecteurs d'écran (accessibilité)
+        L'icône changera via JavaScript selon le thème actif
       -->
-      <button id="dark-toggle" aria-label="Switch theme">🌙</button>
+      <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
     </li>
   </ul>
 </nav>
@@ -76,9 +77,9 @@
 
     <!-- ========== HEADER ========== -->
     <header>
-      <h1 class="project_title">Nuton Cave Website</h1>
+      <h1 class="project_title">Ogma - Personal Spotify Wrapped</h1>
       <p class="project_summary">
-        Personal website to showcase my projects and in the same time learn the basics of web development.
+        Inspired by the Celtic god of eloquence and learning, Ogma is a simple github repository activated by a GitHub Action that generates a Spotify Wrapped-like summary of my listening habits (weekly and monthly)
       </p>
 
       <!-- KEY INFO -->
@@ -88,59 +89,72 @@
         <dt>Start Date</dt>
         <dd>June 2026</dd>
         <dt>Tools</dt>
-        <dd>Python, GitHub Actions, Spotify API</dd>
+        <dd>Python, GitHub, GitHub Actions, Spotify API</dd>
       </dl>
 
       <!-- Tags : same words as for the projects.html filter -->
-      <ul class="skills-list">
-        <li>web development</li>
-        <li>personal project</li>
+      <ul class="project_tags">
+        <li>web-development</li>
+        <li>music</li>
       </ul>
     </header>
 
+    <!-- ========== COVER IMAGE (optional, remove block otherwise) ========== -->
+    <figure class="project_cover">
+      <img src="../img/ogma.svg" alt="Ogma logo">
+      <figcaption>Ogma logo, the name of the god is written in Ogham, the alphabet he created.</figcaption>
+    </figure>
 
     <!-- ========== SECTIONS ========== -->
     <!-- Every section = a <section class="project_section"> with an <h2>.
           Duplicate, rename, or remove as needed for the project. -->
 
-    <section class="project_section" id="context">
+    <section class="project_section">
       <h2>Context</h2>
-      <p>While looking for a job (still looking btw, connect with <a href="https://www.linkedin.com/in/géraud-hubin-8a73ba354" target="_blank" rel="noopener noreferrer">me!</a>) I wanted to keep learning and building new skills. That's when I started playing with web development. </p>
+      <p>After the yearly Spotify Wrapped dropped, I became curious to get more data and on a more regular basis. 
+        The yearly wrapped is fun and you can see your new discoveries of the year but the data you get is only the one they want to show you, and you can't get it more than once a year.
+        I wanted to have a more complete and regular overview of my listening habits, so I created Ogma. The name comes from the Celtic (Ogam for the Irish and Scottish and Ogios for the gallic) 
+        god of eloquence and learning, who is said to have created the Ogham alphabet. 
+        I find the the name fitting as Ogma is a tool allowing me to inscribed and save my listening habits.
+      </p>
     </section>
 
-    <section class="project_section" id="realization">
+    <section class="project_section">
       <h2>Realization</h2>
-      <p>I started playing with AI and web development, this site as almost everything nowadays is built with the help of AI. However I did not simply ask to build this website, I kept asking for information and tried to build as much as possible myself, because that's my view on AI, a powerful tool that needs first to understand what is done to be effective.</p>
-
-      <p>In the beginning, I focused on learning the fundamentals of web development and how to integrate AI tools into my workflow. I made a first page highly inspired by <a href="https://chester.how" rel="noopener noreferrer">Chester.How</a>, with a grid system that would able me to show different projects. I tried to integrate a simple design in the shape of a post-it, but was not completely convinced by the result. In the meantime, I also started to construction of a personal Spotify weekly wrapped, as the company only provides this kind of information on a year time.</p>
-
-      <figure class="project_figure">
-        <img src="../img/projects/NutonCave/OldHomepage.PNG" alt="Old homepage of the Nuton Cave website">
-        <figcaption>Old Homepage with a personal touch, the post-it.</figcaption>
-      </figure>
-
-      <p>After a few months, I decided to rebuild the homepage to create a more interactive experience. I wanted to create a desk where the user could find different projects and information about me. This is how the current design of the homepage came about; it is designed to be adaptable, where the new projects will be added over time in the shape on new objects placed on the walls or the desk.</p>
-    
+      <p>Using the Spotify API is quite easy to use to get data, however, there is no streaming history per se.
+        You cannot simply ask for your last month or more of listening history. You can get the last 50 tracks played, nothing more.
+        I had to go around and build the history myself, using a GitHub Action running everyday to get the last 50 tracks played and add them to a .json file inside the repository.
+        This is the first real limitation, as if I listen to more than 50 tracks a day, I will lose informations on the tracks listened to earlier in the day.
+        It can be estimated that the time required to listen to 50 tracks oscillates between 2h40 and 3h30, depending on the genre of music.
+        To be sure to not lose any data, it is possible to simply run the GitHub Action more often, but the number of times I would listen to more than 50 tracks a day is not that high and running so many useless GitHub Actions
+        would be a waste of resources. 
+        <br>
+        <br>
+        For each track, it aso recovers the name, artist, album and genre, to get a more complete overview.
+        Then once per week a second GitHub Action is triggered to generate the weekly summary with the top 10 tracks, top 5 artists and genre and top 3 albums, as well as purging the previous history.json. 
+        But before purging, the history.json is pushed to the repository of website, so that I can display the summaries here at <a href="../listeningRoom.html">listeningRoom.html</a>.
+        It was fun to learn about the API calls and GitHub Actions, how to manage them and how to use them to recover data.
+      </p>
     </section>
 
     <section class="project_section" id="future">
       <h2>Future</h2>
       <p>There are a few ideas and projects that I want to create and implement in the future.</p>
       <ul>
-        <li>Finish the implementation of the personal Spotify wrapped feature, the data recovery process is ready (explained <a href="ogma.html">here</a>), but I still need to find a satisfactory way to show them.</li>
-        <li>Create the reading section, with a display of the books I've read and a sorting mechanism.</li>
-        <li>Develop the thought section, type of a blog/journal, but still in brainstorming phase.</li>
+        <li>Implement the visualization of the data and summaries inside <a href="../listeningRoom.html">listeningRoom.html</a></li>
+        <li>Compare to the data recovered through the <a href="https://www.last.fm/api">Last.fm API</a> because it's probably easier and without loosing data, ...</li>
       </ul>
-    </section>
 
-    <!-- History : to complete -->
-    <section class="project_section" id="history">
-      <h2>History</h2>
+    <!-- Evolutions : to complete -->
+    <section class="project_section" id="evolutions">
+      <h2>Evolutions</h2>
       <dl class="project_updates">
+        <dt>October 2026</dt>
+        <dd>Added the monthly summary.</dd>
         <dt>September 2026</dt>
-        <dd>Rebuilding of the homepage to create an interactive desk.</dd>
-        <dt>June 2026</dt>
-        <dd>Start of the project and first design of homepage.</dd>
+        <dd>Added the album covers and genres.</dd>
+        <dt>September 2026</dt>
+        <dd>Start of the project.</dd>
       </dl>
     </section>
 
@@ -211,6 +225,6 @@
     });
   </script>
   <dialog class="project_lightbox"><img alt=""></dialog>
-  <script src="project.js" defer></script>
+  <script src="project.js" defer></script>  
 </body>
 </html>

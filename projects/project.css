@@ -108,10 +108,12 @@ body.dark .project {
 .project_cover img,
 .project_figure img {
   display: block;
+  margin: auto;
   max-width: 100%;
   height: auto;
   border: 1px solid var(--project_line);
 }
+
 
 /* Lightbox for enlarged images */
 .project_lightbox {
@@ -142,7 +144,13 @@ body.dark .project {
   color: var(--muted);
 }
 
-.project_cover, .project_figure:hover {
+.project_cover:hover {
+  transform: scale(1.05) translateY(-5px);
+  filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
+}
+
+.project_figure:hover {
   transform: scale(1.05) translateY(-5px);
   filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
   cursor: pointer;
