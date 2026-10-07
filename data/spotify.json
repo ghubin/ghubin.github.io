@@ -1,125 +1,131 @@
 {
-  "week": "2026-09-28/2026-10-05",
+  "week": "2026-09-30/2026-10-07",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "The Pretender",
-      "artist": "Foo Fighters",
-      "cover": "https://i.scdn.co/image/ab67616d00001e029d957247c6c610cb7c4da1c5",
-      "plays": 2
+      "name": "Song 2 - 2012 Remaster",
+      "artist": "Blur",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "plays": 1
     },
     {
       "rank": 2,
-      "name": "Free Bird",
-      "artist": "Lynyrd Skynyrd",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02128450651c9f0442780d8eb8",
+      "name": "Jerk It Out",
+      "artist": "Caesars",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     },
     {
       "rank": 3,
-      "name": "Perfect",
-      "artist": "Simple Plan",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02fbee462a3aa4e7ea05e07aa5",
+      "name": "Smoke on the Water - remastered 2012",
+      "artist": "Deep Purple",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     },
     {
       "rank": 4,
-      "name": "T.N.T.",
-      "artist": "AC/DC",
-      "cover": "https://i.scdn.co/image/ab67616d00001e028c7f355d649e0a3cfcf6fc39",
+      "name": "Money For Nothing - Remastered 1996",
+      "artist": "Dire Straits",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     },
     {
       "rank": 5,
-      "name": "IGYEIH",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
+      "name": "One World - Remastered 1996",
+      "artist": "Dire Straits",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     },
     {
       "rank": 6,
-      "name": "Roxanne",
-      "artist": "The Police",
-      "cover": "https://i.scdn.co/image/ab67616d00001e022043dd3544a339547d04b436",
+      "name": "Ride Across The River - Remastered 1996",
+      "artist": "Dire Straits",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     },
     {
       "rank": 7,
-      "name": "Selfless",
-      "artist": "The Strokes",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02e3f1ba3de4659708c25d0f39",
+      "name": "So Far Away - Remastered 1996",
+      "artist": "Dire Straits",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     },
     {
       "rank": 8,
-      "name": "Beautiful Day",
-      "artist": "U2",
-      "cover": "https://i.scdn.co/image/ab67616d00001e0238fa0dfe55b1ff2e8c962bae",
+      "name": "The Man's Too Strong - Remastered 1996",
+      "artist": "Dire Straits",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     },
     {
       "rank": 9,
-      "name": "Under Pressure (feat. David Bowie)",
-      "artist": "Queen",
-      "cover": "https://i.scdn.co/image/ab67616d00001e0244c0a9843fac69db4d56d14e",
+      "name": "Walk Of Life - Remastered 1996",
+      "artist": "Dire Straits",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     },
     {
       "rank": 10,
-      "name": "In the End",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02e2f039481babe23658fc719a",
+      "name": "Why Worry - Remastered 1996",
+      "artist": "Dire Straits",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Danish National Symphony Orchestra",
-      "plays": 15
-    },
-    {
-      "rank": 2,
-      "name": "Christian Schumann",
-      "plays": 15
-    },
-    {
-      "rank": 3,
       "name": "Dire Straits",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "plays": 8
     },
     {
-      "rank": 4,
+      "rank": 2,
       "name": "Muse",
-      "plays": 6
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "plays": 8
+    },
+    {
+      "rank": 3,
+      "name": "Nancy Ajram",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "plays": 4
+    },
+    {
+      "rank": 4,
+      "name": "Fares Karam",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "plays": 2
     },
     {
       "rank": 5,
-      "name": "Linkin Park",
-      "plays": 5
+      "name": "John Williams",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+      "plays": 2
     }
   ],
   "top_albums": [
     {
       "rank": 1,
       "name": "Fantasymphony",
-      "artist": "Ramin Djawadi",
-      "cover": "https://i.scdn.co/image/ab67616d00001e0230edd9d9b21dff8892b6a7eb",
-      "plays": 15
+      "artist": "Danish National Symphony Orchestra",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81d3ead7cbb8c33214e6bfc3e28202f5.jpg",
+      "plays": 8
     },
     {
       "rank": 2,
       "name": "Brothers In Arms (Remastered 1996)",
       "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d00001e0258c4e9c84ece7d31f51636f3",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ec93b54c76724e267bd7a69c69eeb5f7.jpg",
       "plays": 8
     },
     {
       "rank": 3,
-      "name": "From Zero",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d00001e028be9eeb8f19696ef2fd3b6b4",
-      "plays": 2
+      "name": "The Wow! Signal",
+      "artist": "Muse",
+      "cover": "https://lastfm-img.freetls.fastly.net/i/u/300x300/31aed915bb0883a5273375be29016294.png",
+      "plays": 5
     }
-  ]
+  ],
+  "top_genres": []
 }
