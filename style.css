@@ -1172,7 +1172,7 @@ footer {
    RESPONSIVE — mobile
    ========================================= */
 @media (max-width: 600px) {
-  nav { padding: 1rem 1.5rem; }
+  .nav { padding: 1rem 1.5rem; }
   .nav-logo { font-size: 0.95rem; }
   .hero, .articles-grid, .about-wrapper, .article-wrapper { padding-left: 1.5rem; padding-right: 1.5rem; }
   .about-header { flex-direction: column; gap: 1.5rem; }
