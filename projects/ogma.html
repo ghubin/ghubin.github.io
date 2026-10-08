@@ -145,7 +145,7 @@
       </p>
       <h3>Second Version</h3>
       <p>In the middle of the redaction of this project page, I realised that I already used to track a bit my listening habits through <a href="https://www.last.fm" target="_blank" rel="noopener noreferrer">Last.fm</a> because it was linked to my Spotify.
-        Stronger and wiser with my new knowledge of API's and the understanding that many websites and tools I used had their own API and often if not always free to use, I digged inside it.
+        Stronger and wiser with my new knowledge of API's and the understanding that many websites and tools I used had their own <a href="https://www.last.fm/api" target="_blank" rel="noopener noreferrer">API</a> and often if not always free to use, I digged inside it.
         What a surprise, it already does what I tried to tinker with my small repo and actions.
       </p>   
         <br>
@@ -155,17 +155,30 @@
         </figure>
 
         <p>
-        The calls user.getTopTracks, user.getTopAlbums, user.getTopArtists and user.getTopTags can return the informations for up to 50 elements and from a specified time window.
+        The calls user.getTopTracks, user.getTopAlbums and user.getTopArtists can return the informations on the top listened to elements for up to the top 50 and from a specified time window.
+        There is also a getTopTags for genre, but as it does not have a time period that can be precised, it would not work for my case of use.
         It is a moving window, so 1 week takes the data from the 7 previous days and month for the last 30 days. I decided to leave it this way, a day would not modify that much the results.
         It should also be noted that the their is already a weekly chart that can be extracted from Last.fm with one call, but I wanted to keep it my way.
         <br>
+        </p>
+        <figure class="project_figure">
+          <img src="../img/projects/Ogma/APIResponse.PNG" alt="Typical Response for user.getTopArtists">
+          <figcaption>Sample response for a user.getTopArtists (credit <a href="https://www.last.fm/api/show/user.getTopArtists" target="_blank" rel="noopener noreferrer">Last.fm API</a>)</figcaption>
+        </figure>
+
+        <p>
+        Because these tools made my life much easier, I migrated to the new calls to recover data, as they would not require a daily call that could even miss songs in case of prolongated listening sessions.
+        To get the genre, I call also artist.getTopTags and use the number of stream on the period to weight the value. 
         <br>
-        Because these tools made my life much easier, I migrated to the new calls to recover data, as they would not require a daily call that could even miss songs in case of prolongated listening sessions. 
-        However, these calls have a small defect, they do not recover the pictures for the artists or the tracks, well they give you placeholders. Lucky for me I already set up the Spotify API, which can recover these images.
+        The secrets for the Username and last.fm API key join the ones for Spotify as well in the repository.
+        <br>
+        <br>
+        The calls are great but there is still a small problem, they do not recover the pictures for netiher the artists nor the tracks, well they give you placeholders. Lucky for me I already set up the Spotify API, which can recover these images.
         By hybridizing the API calls I can recover the images for the top tracks and artists found using the user.getTop(..) from last.fm. 
         It resulted in a much simpler file tree and fewer GitHub Action calls, only one per week and one per month (total 5 per month) versus one everyday + the weekly + the monthly (around 36 per month).
-        The API calls are also much more reduced, instead of asking for all the previous listened to tracks, artists, album and genre from these tracks, it comes directly by 4 different calls.
+        The API calls are also much more reduced, instead of asking for all the previous listened to tracks, artists and album from these tracks, it comes directly by 3 different calls.
         I just have to add the layer to Spotify, but it is focused on a small list.        
+        In the same idea, to reduce the number of calls for the genre of the artist, they are stored in a cache inside the repo, that is embellished when a new artist enters the listened database.
       </p>
     </section>
 
@@ -175,6 +188,7 @@
         <li>API: Working principl, calls</li>
         <li>GitHub Actions and Secrets</li>
         <li>JSON format and data management</li>
+        <li>More HTML and redaction skills</li>
       </ul>
     </section>
 
@@ -183,7 +197,7 @@
       <p>There are a few ideas and projects that I want to create and implement in the future.</p>
       <ul>
         <li>Implement the visualization of the data and summaries inside <a href="../listeningRoom.html">listeningRoom.html</a></li>
-        </ul>
+      </ul>
 
     <!-- Evolutions : to complete -->
     <section class="project_section" id="history">
