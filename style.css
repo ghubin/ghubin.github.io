@@ -14,6 +14,7 @@
   --bordernav:#565656;
   --nav-left:rgb(229 229 229);
   --lacostegreen: #004526;
+  --role:#004526;
   --upforest: #014421;
   --BIC:#5980d4;
   --font-display: 'Playfair Display', Georgia, serif;
@@ -50,6 +51,7 @@ body.dark {
   --wall: #2e2820;
   --floor: #ac9a82;
   --plinthe: #c0af9b;
+  --role:#f3701e;
 }
 
 /* =========================================
@@ -1060,7 +1062,7 @@ a.article-card {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--lacostegreen);
+  color: var(--role);
   margin-top: 0.8rem;
   display: block;
 }
@@ -1089,7 +1091,7 @@ a.article-card {
 
 .about-section a:hover {
   text-decoration: underline;
-  text-decoration-color: var(--lacostegreen);
+  text-decoration-color: var(--role);
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
 
