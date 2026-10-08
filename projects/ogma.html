@@ -113,7 +113,7 @@
         The yearly wrapped is fun and you can see your new discoveries of the year but the data you get is only the one they want to show you, and you can't get it more than once a year.
         I wanted to have a more complete and regular overview of my listening habits, so I created Ogma. The name comes from the Celtic (Ogma for the Irish and Scottish and Ogmios for the Gallic people) 
         god of eloquence and learning, who is said to have created the Ogham alphabet. 
-        I find the the name strikingly fitting as Ogma is a tool allowing me to inscribed and save my listening habits.
+        I find the the name strikingly fitting as Ogma is a tool allowing me to inscribe and save my listening habits.
       </p>
     </section>
 
@@ -137,10 +137,10 @@
       <p>  
         For each track, it also recovers the name, artist, album and genre, to get a more complete overview.
         Then once per week a second GitHub Action is triggered to generate the weekly summary with the top 10 tracks, top 5 artists and genre and top 3 albums, as well as purging the previous history.json. 
-        But before purging, the history.json is pushed to the repository of website, so that I can display the summaries here in <a href="../listeningRoom.html">listening room</a>.
+        But before purging, the history.json is pushed to the repository of the website, so that I can display the summaries here in the <a href="../listeningRoom.html">listening room</a>.
         <br>
         <br>
-        In order to keep the important values that are the API keys from Spotify and GitHub to push the data to the other repo, they are placed inside secrets in the repository.
+        In order to keep the important values that are the API keys from Spotify and GitHub (to push the data to the website repository), they are placed inside secrets in the repository.
         It was fun to learn about the API calls and GitHub Actions, how to manage them and how to use them to recover data.
       </p>
       <h3>Second Version</h3>
@@ -156,7 +156,7 @@
 
         <p>
         The calls user.getTopTracks, user.getTopAlbums and user.getTopArtists can return the informations on the top listened to elements for up to the top 50 and from a specified time window.
-        There is also a getTopTags for genre, but as it does not have a time period that can be precised, it would not work for my case of use.
+        There is also a getTopTags for genre, but as it does not have a time period that can be precised, it would not work for my usecase.
         It is a moving window, so 1 week takes the data from the 7 previous days and month for the last 30 days. I decided to leave it this way, a day would not modify that much the results.
         It should also be noted that the their is already a weekly chart that can be extracted from Last.fm with one call, but I wanted to keep it my way.
         <br>
@@ -174,7 +174,7 @@
         <br>
         <br>
         The calls are great but there is still a small problem, they do not recover the pictures for netiher the artists nor the tracks, well they give you placeholders. Lucky for me I already set up the Spotify API, which can recover these images.
-        By hybridizing the API calls I can recover the images for the top tracks and artists found using the user.getTop(..) from last.fm. 
+        By hybridizing the API calls I can recover the images for the top tracks and artists found using the user.getTop(...) from last.fm. 
         It resulted in a much simpler file tree and fewer GitHub Action calls, only one per week and one per month (total 5 per month) versus one everyday + the weekly + the monthly (around 36 per month).
         The API calls are also much more reduced, instead of asking for all the previous listened to tracks, artists and album from these tracks, it comes directly by 3 different calls.
         I just have to add the layer to Spotify, but it is focused on a small list.        
@@ -185,7 +185,7 @@
     <section class="project_section" id="Learnings">
       <h2>Learnings</h2>
       <ul>
-        <li>API: Working principl, calls</li>
+        <li>API: Working principle and calls</li>
         <li>GitHub Actions and Secrets</li>
         <li>JSON format and data management</li>
         <li>More HTML and redaction skills</li>
