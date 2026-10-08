@@ -1,5 +1,5 @@
 {
-  "week": "2026-09-30/2026-10-07",
+  "week": "2026-10-01/2026-10-08",
   "top_tracks": [
     {
       "rank": 1,
@@ -75,14 +75,14 @@
   "top_artists": [
     {
       "rank": 1,
-      "name": "Dire Straits",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb4bdaa8c5e65b64f50549c393",
-      "plays": 8
+      "name": "Muse",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebccb215d769112ec422a59ce6",
+      "plays": 9
     },
     {
       "rank": 2,
-      "name": "Muse",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebccb215d769112ec422a59ce6",
+      "name": "Dire Straits",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb4bdaa8c5e65b64f50549c393",
       "plays": 8
     },
     {
@@ -124,34 +124,34 @@
       "name": "The Wow! Signal",
       "artist": "Muse",
       "cover": "https://i.scdn.co/image/ab67616d0000b273b295bd39e098e7b68d57aacf",
-      "plays": 5
+      "plays": 6
     }
   ],
   "top_genres": [
     {
       "rank": 1,
       "name": "rock",
-      "plays": 26
+      "plays": 27
     },
     {
       "rank": 2,
       "name": "british",
-      "plays": 21
+      "plays": 22
     },
     {
       "rank": 3,
       "name": "Progressive rock",
-      "plays": 18
+      "plays": 19
     },
     {
       "rank": 4,
       "name": "alternative",
-      "plays": 17
+      "plays": 18
     },
     {
       "rank": 5,
       "name": "alternative rock",
-      "plays": 16
+      "plays": 17
     }
   ]
 }
