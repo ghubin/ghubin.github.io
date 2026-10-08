@@ -101,7 +101,7 @@ body.dark .project {
 /* --- Cover Image (optional) --- */
 .project_cover,
 .project_figure {
-  margin: 2.5rem 0 1.5rem;
+  margin: 1rem 0 1.75rem;
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
 }
 
@@ -163,13 +163,14 @@ body.dark .project {
 }
 
 .project_section h2 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.35rem;
   font-size: 1.45rem;
 }
 
 .project_section h3 {
-  margin: 1.75rem 0 0.5rem;
-  font-size: 1.25rem;
+  color: 	#f3701e;
+  margin: 1rem 1rem 0.5rem;
+  font-size: 1.15rem;
 }
 
 .project_section p {
@@ -300,13 +301,13 @@ body.dark .project {
 }
 
 .project_back a {
-  color: var(--lacostegreen);
+  color: #f3701e;
   text-decoration: none;
 }
 
 .project_back a:hover {
   text-decoration: underline;
-  text-decoration-color: var(--lacostegreen);
+  text-decoration-color: #f3701e;
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
 }
