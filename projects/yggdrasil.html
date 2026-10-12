@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- TITLE OF THE PROJECT -->
+  <title>Yggdrasil - Domotic Server</title>
+  <meta name="description" content="Domotic server based on Home Assistant - Each tool is symbolised by a divinity/myth/god">
+  <meta name="author" content="Géraud Hubin">
+  <meta name="keywords" content="Nuton Cave, personal website, projects, engineering, web development, domotics, DIY, HomeAssistant">
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../style.css">
+  <!-- CSS PROJECTS -->
+  <link rel="stylesheet" href="project.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/cave-icon" href="../img/cave.png">
+  
+</head>
+<body>
+<!--
+  INITIALISATION OF DARK MODE
+  Reading localStorage before the page is displayed,
+  which avoids a "flash" of light theme on load.
+-->
+<script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
+<nav>
+  <div class="nav-left">
+    <a id="index-nav" href="/index.html" class="nav-logo">
+      <span class="nav-highlight"></span> 
+      The Cave
+    </a>
+    <a id="projects-nav" href="/projects.html" class="nav-logo"> 
+      <span class="nav-highlight"></span>
+      Projects 
+    </a>
+    <a id="reading-nav" href="/study.html" class="nav-logo"> 
+      Reading 
+      <span class="nav-highlight"></span>
+    </a> 
+    <a id="listening-nav" href="/listeningRoom.html" class="nav-logo">
+      Listening
+      <span class="nav-highlight"></span>
+    </a>
+    <a id="blog-nav" href="/thoughts.html" class="nav-logo">
+      Thoughts
+      <span class="nav-highlight"></span>
+    </a>
+
+  </div>
+  <ul id= "navigation-links" class="nav-links">
+    <li><a href="/about.html">About the Nuton</a></li>
+    <li><a href="https://github.com/ghubin" target="_blank" rel="noopener noreferrer">Github</a></li>
+    <li>
+      <!--
+        BOUTON DARK MODE
+        aria-label = texte pour les lecteurs d'écran (accessibilité)
+        L'icône changera via JavaScript selon le thème actif
+      -->
+      <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
+    </li>
+  </ul>
+</nav>
+
+<main class="project">
+  <article>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+      <h1 class="project_title">Yggdrasil</h1>
+      <p class="project_summary">
+        Domotics server using Home Assistant OS on a Raspberry Pi 5, each module is represented by a divinity/myth and all are linked by the tree Yggdrasil.
+      </p>
+
+      <!-- KEY INFO -->
+      <dl class="project_meta">
+        <dt>Status</dt>
+        <dd>In Progress</dd>
+        <dt>Start Date</dt>
+        <dd>September 2026</dd>
+        <dt>Tools</dt>
+        <dd>Raspberry Pi 5, Home Assistant OS, GitHub, STIB API</dd>
+      </dl>
+
+      <!-- Tags : same words as for the projects.html filter -->
+      <ul class="skills-list">
+        <li>personal project</li>
+        <li>domotics</li>
+        <li>electronics</li>
+      </ul>
+    </header>
+
+    <!-- ========== COVER IMAGE (optional, remove block otherwise) ========== -->
+    <figure class="project_cover">
+      <img src="../img/yggdrasil.png" style="max-width: 60%" alt="Logo Yggdrasil">
+      <figcaption>Yggdrasil linking all sensors and tools</figcaption>
+    </figure>
+
+    <!-- ========== SECTIONS ========== -->
+    <!-- Every section = a <section class="project_section"> with an <h2>.
+          Duplicate, rename, or remove as needed for the project. -->
+
+    <section class="project_section" id="context">
+      <h2>Context</h2>
+      <p>The idea started with the COVID and then was accelerated with the discovery of <a href="https://birdie.design/" target="_blank" rel="noopener noreferrer">Birdie</a> (the CO<sub>2</sub> monitoring station)
+        and reading about the effect of CO<sub>2</sub> concentration on <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=CO2+level+sleep&btnG=" target="_blank" rel="noopener noreferrer">sleep quality</a>, <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=co2+level+decision+ability&btnG=&oq=co2+level+decision+ab" target="_blank" rel="noopener noreferrer"> focus and decision-making ability</a>.
+        However, between the price for Birdie and the curiosity to understand and create a device that could tell me when to open the windows to stay alert,
+        I started looking into creating such device and I chose to build it using <a href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer">Home Assistant</a> as the backbone. 
+        It was chosen because it is quite easy to add homemade sensors using ESPHome, as well as more ready-made connected objects such as Philips Hue and other smart lights, when I will add new items to the system.             
+      </p>
+    </section>
+
+    <section class="project_section" id="realization">
+      <h2>Realization</h2>
+      <p>The installation of the HomeAssistant OS was very simple using the furnished <a href="https://www.home-assistant.io/installation/raspberrypi/" target="_blank" rel="noopener noreferrer">tutorials</a>, 
+        I used an external SSD flashed using the Raspberry Pi Imager that already includes the OS in its installation folder. 
+        The creation of a the home server was then a question of settings and linking to the wifi and the design of a dashboard using the tools given by HA.
+
+      </p>
+
+      <figure class="project_figure">
+          <img src="../img/projects/Yggdrasil/RPi5.png" style="max-width: 60%" alt="Raspberry Pi 5">
+          <figcaption>Raspberry Pi 5</figcaption>
+      </figure>
+
+        <h3 id="materials">Elements and materials</h3>
+      <p> 
+      The list of the current elements constituting the complete system, which is evolving with time and projects
+      </p>
+    </section>
+
+      <div class="project_table">
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Components</th><th>Role</th><th>Reference</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Yggdrasil</td><td>Raspberry Pi 5</td><td>Orchestrates and links all devices</td><td><a href="https://www.home-assistant.io/"target="_blank" rel="noopener noreferrer">HA</a> - <a href="https://www.raspberrypi.com/" target="_blank" rel="noopener noreferrer">RPi5</a></td></tr>
+            <tr><td>Stribog</td><td>SCD41 sensor and ESP32C3</td><td>CO<sub>2</sub> sensor, notify me to open windows</td><td> <a href="../projects/stribog.html">Stribog</a></td></tr>
+            <tr><td>Demeter</td><td>Capacitive Soil Moisture and ESP32C3</td><td>Tells me when to water my plant</td><td> <a href="../projects/demeter.html">Demeter</a></td></tr>
+            <tr><td>Mercurius</td><td>64x32 LED Matrix, STIB API and ESP32</td><td>Gives me next arrival of public transportation</td><td><a href="../projects/mercurius.html">Mercurius</a></td></tr>
+            <tr><td> </td><td> </td><td> </td><td> </td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <section class="project_section" id="Learnings">
+      <h2>Learnings</h2>
+      <ul>
+        <li>Home Assistant and YAML</li>
+        <li>GitHub Repositories</li>
+        <li>Electronics: Soldering, sensors and circuit design</li>
+        <li>KiCad: PCB Design</li>
+        <li>API: calls and usage of data</li>
+      </ul>
+    </section>
+
+    <section class="project_section" id="future">
+      <h2>Future</h2>
+      <p>There are a few sensors and automations that I want to add</p>
+      <ul>
+        <li>Finish the battery powering of Stribog</li>
+        <li>Start Demeter project</li>
+        <li>Install the Mercurius project (backend and data gathering are ready)</li>
+      </ul>
+
+    <!-- Evolutions : to complete -->
+    <section class="project_section" id="history">
+      <h2>History</h2>
+      <dl class="project_updates">
+        <dt>October 2026</dt>
+        <dd>Installation of Mercurius inside Yggdrasil, data gathered and ready to be displayed</dd>
+        <dt>October 2026</dt>
+        <dd>Addition of the first sensor to the system - <a href="../projects/stribog.html">Stribog</a></dd>
+        <dt>September 2026</dt>
+        <dd>Start of the project.</dd>
+      </dl>
+    </section>
+
+    <section class="project_section">
+      <h2>Links</h2>
+      <ul class="project_links">
+        <li><a href="https://github.com/ghubin">GitHub Repository</a></li>
+      </ul>
+    </section>
+
+    <!-- ========== RETURN ========== -->
+    <p class="project_back">
+      <a href="../projects.html">Back to projects &#8617</a>
+    </p>
+
+  </article>
+</main>
+  <footer>
+    <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('dark-toggle');
+    // getElementById cherche l'élément avec id="dark-toggle"
+
+    // Fonction qui met à jour l'icône selon le thème actif
+    function updateIcon() {
+      // body.classList.contains('dark') renvoie true ou false
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      // Si dark → afficher le soleil (pour repasser au clair)
+      // Sinon → afficher la lune (pour passer au sombre)
+    }
+
+    updateIcon(); // appel immédiat pour afficher la bonne icône au chargement
+
+    btn.addEventListener('click', function () {
+      // addEventListener écoute les clics sur le bouton
+      // À chaque clic, on bascule la classe "dark" sur le <body>
+      document.body.classList.toggle('dark');
+      // toggle = ajoute la classe si absente, la retire si présente
+
+      // On sauvegarde le choix dans localStorage
+      // localStorage = stockage persistant dans le navigateur (survit à la fermeture)
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+
+      updateIcon(); // met à jour l'icône après le changement
+    });
+  </script>
+  
+  <script>
+    window.addEventListener('scroll', () => {
+      const item = document.getElementById('navigation-links');
+      if(!item) return;
+      
+      const currentScroll = window.scrollY;
+      const scrollThreshold = 75;
+
+      if(currentScroll >= scrollThreshold){
+        item.style.opacity = '0';
+        item.style.visibility='none';
+        item.style.pointerEvents = 'none';
+      }
+      else{
+        item.style.opacity = 1-(currentScroll/scrollThreshold);
+        item.style.visibility = 'visible';
+        item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+  <dialog class="project_lightbox"><img alt=""></dialog>
+  <script src="project.js" defer></script>  
+</body>
+</html>

@@ -168,7 +168,7 @@ body.dark .project {
 }
 
 .project_section h3 {
-  color: 	#f3701e;
+  color: var(--role);
   margin: 1rem 1rem 0.5rem;
   font-size: 1.15rem;
 }
@@ -257,7 +257,6 @@ body.dark .project {
   color: var(--project_muted);
   font-weight: 600;
 }
- 
 /* --- Evolutions : Dates on left --- */
 .project_updates {
   display: grid;
@@ -283,6 +282,7 @@ body.dark .project {
 
 .project a {
   text-underline-offset: 0.2em;
+  color: var(--BIC);
 }
 
 .project a:focus-visible {
