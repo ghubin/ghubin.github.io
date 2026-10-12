@@ -1,157 +1,157 @@
 {
-  "week": "2026-10-01/2026-10-08",
+  "week": "2026-10-05/2026-10-12",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Song 2 - 2012 Remaster",
-      "artist": "Blur",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273de114203356c1f7b136960b6",
-      "plays": 1
+      "name": "One and the Same",
+      "artist": "Feldup",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2734db1e24f6f18d1dac16184e6",
+      "plays": 2
     },
     {
       "rank": 2,
-      "name": "Jerk It Out",
-      "artist": "Caesars",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27346ed4ae9343359e5965baf7b",
-      "plays": 1
+      "name": "Roadgame",
+      "artist": "Kavinsky",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2731c08bca073e89ae32c68ffaa",
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "Smoke on the Water - remastered 2012",
-      "artist": "Deep Purple",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273a729c9c3dec04b99d889c66f",
-      "plays": 1
+      "name": "Alors on danse",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d5962568c5d574d7fdbc8a36",
+      "plays": 2
     },
     {
       "rank": 4,
-      "name": "Money For Nothing - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Bienvenue chez moi",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 2
     },
     {
       "rank": 5,
-      "name": "One World - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Peace or Violence",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 2
     },
     {
       "rank": 6,
-      "name": "Ride Across The River - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Rail de musique",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 2
     },
     {
       "rank": 7,
-      "name": "So Far Away - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Te Quiero",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 2
     },
     {
       "rank": 8,
-      "name": "The Man's Too Strong - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
+      "name": "Take on Me",
+      "artist": "a-ha",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273e8dd4db47e7177c63b0b7d53",
       "plays": 1
     },
     {
       "rank": 9,
-      "name": "Walk Of Life - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
+      "name": "Eyes Without a Face",
+      "artist": "Billy Idol",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ea07dca8b4ca808c1e5b17fb",
       "plays": 1
     },
     {
       "rank": 10,
-      "name": "Why Worry - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
+      "name": "Song 2 - 2012 Remaster",
+      "artist": "Blur",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273de114203356c1f7b136960b6",
       "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
+      "name": "Stromae",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebcc129f1c9b5047760d66aae2",
+      "plays": 24
+    },
+    {
+      "rank": 2,
+      "name": "Feldup",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb32e98560afdcab787b147bbb",
+      "plays": 11
+    },
+    {
+      "rank": 3,
       "name": "Muse",
       "image": "https://i.scdn.co/image/ab6761610000e5ebccb215d769112ec422a59ce6",
       "plays": 9
     },
     {
-      "rank": 2,
-      "name": "Dire Straits",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb4bdaa8c5e65b64f50549c393",
-      "plays": 8
-    },
-    {
-      "rank": 3,
-      "name": "Nancy Ajram",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb5c9cf78344e4a0dd486a0e34",
-      "plays": 4
-    },
-    {
       "rank": 4,
-      "name": "Fares Karam",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebd5d1b42f0cd8135b87655f16",
+      "name": "Kavinsky",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb2dc7b3180bad1885c6ee1320",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "John Williams",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb86b13e4d2e65ebf694384ef4",
+      "name": "Simple Plan",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebf8a6c76b696c37d752a6797e",
       "plays": 2
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Fantasymphony",
-      "artist": "Danish National Symphony Orchestra",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27330edd9d9b21dff8892b6a7eb",
-      "plays": 8
+      "name": "Cheese",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 17
     },
     {
       "rank": 2,
-      "name": "Brothers In Arms (Remastered 1996)",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 8
+      "name": "Towards Happiness",
+      "artist": "Feldup",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2734db1e24f6f18d1dac16184e6",
+      "plays": 11
     },
     {
       "rank": 3,
-      "name": "The Wow! Signal",
-      "artist": "Muse",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273b295bd39e098e7b68d57aacf",
-      "plays": 6
+      "name": "Racine carrée",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ab580fab750cc9baf0d52b5c",
+      "plays": 7
     }
   ],
   "top_genres": [
     {
       "rank": 1,
       "name": "rock",
-      "plays": 27
+      "plays": 39
     },
     {
       "rank": 2,
-      "name": "british",
-      "plays": 22
+      "name": "french",
+      "plays": 37
     },
     {
       "rank": 3,
-      "name": "Progressive rock",
-      "plays": 19
+      "name": "alternative rock",
+      "plays": 34
     },
     {
       "rank": 4,
-      "name": "alternative",
-      "plays": 18
+      "name": "pop",
+      "plays": 32
     },
     {
       "rank": 5,
-      "name": "alternative rock",
-      "plays": 17
+      "name": "electronic",
+      "plays": 30
     }
   ]
 }
