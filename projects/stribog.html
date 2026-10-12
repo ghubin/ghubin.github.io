@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- TITLE OF THE PROJECT -->
+  <title>Stribog - CO2 sensor in Home Assistant</title>
+  <meta name="description" content="Stribog a CO2 sensor made of an SCD41 sensor and ESP32C3 working with Home Assistant">
+  <meta name="author" content="Géraud Hubin">
+  <meta name="keywords" content="Nuton Cave, personal website, projects, engineering, domotics, DIY, Home Assistant, CO2 sensor, electronics">
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="../style.css">
+  <!-- CSS PROJECTS -->
+  <link rel="stylesheet" href="project.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/cave-icon" href="../img/cave.png">
+  
+</head>
+<body>
+<!--
+  INITIALISATION OF DARK MODE
+  Reading localStorage before the page is displayed,
+  which avoids a "flash" of light theme on load.
+-->
+<script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
+<nav>
+  <div class="nav-left">
+    <a id="index-nav" href="/index.html" class="nav-logo">
+      <span class="nav-highlight"></span> 
+      The Cave
+    </a>
+    <a id="projects-nav" href="/projects.html" class="nav-logo"> 
+      <span class="nav-highlight"></span>
+      Projects 
+    </a>
+    <a id="reading-nav" href="/study.html" class="nav-logo"> 
+      Reading 
+      <span class="nav-highlight"></span>
+    </a> 
+    <a id="listening-nav" href="/listeningRoom.html" class="nav-logo">
+      Listening
+      <span class="nav-highlight"></span>
+    </a>
+    <a id="blog-nav" href="/thoughts.html" class="nav-logo">
+      Thoughts
+      <span class="nav-highlight"></span>
+    </a>
+
+  </div>
+  <ul id= "navigation-links" class="nav-links">
+    <li><a href="/about.html">About the Nuton</a></li>
+    <li><a href="https://github.com/ghubin" target="_blank" rel="noopener noreferrer">Github</a></li>
+    <li>
+      <!--
+        BOUTON DARK MODE
+        aria-label = texte pour les lecteurs d'écran (accessibilité)
+        L'icône changera via JavaScript selon le thème actif
+      -->
+      <button id="dark-toggle" aria-label="Basculer le mode nuit">🌙</button>
+    </li>
+  </ul>
+</nav>
+
+<main class="project">
+  <article>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+      <h1 class="project_title">Stribog - CO<sub>2</sub> sensor</h1>
+      <p class="project_summary">
+        To avoid poor sleep or worse decision making and focus, the Slavic god of wind, sky and air tells me when CO<sub>2</sub> reaches a critical concentration and pushes my to open my windows. 
+      </p>
+
+      <!-- KEY INFO -->
+      <dl class="project_meta">
+        <dt>Status</dt>
+        <dd>In Progress</dd>
+        <dt>Start Date</dt>
+        <dd>September 2026</dd>
+        <dt>Tools</dt>
+        <dd>Home Assistant OS, KiCad</dd>
+      </dl>
+
+      <!-- Tags : same words as for the projects.html filter -->
+      <ul class="skills-list">
+        <li>domotics</li>
+        <li>electronics</li>
+        <li>personal project</li>
+      </ul>
+    </header>
+
+    <!-- ========== COVER IMAGE (optional, remove block otherwise) ========== -->
+    <figure class="project_cover">
+      <img src="../img/projects/nom-du-projet.png" alt="First working prototype">
+      <figcaption>First picture of the captor</figcaption>
+    </figure>
+
+    <!-- ========== SECTIONS ========== -->
+    <!-- Every section = a <section class="project_section"> with an <h2>.
+          Duplicate, rename, or remove as needed for the project. -->
+
+    <section class="project_section">
+      <h2>Context</h2>
+      <p>The idea began during the COVID era and then was accelerated with the discovery of <a href="https://birdie.design/" target="_blank" rel="noopener noreferrer">Birdie</a> (the CO<sub>2</sub> monitoring station)
+        and reading about the effect of CO<sub>2</sub> concentration on <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=CO2+level+sleep&btnG=" target="_blank" rel="noopener noreferrer">sleep quality</a>, <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=co2+level+decision+ability&btnG=&oq=co2+level+decision+ab" target="_blank" rel="noopener noreferrer"> focus and decision-making ability</a>.
+        However, between the price for Birdie and the curiosity to understand and create a device that could tell me when to open the windows to stay alert,
+        I started looking into creating such device and I chose to build it using <a href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer">Home Assistant</a> as the backbone. 
+        Before trying to build one I looked for already existing devices, but the cheap ones are not really good or need monitoring to check if a threshold is reached (and I don't want a strong buzzing during the night!).
+        The others are quite expensive (hello <a href="https://birdie.design/" target="_blank" rel="noopener noreferrer">Birdie</a>) even though its design and additional motor can justify an increased price.
+        Moreover, these devices are not modular and I can not tinker with them to automatize anything easily, that's where I started looking to build one.
+        <br>
+        <br>
+        The CO<sub>2</sub> concentration is measured in [ppm] - part per million, and generally we can admit that there are typical levels to observe when looking at air quality.
+        Below 800 ppm, the air is quite good and the concentration in carbon dioxide should not alter judgement/reflexion speed (note that the average concentration outside sits around 400 to 500ppm in the countryside or the city). 
+        Between 800 and 1200 ppm, there can be slight drops in attention and concentration, and above 1200 ppm it's clearly time to open the window and let air circulate inside.
+        <br>
+        <br>
+      </p>
+      <div class="project_table" id="CO2Levels">
+        <table>
+          <thead>
+            <tr><th style="text-align: center;border-right: solid 1px var(--project_line);">Concentration [ppm]</th><th style="text-align: center;">Condition and effects</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style="text-align: center;border-right: solid 1px var(--project_line);">400-800</td><td style="text-align: center;">Good conditions</td></tr>
+            <tr><td style="text-align: center;border-right: solid 1px var(--project_line);">800-1200</td><td style="text-align: center;">Deteriorating conditions, slight lost in focus and dizziness</td></tr>
+            <tr><td style="text-align: center;border-right: solid 1px var(--project_line);border-bottom: none;">>1200</td><td style="text-align: center;border-bottom: none;">Poor conditions, sleepiness can begin time to open the windows !</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <p>
+        There are already many different tutorials on how to build a CO<sub>2</sub> sensor with Home Assistant, but there is something that always bothers me, you need to constantly keep the captor plugged in, even if you only take a measure every five minutes.
+        Moreover, it takes an electric plug spot and a when you have small rooms with limited power plugs, you're quickly out of options. You could say, I plug it to my computer, but as I am usually using a laptop, I don't want to have it using on of the USB plugs.
+        These different reasons explain why I aim to build a battery powered sensor, taking advantage of the deep sleep mode of the ESP32C3 (more about that in the <a href="#V2">V2</a>).
+      </p>
+
+      <h2 style="color: var(--role);text-align: center;" id="objective">Objective</h2>
+      <p style="text-align: center;">Create a battery powered CO<sub>2</sub> sensor communicating with the home server to launch an alert when the concentration reaches 1200 ppm.</p>
+    </section>
+
+    <section class="project_section">
+      <h2>Realization</h2>
+      <p>The project is built around 2 mains components, the sensor, an SCD41 from Sensirion (more info <a href="https://sensirion.com/products/catalog/SCD41"target="_blank" rel="noopener noreferrer">here</a>)
+        and the brain, an ESP32C3 from SeeedStudio (bought un soldered in pack of 3 - <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C3-3PCS-p-5920.html" target="_blank" rel="noopener noreferrer">here</a>).
+        The building of the final sensor is made through 3 iterations:
+        <ul>
+          <li><a href="#V1">V1</a> is not yet battery powered, the juice is provided by the USB-C connection of the ESP32C3,</li>
+          <li><a href="#V2">V2</a> is created to test the battery powering of the ESP and sensor</li>
+          <li><a href="#V3">V3</a> goes a step further and aim to create a complete device, with PCB and 3D printed case</li>
+        </ul>    
+      </p>
+      
+      <h2 id="V1">V1 - Getting familiarized with HA and ESPhome </h2>
+
+      <h2 id="V2">V2 - Battery power the sensor</h2>
+
+      <h2 id="V3">V3 - Design a PCB and create a 3D printed enclosure</h3>
+      <!-- Sub-section : a <h3> (with id if you want to link to it) -->
+      <h3 style="text-align: center;" id="materials">Materials</h3>
+
+      <!-- Table : always in a .project_table to be able to scroll -->
+      <div class="project_table">
+        <table>
+          <thead>
+            <tr><th>Component</th><th>Role</th><th>Reference</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Raspberry Pi 5</td><td>Wakes the circuit, receive data, display them and send notification if needed</td><td><a href="https://www.raspberrypi.com/" target="_blank" rel="noopener noreferrer">Raspberry home site</a></td></tr>
+            <tr><td>SCD41</td><td>Measuring CO<sub>2</sub> [ppm], temperature [°C] and humidity level [%]</td><td><a href="https://www.tinytronics.nl/en/sensors/air/humidity/gy-scd41-module-co2-humidity-temperature-sensor-i2c" target="_blank" rel="noopener noreferrer">Mounted</a> · <a href="https://nl.aliexpress.com/item/1005011652313734.html?spm=a2g0o.productlist.main.2.5b0f3861TFhICj&algo_pvid=edd291f2-b68b-4205-acc4-ad41366b93b3&pdp_ext_f=%7B%22order%22%3A%22873%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005011652313734%7C_p_origin_prod%3A" target="_blank" rel="noopener noreferrer">Unmounted</a></td></tr>
+            <tr><td>ESP32C3</td><td>Read and send the data to the server, <a href="yggdrasil.html">Yggdrasil</a></td><td><a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C3-3PCS-p-5920.html" target="_blank" rel="noopener noreferrer">XIAO ESP32C3</a></td></tr>
+            <tr><td>3.7V Li-Po Battery (2000mah)</td><td> Power the ESP32 and the sensor</td><td> <a href="https://www.tinytronics.nl/en/power/batteries/li-po/pkcell-li-po-battery-3.7v-2000mah-jst-ph-lp803860"target="_blank" rel="noopener noreferrer">Ref</a> </td></tr>
+            <tr><td>Small components (wires, capacitor)</td><td>Connect everything and smoothen signal</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+      <p>Text with <code>inline code</code> if needed.</p>
+      <h3 id="software">The software</h3>
+      <p>example, then a code snippet:</p>
+
+      <!-- Code block : the content is displayed as-is (spaces included).
+            The characters < and > are written as &lt; and &gt; in the HTML. -->
+      <pre><code>def exemple():
+  return "bonjour"</code></pre>
+
+      <!-- Figure -->
+      <figure class="project_figure">
+        <img src="../img/projects/nom-du-projet-schema.png" alt="Description of the schema">
+        <figcaption>Figure description.</figcaption>
+      </figure>
+
+      <!-- Lists and citations, if needed -->
+      <ul>
+        <li>Point one</li>
+        <li>Point two</li>
+      </ul>
+      <blockquote>
+        <p>Citation or remark</p>
+      </blockquote>
+    </section>
+    
+    <section class="project_section" id="future">
+      <h2>Future</h2>
+      <p>There are a few ideas and projects that I want to create and implement in the future.</p>
+      <ul>
+        <li>Implement the visualization of the data and summaries inside <a href="../listeningRoom.html">listeningRoom.html</a></li>
+      </ul>
+
+    <!-- Evolutions : to complete -->
+    <section class="project_section" id="evolutions">
+      <h2>Evolutions</h2>
+      <dl class="project_updates">
+        <dt>October 2026</dt>
+        <dd>What has changed or advanced.</dd>
+        <dt>September 2026</dt>
+        <dd>Start of the project.</dd>
+      </dl>
+    </section>
+
+    <section class="project_section">
+      <h2>Links</h2>
+      <ul class="project_links">
+        <li><a href="https://github.com/ghubin">GitHub Repository</a></li>
+      </ul>
+    </section>
+
+    <!-- ========== RETURN ========== -->
+    <p class="project_back">
+      <a href="../projects.html">Back to projects &#8617</a>
+    </p>
+
+  </article>
+</main>
+  <footer>
+    <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('dark-toggle');
+    // getElementById cherche l'élément avec id="dark-toggle"
+
+    // Fonction qui met à jour l'icône selon le thème actif
+    function updateIcon() {
+      // body.classList.contains('dark') renvoie true ou false
+      btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      // Si dark → afficher le soleil (pour repasser au clair)
+      // Sinon → afficher la lune (pour passer au sombre)
+    }
+
+    updateIcon(); // appel immédiat pour afficher la bonne icône au chargement
+
+    btn.addEventListener('click', function () {
+      // addEventListener écoute les clics sur le bouton
+      // À chaque clic, on bascule la classe "dark" sur le <body>
+      document.body.classList.toggle('dark');
+      // toggle = ajoute la classe si absente, la retire si présente
+
+      // On sauvegarde le choix dans localStorage
+      // localStorage = stockage persistant dans le navigateur (survit à la fermeture)
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+
+      updateIcon(); // met à jour l'icône après le changement
+    });
+  </script>
+  
+  <script>
+    window.addEventListener('scroll', () => {
+      const item = document.getElementById('navigation-links');
+      if(!item) return;
+      
+      const currentScroll = window.scrollY;
+      const scrollThreshold = 75;
+
+      if(currentScroll >= scrollThreshold){
+        item.style.opacity = '0';
+        item.style.visibility='none';
+        item.style.pointerEvents = 'none';
+      }
+      else{
+        item.style.opacity = 1-(currentScroll/scrollThreshold);
+        item.style.visibility = 'visible';
+        item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+  <dialog class="project_lightbox"><img alt=""></dialog>
+  <script src="project.js" defer></script>  
+</body>
+</html>
