@@ -92,6 +92,11 @@ body.dark .project {
   padding-left: 1.25rem;
 }
 
+.project_toc ol {
+  margin: 0;
+  padding-left: 1.75rem;
+}
+
 /* Anchored titles do not stick to the top of the window */
 .project_section[id],
 .project_section h3[id] {
