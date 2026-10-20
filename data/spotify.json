@@ -1,157 +1,157 @@
 {
-  "week": "2026-10-05/2026-10-12",
+  "week": "2026-10-13/2026-10-20",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "One and the Same",
-      "artist": "Feldup",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2734db1e24f6f18d1dac16184e6",
+      "name": "A Victory of Love - 2019 Remaster",
+      "artist": "Alphaville",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
       "plays": 2
     },
     {
       "rank": 2,
-      "name": "Roadgame",
-      "artist": "Kavinsky",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2731c08bca073e89ae32c68ffaa",
+      "name": "Big in Japan - 2019 Remaster",
+      "artist": "Alphaville",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Alors on danse",
-      "artist": "Stromae",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273d5962568c5d574d7fdbc8a36",
+      "name": "Fallen Angel - 2019 Remaster",
+      "artist": "Alphaville",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
       "plays": 2
     },
     {
       "rank": 4,
-      "name": "Bienvenue chez moi",
-      "artist": "Stromae",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "name": "Summer in Berlin - 2019 Remaster",
+      "artist": "Alphaville",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "Peace or Violence",
-      "artist": "Stromae",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "name": "To Germany With Love - 2019 Remaster",
+      "artist": "Alphaville",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "Rail de musique",
-      "artist": "Stromae",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "name": "Shadow",
+      "artist": "Chromatics",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27387198c89d9f1731c3da39def",
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "Te Quiero",
-      "artist": "Stromae",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "name": "Windswept",
+      "artist": "Johnny Jewel",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273283a65b8940856a1d7d3bc7b",
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "Take on Me",
-      "artist": "a-ha",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273e8dd4db47e7177c63b0b7d53",
-      "plays": 1
+      "name": "Let It Happen",
+      "artist": "Tame Impala",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79",
+      "plays": 2
     },
     {
       "rank": 9,
-      "name": "Eyes Without a Face",
-      "artist": "Billy Idol",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ea07dca8b4ca808c1e5b17fb",
-      "plays": 1
+      "name": "Lonely in the Future",
+      "artist": "The Strokes",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2736b458d1409d938dad4e3ba2c",
+      "plays": 2
     },
     {
       "rank": 10,
-      "name": "Song 2 - 2012 Remaster",
-      "artist": "Blur",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273de114203356c1f7b136960b6",
-      "plays": 1
+      "name": "The Adults Are Talking",
+      "artist": "The Strokes",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273e3f1ba3de4659708c25d0f39",
+      "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Stromae",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebcc129f1c9b5047760d66aae2",
-      "plays": 24
+      "name": "The Strokes",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb98856eea770468af6dd999d9",
+      "plays": 19
     },
     {
       "rank": 2,
-      "name": "Feldup",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb32e98560afdcab787b147bbb",
-      "plays": 11
+      "name": "Alphaville",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb3f8779bb1c97be855c6b51a8",
+      "plays": 14
     },
     {
       "rank": 3,
-      "name": "Muse",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebccb215d769112ec422a59ce6",
-      "plays": 9
+      "name": "Angelo Badalamenti",
+      "image": "https://i.scdn.co/image/816e5aaaf9de137bdb327937ccde4a019eb579a1",
+      "plays": 8
     },
     {
       "rank": 4,
-      "name": "Kavinsky",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb2dc7b3180bad1885c6ee1320",
-      "plays": 2
+      "name": "Tame Impala",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebe412a782245eb20d9626c601",
+      "plays": 8
     },
     {
       "rank": 5,
-      "name": "Simple Plan",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebf8a6c76b696c37d752a6797e",
-      "plays": 2
+      "name": "Linkin Park",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb527d95dabbe8b8b527e8136f",
+      "plays": 7
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Cheese",
-      "artist": "Stromae",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
-      "plays": 17
+      "name": "Forever Young (Super Deluxe Edition; 2019 Remaster)",
+      "artist": "Alphaville",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
+      "plays": 14
     },
     {
       "rank": 2,
-      "name": "Towards Happiness",
-      "artist": "Feldup",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2734db1e24f6f18d1dac16184e6",
-      "plays": 11
+      "name": "The New Abnormal",
+      "artist": "The Strokes",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273e3f1ba3de4659708c25d0f39",
+      "plays": 10
     },
     {
       "rank": 3,
-      "name": "Racine carrée",
-      "artist": "Stromae",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ab580fab750cc9baf0d52b5c",
-      "plays": 7
+      "name": "Soundtrack From Twin Peaks",
+      "artist": "Angelo Badalamenti",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2730fe62e9afb4ae8f52a241d33",
+      "plays": 5
     }
   ],
   "top_genres": [
     {
       "rank": 1,
       "name": "rock",
-      "plays": 39
+      "plays": 73
     },
     {
       "rank": 2,
-      "name": "french",
-      "plays": 37
+      "name": "alternative",
+      "plays": 67
     },
     {
       "rank": 3,
-      "name": "alternative rock",
-      "plays": 34
+      "name": "american",
+      "plays": 66
     },
     {
       "rank": 4,
-      "name": "pop",
-      "plays": 32
+      "name": "alternative rock",
+      "plays": 57
     },
     {
       "rank": 5,
-      "name": "electronic",
-      "plays": 30
+      "name": "indie",
+      "plays": 41
     }
   ]
 }
