@@ -12,3 +12,18 @@ document.querySelectorAll('.project_cover img, .project_figure img').forEach(img
 
 //Clicking anywhere outside the image closes the enlargement (Escape key also works)
 lightbox.addEventListener('click', () => lightbox.close());
+
+hljs.highlightAll();
+
+document.querySelectorAll('.project pre').forEach(pre => {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'code_copy';
+  btn.textContent = 'Copy';
+  btn.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(pre.querySelector('code').innerText);
+    btn.textContent = 'Copied !';
+    setTimeout(() => (btn.textContent = 'Copier'), 1500);
+  });
+  pre.appendChild(btn);
+});

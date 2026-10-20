@@ -15,6 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- Style for the Code -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="../style.css">
   <!-- CSS PROJECTS -->
@@ -115,17 +117,18 @@
       <ol>
         <li><a href="#context">Context</a></li>
         <li><a href="#objective">Objective</a></li>
-        <li><a href="#realization">Realization</a></li>
+        <li><a href="#realization">Realization</a>
           <ul>
-            <li><a href="#V1">V1 - Getting familiar with HA and ESPhome</a></li>
-            <ul>
-              <li>Flashing the ESP</li>
-              <li>Connecting to Yggdrasil</li>
-              <li>First measurement</li>
-            </ul>
+            <li><a href="#V1">V1 - Getting familiar with HA and ESPhome</a>
+              <ul>
+                <li>Flashing the ESP & connecting to Yggdrasil</li>
+                <li>First measurement</li>
+              </ul>
+            </li>
             <li><a href="#V2">V2 - Battery power the sensor</a></li>
             <li><a href="#V3">V3 - Design a PCB and create a 3D printed enclosure</a></li>
           </ul>
+        </li>
         <li><a href="#materials">Materials</a></li>
         <li><a href="#future">Future</a></li>
         <li><a href="#history">History</a></li>
@@ -175,23 +178,157 @@
 
     <section class="project_section" id="realization">
       <h2>Realization</h2>
-      <p>The project is built around 2 mains components, the sensor, an SCD41 from Sensirion (more info <a href="https://sensirion.com/products/catalog/SCD41"target="_blank" rel="noopener noreferrer">here</a>)
+      <p>The project is built around 2 mains components, the sensor, an SCD41 from Sensirion (more info <a href="https://sensirion.com/products/catalog/SCD41" target="_blank" rel="noopener noreferrer">here</a>)
         and the brain, an ESP32C3 from SeeedStudio (bought un soldered in pack of 3 - <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C3-3PCS-p-5920.html" target="_blank" rel="noopener noreferrer">here</a>).
-        The building of the final sensor is made through 3 iterations:
+        The construction of the final sensor is made through 3 iterations:
+      </p>
         <ul>
           <li><a href="#V1">V1</a> is not yet battery powered, the juice is provided by the USB-C connection of the ESP32C3,</li>
           <li><a href="#V2">V2</a> is created to test the battery powering of the ESP and sensor</li>
           <li><a href="#V3">V3</a> goes a step further and aim to create a complete device, with PCB and 3D printed case</li>
         </ul>    
-      </p>
+      
       
       <h2 id="V1">V1 - Getting familiar with HA and ESPhome </h2>
+        <p>
+          After installing Home Assistant OS on the Raspberry, I simply added the ESPHome add-on to monitor and use various sensors.
+          The GY-SCD41 module used possesses already Dupont wires that can be easily connected to the pins of the ESP32C3 that I already soldered, the ESP is connected through its USB-C and the first YAML code is flashed on it.
+        </p>
+        <figure class="project_figure" style="display: flex;flex-wrap: wrap;gap: 1rem;">
+          <img src="../img/projects/Stribog/ESP32C3.jpg" style="flex: 1 1 45%;min-width: 0;" alt="solderedESP32"> <img src="../img/projects/Stribog/FirstBuild.jpg" style="flex: 1 1 45%;min-width: 0;" alt="FirstBuild">
+          <figcaption style="flex-basis: 100%; text-align: center;">
+            Soldered ESP32C3 and first build connected through USB-C
+          </figcaption>
+        </figure>
 
+        <p>The first YAML script is basic: definition of the esp, sensor as well as the pin used and setup of the Wi-Fi to be able to have the ESP communicate with the HA server.
+          To avoid having the keys and sensible data in the YAML, they are stored within secrets inside ESPHome. 
+          The sensor simply measures the values for CO2, temperature and humidity every 60 seconds and sends them to the server. 
+          I also created a first automation sending me a notification when the CO2 level rises above 1200 ppm. Home Assistant also
+          lets you test the automation manually, which is nice to check if the phone is correctly appaired with the server and the HA app.
+        </p>
+        <pre><code class="language-yaml">
+          # Board: Seeed Studio XIAO ESP32C3
+          # Definition: definitions/boards/seeed_xiao_esp32c3/manifest.yaml
+
+          esphome:
+            name: stribog
+            friendly_name: Stribog
+
+          esp32:
+            variant: esp32c3
+
+          logger:
+            hardware_uart: USB_SERIAL_JTAG
+
+          api:
+            encryption:
+              key: !secret stribog__encryption_key
+
+          ota:
+            - platform: esphome
+
+          wifi:
+            ssid: !secret wifi_ssid
+            password: !secret wifi_password
+            ap:
+              ssid: Stribog Fallback Hotspot
+              password: !secret stribog__ap_password
+
+          captive_portal:
+
+          # I2C Bus for SCD41
+          i2c:
+            sda: GPIO6   # D4
+            scl: GPIO7   # D5
+            scan: true
+
+          # Sensor SCD41 (Sensirion)
+          sensor:
+            - platform: scd4x
+              co2:
+                name: CO2
+                id: stribog_co2
+                icon: "mdi:molecule-co2"
+                device_class: carbon_dioxide
+                unit_of_measurement: ppm
+              temperature:
+                name: Temperature
+                icon: "mdi:thermometer"
+                device_class: temperature
+                unit_of_measurement: °C
+                id: stribog_temperature
+              humidity:
+                name: Humidity
+                icon: "mdi:water-percent"
+                device_class: humidity
+                unit_of_measurement: "%"
+                id: stribog_humidity
+              update_interval: 60s
+              address: 0x62
+              temperature_offset: 4°C
+            </code></pre>
+        
+        <p>The device was working then continuously through the USB-C powering to obtain data and check them as well as verify if the notification system works.
+          The first nights of data are shown below, the graph is separated in different zones, first the end of the 5th of October, we can observe the various  peaks and decreases as I was working on the device and was litteraly breathing around it.
+          Then the night was quite hot, so the window was left open, we can observe the plateau around 800 ppm. In the morning, we leaving, the plateau decreases to around 450 ppm the base until return home around 18h.
+          Finally the last parts shows the increase during a night where the windows are closed, we can observe the steady increase as I sleep and the sharp decrease upon window opening in the morning.
+        </p>
+
+        <figure class="project_figure">
+          <img src="../img/projects/Stribog/05_10to7_10.PNG" alt="First CO2 Data">
+          <figcaption style="text-align: center;">
+            First set of CO2 data, from 05/10 to 07/10
+          </figcaption>
+        </figure>
+
+        <p>A second interesting data set is from 07/10 to 09/10 where we can observe two main differences, first a day without anyone in the room
+          versus a day where I stayed working inside it. The plateau below 500 ppm is compared to the peaks during the second day, and it is clear that the notification
+          system works because we can observe the sharp decrease when I receive it and open the windows. The seconde difference lies during the nights
+          whether alone or 2 people sleeping, the height of the peak is different.
+        </p>
+
+        <figure class="project_figure">
+          <img src="../img/projects/Stribog/07_10to09_10.PNG" alt="Second CO2 Data">
+          <figcaption style="text-align: center;">
+            Second set of CO2 data, from 07/10 to 09/10
+          </figcaption>
+        </figure>
+
+        <p>
+          The data can be displayed in various ways using the smart card system of Home Assistant, I personally enjoy showing a gauge on my dashboard to directly see
+          the last measured value as well as the level (good, moderate, bad) at a glance. The gauge goes from green to orange to red when reaching the previously noted levels.
+        </p>
+
+        <figure class="project_figure">
+          <img src="../img/projects/Stribog/CO2Gauge.PNG" alt="GaugeCO2">
+          <figcaption>
+            Gauge indicating CO2 level, don't worry I opened the windows right after !
+          </figcaption>
+        </figure>
+
+        <p>The code for this kind of gauge is simple, but it also can be made directly without coding through the dashboard modification of Home Assistant.</p>
+
+        <pre><code class="language-yaml">          #Gauge displaying of the CO2 level with severity levels
+          type: gauge
+          entity: sensor.stribog_co2
+          unit: ppm
+          min: 0
+          max: 1500
+          severity:
+            green: 400
+            yellow: 800
+            red: 1200
+          needle: false
+          name: Room CO2</pre></code>
+
+        <p>After these first concluding tests from the data and the notification point of view, it went on to try and battery power the sensor to avoid having to use a usb port or a power plug continuously.
+        </p>
       <h2 id="V2">V2 - Battery power the sensor</h2>
 
-      <h2 id="V3">V3 - Design a PCB and create a 3D printed enclosure</h3>
+      <h2 id="V3">V3 - Design a PCB and create a 3D printed enclosure</h2>
       <!-- Sub-section : a <h3> (with id if you want to link to it) -->
-      <h2 id="materials">Materials</h3>
+      <h2 id="materials">Materials</h2>
 
       <!-- Table : always in a .project_table to be able to scroll -->
       <div class="project_table">
@@ -203,7 +340,7 @@
             <tr><td>Raspberry Pi 5</td><td>Wakes the circuit, receive data, display them and send notification if needed</td><td><a href="https://www.raspberrypi.com/" target="_blank" rel="noopener noreferrer">Raspberry home site</a></td></tr>
             <tr><td>SCD41</td><td>Measuring CO<sub>2</sub> [ppm], temperature [°C] and humidity level [%]</td><td><a href="https://www.tinytronics.nl/en/sensors/air/humidity/gy-scd41-module-co2-humidity-temperature-sensor-i2c" target="_blank" rel="noopener noreferrer">Mounted</a> · <a href="https://nl.aliexpress.com/item/1005011652313734.html?spm=a2g0o.productlist.main.2.5b0f3861TFhICj&algo_pvid=edd291f2-b68b-4205-acc4-ad41366b93b3&pdp_ext_f=%7B%22order%22%3A%22873%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005011652313734%7C_p_origin_prod%3A" target="_blank" rel="noopener noreferrer">Unmounted</a></td></tr>
             <tr><td>ESP32C3</td><td>Read and send the data to the server, <a href="yggdrasil.html">Yggdrasil</a></td><td><a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C3-3PCS-p-5920.html" target="_blank" rel="noopener noreferrer">XIAO ESP32C3</a></td></tr>
-            <tr><td>3.7V Li-Po Battery (2000mah)</td><td> Power the ESP32 and the sensor</td><td> <a href="https://www.tinytronics.nl/en/power/batteries/li-po/pkcell-li-po-battery-3.7v-2000mah-jst-ph-lp803860"target="_blank" rel="noopener noreferrer">Ref</a> </td></tr>
+            <tr><td>3.7V Li-Po Battery (2000mah)</td><td> Power the ESP32 and the sensor</td><td> <a href="https://www.tinytronics.nl/en/power/batteries/li-po/pkcell-li-po-battery-3.7v-2000mah-jst-ph-lp803860" target="_blank" rel="noopener noreferrer">Ref</a> </td></tr>
             <tr><td>Small components (wires, capacitor)</td><td>Connect everything and smoothen signal</td><td></td></tr>
           </tbody>
         </table>
@@ -216,7 +353,6 @@
         <figcaption>Figure description.</figcaption>
       </figure>
 
-    </section>
     
     <section class="project_section" id="future">
       <h2>Future</h2>
@@ -226,7 +362,7 @@
         <li>Continue PCB design for the V3 with an SCD41 with pins and not cables</li>
         <li>Finish redaction on V1</li>
       </ul>
-
+    </section>  
     <!-- Evolutions : to complete -->
     <section class="project_section" id="history">
       <h2>History</h2>
@@ -247,7 +383,7 @@
 
     <!-- ========== RETURN ========== -->
     <p class="project_back">
-      <a href="../projects.html">Back to projects &#8617</a>
+      <a href="../projects.html">Back to projects &#8617;</a>
     </p>
 
   </article>
@@ -304,7 +440,8 @@
       }
     });
   </script>
-  <dialog class="project_lightbox"><img alt=""></dialog>
+  <dialog class="project_lightbox"><img src="data:," alt="Bidule"></dialog>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script src="project.js" defer></script>  
 </body>
 </html>
