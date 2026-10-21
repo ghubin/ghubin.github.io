@@ -122,10 +122,15 @@
             <li><a href="#V1">V1 - Getting familiar with HA and ESPhome</a>
               <ul>
                 <li>Flashing the ESP & connecting to Yggdrasil</li>
-                <li>First measurement</li>
+                <li>First measures</li>
               </ul>
             </li>
             <li><a href="#V2">V2 - Battery power the sensor</a></li>
+              <ul>
+                <li>Adding a battery to the device</li>
+                <li>Measuring battery level</li>
+                <li>Optimizing battery lifetime</li>
+              </ul>
             <li><a href="#V3">V3 - Design a PCB and create a 3D printed enclosure</a></li>
           </ul>
         </li>
@@ -179,7 +184,7 @@
     <section class="project_section" id="realization">
       <h2>Realization</h2>
       <p>The project is built around 2 mains components, the sensor, an SCD41 from Sensirion (more info <a href="https://sensirion.com/products/catalog/SCD41" target="_blank" rel="noopener noreferrer">here</a>)
-        and the brain, an ESP32C3 from SeeedStudio (bought un soldered in pack of 3 - <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C3-3PCS-p-5920.html" target="_blank" rel="noopener noreferrer">here</a>).
+        and the brain, an ESP32C3 from SeeedStudio (bought un soldered in pack of 3 - <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C3-3PCS-p-5920.html" target="_blank" rel="noopener noreferrer">here</a>) communicating using the I2C protocol.
         The construction of the final sensor is made through 3 iterations:
       </p>
         <ul>
@@ -192,7 +197,9 @@
       <h2 id="V1">V1 - Getting familiar with HA and ESPhome </h2>
         <p>
           After installing Home Assistant OS on the Raspberry, I simply added the ESPHome add-on to monitor and use various sensors.
-          The GY-SCD41 module used possesses already Dupont wires that can be easily connected to the pins of the ESP32C3 that I already soldered, the ESP is connected through its USB-C and the first YAML code is flashed on it.
+          The GY-SCD41 module used possesses already Dupont wires that can be easily connected to the pins of the ESP32C3 that I already soldered. 
+          The VCC and GND from the sensor are connected respectively to the 3V3 and GND power pins of the ESP. The data line, SDA, is connected to pin GPIO6 (D4) of the ESP and the clock line, SCL, is connected to the pin GPIO7 (D5).
+          The ESP is then branch through its USB-C and the first YAML code is flashed on it.
         </p>
         <figure class="project_figure" style="display: flex;flex-wrap: wrap;gap: 1rem;">
           <img src="../img/projects/Stribog/ESP32C3.jpg" style="flex: 1 1 45%;min-width: 0;" alt="solderedESP32"> <img src="../img/projects/Stribog/FirstBuild.jpg" style="flex: 1 1 45%;min-width: 0;" alt="FirstBuild">
@@ -208,65 +215,65 @@
           lets you test the automation manually, which is nice to check if the phone is correctly appaired with the server and the HA app.
         </p>
         <pre><code class="language-yaml">
-          # Board: Seeed Studio XIAO ESP32C3
-          # Definition: definitions/boards/seeed_xiao_esp32c3/manifest.yaml
+      # Board: Seeed Studio XIAO ESP32C3
+      # Definition: definitions/boards/seeed_xiao_esp32c3/manifest.yaml
 
-          esphome:
-            name: stribog
-            friendly_name: Stribog
+      esphome:
+        name: stribog
+        friendly_name: Stribog
 
-          esp32:
-            variant: esp32c3
+      esp32:
+        variant: esp32c3
 
-          logger:
-            hardware_uart: USB_SERIAL_JTAG
+      logger:
+        hardware_uart: USB_SERIAL_JTAG
 
-          api:
-            encryption:
-              key: !secret stribog__encryption_key
+      api:
+        encryption:
+          key: !secret stribog__encryption_key
 
-          ota:
-            - platform: esphome
+      ota:
+        - platform: esphome
 
-          wifi:
-            ssid: !secret wifi_ssid
-            password: !secret wifi_password
-            ap:
-              ssid: Stribog Fallback Hotspot
-              password: !secret stribog__ap_password
+      wifi:
+        ssid: !secret wifi_ssid
+        password: !secret wifi_password
+        ap:
+          ssid: Stribog Fallback Hotspot
+          password: !secret stribog__ap_password
 
-          captive_portal:
+      captive_portal:
 
-          # I2C Bus for SCD41
-          i2c:
-            sda: GPIO6   # D4
-            scl: GPIO7   # D5
-            scan: true
+      # I2C Bus for SCD41
+      i2c:
+        sda: GPIO6   # D4
+        scl: GPIO7   # D5
+        scan: true
 
-          # Sensor SCD41 (Sensirion)
-          sensor:
-            - platform: scd4x
-              co2:
-                name: CO2
-                id: stribog_co2
-                icon: "mdi:molecule-co2"
-                device_class: carbon_dioxide
-                unit_of_measurement: ppm
-              temperature:
-                name: Temperature
-                icon: "mdi:thermometer"
-                device_class: temperature
-                unit_of_measurement: °C
-                id: stribog_temperature
-              humidity:
-                name: Humidity
-                icon: "mdi:water-percent"
-                device_class: humidity
-                unit_of_measurement: "%"
-                id: stribog_humidity
-              update_interval: 60s
-              address: 0x62
-              temperature_offset: 4°C
+      # Sensor SCD41 (Sensirion)
+      sensor:
+        - platform: scd4x
+          co2:
+            name: CO2
+            id: stribog_co2
+            icon: "mdi:molecule-co2"
+            device_class: carbon_dioxide
+            unit_of_measurement: ppm
+          temperature:
+            name: Temperature
+            icon: "mdi:thermometer"
+            device_class: temperature
+            unit_of_measurement: °C
+            id: stribog_temperature
+          humidity:
+            name: Humidity
+            icon: "mdi:water-percent"
+            device_class: humidity
+            unit_of_measurement: "%"
+            id: stribog_humidity
+          update_interval: 60s
+          address: 0x62
+          temperature_offset: 4°C
             </code></pre>
         
         <p>The device was working then continuously through the USB-C powering to obtain data and check them as well as verify if the notification system works.
@@ -325,9 +332,122 @@
         <p>After these first concluding tests from the data and the notification point of view, it went on to try and battery power the sensor to avoid having to use a usb port or a power plug continuously.
         </p>
       <h2 id="V2">V2 - Battery power the sensor</h2>
+      <p>
+        The next step is to start battery powering the device, to do so, I ordered a simple <a href="https://www.tinytronics.nl/en/power/batteries/li-po/pkcell-li-po-battery-3.7v-2000mah-jst-ph-lp803860" target="_blank" rel="noopener noreferrer">3.7V LiPo battery</a> when I bought the sensor from TinyTronics.
+        The battery can be soldered to the bottom pads of the ESP32C3 and it will then provide the 3.3V required to the sensor. The pads BAT+ and BAT- are located below the ESP.
+      </p>
+      <figure class="project_figure">
+        <img src="../img/projects/Stribog/ESPBottom.png" alt="BottomESP32C3">
+        <figcaption> 
+          Bottom of the ESP32C3
+        </figcaption>
+      </figure>
 
-      <h2 id="V3">V3 - Design a PCB and create a 3D printed enclosure</h2>
-      <!-- Sub-section : a <h3> (with id if you want to link to it) -->
+      <p>
+        Moreover, the ESP integrates a charging chip that can be used to recharge the battery when connected to the USB-C.
+        This gave rise to an idea, I want to be able to see the battery level to know when it needs recharging, by receiving a notification, using the automation system of Home Assistant.
+        This can be done using an ADC (Analog to Digital Converter) pin of the ESP32. It can be used to read the voltage and have an indication on the battery level.
+        However, this value can not be read directly from the battery as it would damage the microcontroller.
+        The voltage can also only be measured between 0 and 750mV initially, with an attenuation value given to the chip it can range up to 2500mV.
+        This is solved by simply making a voltage divider using 2 resistors, I took them with a somehow high value at 470k&#x2126; to minimize leakage current through them, with an additional symetric capacitor to help with a stable measure.
+      </p>
+
+      <figure class="project_figure">
+        <img src="../img/projects/Stribog/Schematics.PNG" alt="SchematicsStribog">
+        <figcaption>Stribog V2 Schematics</figcaption>
+      </figure>
+
+      <p>
+        On the schematics, we can easily observe the battery and the divider as well as the different connections between the ESP and the sensor (here the module is represented by a generic 1x4 connector).
+        I soldered two wires under the ESP and made the montage on a breadboard. The LiPo battery has a JST-PH connection making it easy to connect and disconnect it to the circuit to avoid having the components under tension when modifying and preparing it.
+        Now that the battery voltage is connected to the GPIO2 pin, we can monitor its level. But the voltage decrease of a LiPo battery is not linearly linked to its level.
+        It possesses a long plateau around its nominal voltage (around 3.7V) to modelize this evolution and map the battery voltage to a level, we can use the calibrate function from ESPHome.
+      </p>
+
+      <figure class="project_figure">
+        <img src="../img/projects/Stribog/LP8030860Charge&DischargeCurve.jpg">
+        <figcaption>
+          Charge and Discharge curves of the LP803860 LiPo battery
+        </figcaption>
+      </figure>
+
+      <p>
+        There are two calibrating function that we can use to model the battery level evolution. The <code style="color: #181714;">calibrate_linear</code> and <code style="color: #181714;">calibrate_polynomial</code> can map the measured values to "true" values.
+        Polynomial can fit the data to polynomial functions of higher order functions, by precising the degree wanted. Looking at the 
+        shape of the curve of the graph, we could be tempted to use a degree at least 3, maybe 4 polynomial fit. That is what I started to do trying to use the curve found for the LP8030860 battery to obtain data points.
+      </p>
+
+      <figure class="project_figure">
+        <img src="../img/projects/Stribog/PolynomialFits.jpg" alt="PolynomialFits">
+      </figure>
+
+      <p>
+        I wrote a simple Python script to place the points (found graphically, which is not very accurate) and make different degree polynomial fit go through them.
+        As expected, polynomial fits for degree 3 and 4 are already quite close to the datapoints, and when going to a higher degree we get an even more exact shape.
+        As a first approach, I used the <code style="color: #181714;">calibrate_polynomial</code> with degree 3, however the resulting values for battery level were not very good and had the tendency to go quite up and down very fast.
+        On the red curve, the values for higher discharge are mapped to higher voltage, resulting in off results.
+        In fact the results are more satisfactory when using the <code style="color: #181714;">calibrate_linear</code> with the <code style="color: #181714;">exact</code> method.
+        This create multiple linear equation linking the different data points (<span style="color: cyan;">cyan line</span>) and avoid having the battery level increasing when the voltage drops.
+      </p>
+
+      <p>
+        The code added and pushed to the ESP is:
+      </p>
+
+      <pre><code class="language-yaml">
+    # ADC Sensor to measure battery voltage (after divider) on GPIO2
+  - platform: adc
+    pin: GPIO2 #D0
+    name: "Battery Voltage"
+    id: stribog_battery_voltage
+    attenuation: 11db #Attenuation to be able to measure up to 2.5V (Auto could also work)
+    update_interval: 10s
+    filters:
+      - multiply: 2.0  # Compensate divider
+      - exponential_moving_average:
+          alpha: 0.1
+          send_every: 2
+
+    # Virtual sensor for battery level [%] (/!\ LiPo is non-linear)
+  - platform: template
+    name: "Battery Level"
+    id: stribog_battery_percentage
+    unit_of_measurement: "%"
+    icon: "mdi:battery"
+    update_interval: 20s
+    lambda: |- #Get battery voltage
+      return id(stribog_battery_voltage).state; 
+    filters:
+      - calibrate_linear: #Use function to map raw measures to "true" values
+          method: exact
+          datapoints:
+            - 3.00 -> 0
+            - 3.35 -> 5.56
+            - 3.42 -> 11.11
+            - 3.46 -> 16.67
+            - 3.49 -> 22.22
+            - 3.50 -> 27.78
+            - 3.51 -> 33.33
+            - 3.52 -> 38.89
+            - 3.53 -> 44.44
+            - 3.54 -> 50.00
+            - 3.56 -> 55.56
+            - 3.57 -> 61.11
+            - 3.58 -> 66.66
+            - 3.60 -> 72.22
+            - 3.61 -> 77.78
+            - 3.64 -> 83.33
+            - 3.68 -> 88.89
+            - 3.75 -> 94.44
+            - 3.88 -> 100
+      - lambda: |- # Protection to avoid returning impossible values
+          if (x < 0) return 0.0;
+          else if (x > 100) return 100.0;
+          else return x;
+      </code></pre>
+
+        <h2 id="V3">V3 - Design a PCB and create a 3D printed enclosure</h2>
+
       <h2 id="materials">Materials</h2>
 
       <!-- Table : always in a .project_table to be able to scroll -->
