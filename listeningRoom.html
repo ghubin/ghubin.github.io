@@ -14,6 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
+  <!-- CSS ListeningRoom -->
+   <link rel="stylesheet" href="ListeningRoom.css">
   <!-- FAVICON -->
   <link rel="icon" type="image/cave-icon" href="img/cave.png">
 </head>
@@ -30,8 +32,6 @@
       document.body.classList.add('dark');
     }
   </script>
-<div class="wrapper">
-  
   <nav>
     <div class="nav-left">
       <a id="index-nav" href="index.html" class="nav-logo">
@@ -69,6 +69,55 @@
       </li>
     </ul>
   </nav>
+<!-- ===== Section Spotify : à coller dans <main> de listeningRoom.html ===== -->
+<!-- Les conteneurs sont vides : spotify.js les remplit avec les données des JSON -->
+
+<section class="spotify" id="spotify">
+
+  <!-- En-tête : titre, sélecteur Semaine / Mois, période affichée -->
+  <header class="spotify_header">
+    <h2 class="spotify_title">Écoutes</h2>
+
+    <div class="spotify_tabs" role="tablist" aria-label="Période">
+      <button class="spotify_tab spotify_tab_active" type="button" role="tab" aria-selected="true" data-period="week">Semaine</button>
+      <button class="spotify_tab" type="button" role="tab" aria-selected="false" data-period="month">Mois</button>
+    </div>
+
+    <p class="spotify_period"></p>
+  </header>
+
+  <div class="spotify_panel" role="tabpanel">
+
+    <!-- Titres : n°1 en héros, rangs 2 à 10 en liste (start="2" démarre la numérotation à 2) -->
+    <div class="spotify_block spotify_tracks">
+      <h3 class="spotify_block_title">Titres</h3>
+      <article class="spotify_hero"></article>
+      <ol class="spotify_tracklist" start="2"></ol>
+    </div>
+
+    <!-- Artistes : 5 médaillons ronds -->
+    <div class="spotify_block spotify_artists">
+      <h3 class="spotify_block_title">Artistes</h3>
+      <ol class="spotify_artistlist"></ol>
+    </div>
+
+    <!-- Dernière rangée : albums (podium) et genres (barres) -->
+    <div class="spotify_row">
+      <div class="spotify_block spotify_albums">
+        <h3 class="spotify_block_title">Albums</h3>
+        <ol class="spotify_albumlist"></ol>
+      </div>
+
+      <div class="spotify_block spotify_genres">
+        <h3 class="spotify_block_title">Genres</h3>
+        <ol class="spotify_genrelist"></ol>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
   <footer>
     <p>© 2026 - The Nuton Cave - Built with curiosity (not the rover) and mischievousness</p>
@@ -108,6 +157,28 @@
     });
   </script>
 
-</div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const item = document.getElementById('navigation-links');
+      if(!item) return;
+      
+      const currentScroll = window.scrollY;
+      const scrollThreshold = 75;
+
+      if(currentScroll >= scrollThreshold){
+        item.style.opacity = '0';
+        item.style.visibility='none';
+        item.style.pointerEvents = 'none';
+      }
+      else{
+        item.style.opacity = 1-(currentScroll/scrollThreshold);
+        item.style.visibility = 'visible';
+        item.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+<!-- À mettre en bas de listeningRoom.html (adapte le chemin à ton dossier de scripts)-->
+  <script src="spotify.js" defer></script>
 </body>
 </html>

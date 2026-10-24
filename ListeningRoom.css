@@ -1,0 +1,494 @@
+/* ===== listeningRoom.css : section Spotify =====
+   À charger après style.css.
+   Les couleurs viennent de "currentColor" (la couleur de texte du site) :
+   tout s'adapte tout seul au mode clair et au mode sombre (body.dark). */
+
+
+/* ----- Base de la section ----- */
+
+.spotify {
+  /* Trait fin réutilisé partout : 15 % de la couleur du texte, le reste transparent */
+  --spotify_line: color-mix(in srgb, currentColor 15%, transparent);
+}
+
+/* Les blocs (en-tête, titres, artistes, ...) s'empilent avec de l'air entre eux */
+.spotify_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+
+/* ----- En-tête : titre, onglets, période ----- */
+
+.spotify_header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.spotify_title {
+  margin: 0;
+}
+
+/* La période prend toute la largeur : elle passe donc sur sa propre ligne */
+.spotify_period {
+  flex-basis: 100%;
+  margin: 0;
+  opacity: 0.65;
+}
+
+
+/* ----- Onglets Semaine / Mois ----- */
+
+.spotify_tabs {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.spotify_tab {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.spotify_tab:hover {
+  opacity: 1;
+}
+
+.spotify_tab_active {
+  opacity: 1;
+  border-bottom-color: currentColor;
+}
+
+
+/* ----- Titre de chaque bloc (Titres, Artistes, ...) ----- */
+
+.spotify_block_title {
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--spotify_line);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* ----- Bloc TITRES : héros à gauche, liste à droite ----- */
+
+.spotify_tracks {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: 0 2rem;
+}
+
+/* Le titre du bloc occupe toute la première ligne, au-dessus des deux colonnes */
+.spotify_tracks .spotify_block_title {
+  grid-column: 1 / -1;
+}
+
+/* Héros : le titre n°1 */
+.spotify_hero {
+  min-width: 0;
+  align-self: start;
+}
+
+.spotify_hero_cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--spotify_line);
+}
+
+.spotify_hero_name {
+  margin: 0.75rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify_hero_artist {
+  margin: 0.15rem 0 0;
+  opacity: 0.75;
+}
+
+.spotify_hero_plays {
+  margin: 0.5rem 0 0;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Liste : rangs 2 à 10 */
+.spotify_tracklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Une ligne = 4 colonnes : rang | pochette | texte | écoutes */
+.spotify_track {
+  display: grid;
+  grid-template-columns: 2rem 40px minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 0.75rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--spotify_line);
+}
+
+.spotify_track:last-child {
+  border-bottom: 0;
+}
+
+/* Le rang : généré par le CSS, il respecte start="2" du <ol> */
+.spotify_track::before {
+  content: counter(list-item);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+.spotify_track_cover {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  background: var(--spotify_line);
+}
+
+/* min-width: 0 permet au texte de rétrécir, sinon l'ellipse ne se déclenche jamais */
+.spotify_track_text {
+  min-width: 0;
+}
+
+.spotify_track_name,
+.spotify_track_artist {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify_track_name {
+  font-size: 0.95rem;
+}
+
+.spotify_track_artist {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.spotify_plays {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
+
+/* ----- Bloc ARTISTES : 5 médaillons ronds sur une ligne ----- */
+
+.spotify_artistlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.spotify_artist_item {
+  min-width: 0;
+  text-align: center;
+}
+
+/* Image carrée rendue ronde par border-radius: 50%, centrée dans sa colonne */
+.spotify_artist_image {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--spotify_line);
+}
+
+.spotify_artist_name {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify_artist_plays {
+  margin: 0.15rem 0 0;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+
+/* ----- Dernière rangée : albums à gauche, genres à droite ----- */
+
+.spotify_row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 2.5rem 2rem;
+  align-items: start;
+}
+
+
+/* ----- Bloc ALBUMS : podium 2-1-3 ----- */
+
+/* La colonne du milieu est plus large : le n°1 y sera donc plus grand.
+   align-items: end aligne le bas des trois colonnes, le n°1 dépasse donc vers le haut. */
+.spotify_albumlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: end;
+}
+
+/* Dans le HTML l'ordre est 1-2-3 ; "order" les affiche en 2-1-3 */
+.spotify_album:nth-child(1) {
+  order: 2;
+}
+
+.spotify_album:nth-child(2) {
+  order: 1;
+}
+
+.spotify_album {
+  min-width: 0;
+}
+
+.spotify_album_cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--spotify_line);
+}
+
+.spotify_album_name,
+.spotify_album_artist,
+.spotify_album_plays {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify_album_name {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.spotify_album_artist {
+  margin-top: 0.1rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.spotify_album_plays {
+  margin-top: 0.3rem;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+
+/* ----- Bloc GENRES : barres normalisées ----- */
+
+.spotify_genrelist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 0.9rem;
+}
+
+/* Une ligne = 3 colonnes : nom | barre | compte */
+.spotify_genre {
+  display: grid;
+  grid-template-columns: minmax(0, 8rem) minmax(0, 1fr) 2.5rem;
+  align-items: center;
+  column-gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.spotify_genre_name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Majuscule sur la première lettre seulement : "Alternative rock" */
+.spotify_genre_name::first-letter {
+  text-transform: uppercase;
+}
+
+/* La largeur vient de --value (0 à 100), calculée par le script */
+.spotify_genre_bar {
+  display: block;
+  height: 8px;
+  width: calc(var(--value) * 1%);
+  min-width: 4%;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.spotify_genre_count {
+  text-align: right;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
+
+/* ----- Interactions : léger zoom au survol ----- */
+
+/* Les images prennent un peu de volume en douceur */
+.spotify_hero_cover,
+.spotify_track_cover,
+.spotify_artist_image,
+.spotify_album_cover {
+  transition: transform 0.2s ease;
+}
+
+/* Seulement sur les appareils qui ont un vrai survol (souris, trackpad) :
+   sur un écran tactile, le zoom resterait coincé après un tap */
+@media (hover: hover) {
+  /* On survole l'ensemble (ligne, carte, ...), pas seulement l'image */
+  .spotify_hero:hover .spotify_hero_cover,
+  .spotify_artist_item:hover .spotify_artist_image,
+  .spotify_album:hover .spotify_album_cover {
+    transform: scale(1.05);
+  }
+
+  /* La pochette de 40 px a besoin d'un zoom plus marqué pour se voir */
+  .spotify_track:hover .spotify_track_cover {
+    transform: scale(1.12);
+  }
+}
+
+/* Pour les personnes qui ont demandé moins d'animations dans leur système */
+@media (prefers-reduced-motion: reduce) {
+  .spotify_hero_cover,
+  .spotify_track_cover,
+  .spotify_artist_image,
+  .spotify_album_cover {
+    transition: none;
+  }
+}
+
+
+/* ----- Animations d'apparition ----- */
+
+@keyframes spotify_rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes spotify_fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tant que les données ne sont pas affichées, les blocs restent invisibles */
+.spotify:not(.spotify_ready) .spotify_panel > * {
+  opacity: 0;
+}
+
+/* Quand le script ajoute spotify_ready : les blocs arrivent l'un après l'autre.
+   "both" = invisible pendant le délai, puis visible une fois l'animation finie */
+.spotify_ready .spotify_panel > * {
+  animation: spotify_rise 0.5s ease-out both;
+}
+
+.spotify_ready .spotify_panel > :nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.spotify_ready .spotify_panel > :nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+/* Changement d'onglet : simple fondu de tout le panneau (classe posée par le script) */
+.spotify_fade {
+  animation: spotify_fade 0.25s ease-out;
+}
+
+/* Moins d'animations demandé : tout s'affiche directement */
+@media (prefers-reduced-motion: reduce) {
+  .spotify_ready .spotify_panel > *,
+  .spotify_fade {
+    animation: none;
+  }
+}
+
+
+/* ----- Mobile ----- */
+
+@media (max-width: 700px) {
+  /* Titres : le héros passe au-dessus de la liste */
+  .spotify_tracks {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .spotify_hero {
+    margin-bottom: 1.5rem;
+  }
+
+  .spotify_hero_cover {
+    max-width: 320px;
+  }
+
+  /* Artistes : 3 médaillons sur une ligne, puis 2 */
+  .spotify_artistlist {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Albums et genres : l'un sous l'autre, podium à trois pochettes égales */
+  .spotify_row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .spotify_albumlist {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
