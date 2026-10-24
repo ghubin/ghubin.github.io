@@ -1,15 +1,15 @@
 // ===== Configuration =====
 
-// Fichiers de données, chemins relatifs à la racine du site
+// Data files
 const SPOTIFY_FILES = {
   week: "data/spotify.json",
   month: "data/monthlySpotify.json"
 };
 
-// Données déjà chargées : évite de refaire un fetch à chaque clic sur un onglet
+// Use cache to avoid reloading every time
 const spotifyCache = {};
 
-// ===== Éléments de la page que le script remplit =====
+// ===== Elements for the page =====
 
 const periodEl = document.querySelector(".spotify_period");
 const heroEl = document.querySelector(".spotify_hero");
@@ -21,10 +21,9 @@ const tabs = document.querySelectorAll(".spotify_tab");
 const sectionEl = document.querySelector(".spotify");
 const panelEl = document.querySelector(".spotify_panel");
 
-// ===== Petites fonctions utilitaires =====
+// ===== Useful functions =====
 
-// Neutralise les caractères spéciaux d'un texte avant de l'insérer dans du HTML
-// (un nom contenant des guillemets ou un "<" casserait sinon l'affichage)
+// Remove special caracters
 function escapeHtml(text) {
   return String(text)
     .replace(/&/g, "&amp;")
@@ -33,30 +32,30 @@ function escapeHtml(text) {
     .replace(/"/g, "&quot;");
 }
 
-// "1 écoute" au singulier, "2 écoutes" au pluriel
+// "1 stream" singular, "2 streams" plural
 function playsLabel(plays) {
-  return `${plays} écoute${plays > 1 ? "s" : ""}`;
+  return `${plays} stream${plays > 1 ? "s" : ""}`;
 }
 
-// "2026-10-13" devient "13 oct."
-// Le "T00:00:00" force une lecture en heure locale, sans décalage de fuseau
+// "2026-10-13" becomes "13 Oct"
+// "T00:00:00" forces local reading, without time zone 
 function formatDate(isoDate) {
-  return new Date(isoDate + "T00:00:00").toLocaleDateString("fr-BE", {
+  return new Date(isoDate + "T00:00:00").toLocaleDateString("en-BE", {
     day: "numeric",
     month: "short"
   });
 }
 
-// "2026-10-13/2026-10-20" devient "13 oct. → 20 oct."
+// "2026-10-13/2026-10-20" becomes "13 Oct → 20 Oct"
 function formatPeriod(range) {
   const [start, end] = range.split("/");
   return `${formatDate(start)} → ${formatDate(end)}`;
 }
 
-// ===== Rendu des quatre blocs =====
+// ===== Render of the 4 blocks =====
 
 function renderTracks(tracks) {
-  // Le premier titre devient le héros, les autres vont dans la liste
+  // N°1 as a hero
   const [first, ...others] = tracks;
 
   heroEl.innerHTML = first
@@ -114,8 +113,8 @@ function renderAlbums(albums) {
 }
 
 function renderGenres(genres) {
-  // Normalisation : la valeur la plus haute de la période sert de 100 %
-  // Le "0" dans Math.max évite -Infinity si la liste est vide
+  // Normalize genre
+  // "0" in Math.max avoids -Infinity if empty list
   const max = Math.max(...genres.map((genre) => genre.plays), 0);
 
   genrelistEl.innerHTML = genres
@@ -132,8 +131,8 @@ function renderGenres(genres) {
     .join("");
 }
 
-// Remplit toute la section avec les données d'une période
-// "period" vaut "week" ou "month", ce qui est aussi le nom de la clé de période dans le JSON
+// Fills the section with the data
+// "period" is "week" or "month", same as the period key in the JSON 
 function renderPeriod(data, period) {
   periodEl.textContent = formatPeriod(data[period]);
   renderTracks(data.top_tracks);
@@ -144,19 +143,18 @@ function renderPeriod(data, period) {
 
 // ===== Animations =====
 
-// Rejoue le fondu du panneau : on retire la classe, on force le navigateur à
-// recalculer la page (offsetWidth), puis on la remet pour relancer l'animation
+// Fade
 function playFade() {
   panelEl.classList.remove("spotify_fade");
   void panelEl.offsetWidth;
   panelEl.classList.add("spotify_fade");
 }
 
-// ===== Chargement des données =====
+// ===== Data loading =====
 
 async function loadPeriod(period) {
   try {
-    // On ne télécharge le fichier que la première fois
+    // Add to cache
     if (!spotifyCache[period]) {
       const response = await fetch(SPOTIFY_FILES[period]);
       if (!response.ok) {
@@ -167,10 +165,10 @@ async function loadPeriod(period) {
     renderPeriod(spotifyCache[period], period);
 
     if (!sectionEl.classList.contains("spotify_ready")) {
-      // Premier affichage : les blocs arrivent en cascade
+      // First load, cascading blocks
       sectionEl.classList.add("spotify_ready");
     } else {
-      // Changement d'onglet : simple fondu
+      // Tab change, simple fade
       playFade();
     }
   } catch (error) {
@@ -179,7 +177,7 @@ async function loadPeriod(period) {
   }
 }
 
-// ===== Onglets Semaine / Mois =====
+// ===== Week/Month Tab =====
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -195,5 +193,5 @@ tabs.forEach((tab) => {
   });
 });
 
-// Au chargement de la page, on affiche la semaine
+// When loading display week
 loadPeriod("week");

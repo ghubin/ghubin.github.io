@@ -69,18 +69,18 @@
       </li>
     </ul>
   </nav>
-<!-- ===== Section Spotify : à coller dans <main> de listeningRoom.html ===== -->
-<!-- Les conteneurs sont vides : spotify.js les remplit avec les données des JSON -->
+<!-- ===== Spotify Section ===== -->
+<!-- spotify.js fills containers with data from JSON -->
 
 <section class="spotify" id="spotify">
 
-  <!-- En-tête : titre, sélecteur Semaine / Mois, période affichée -->
+  <!-- Header - Title, tabs, dates -->
   <header class="spotify_header">
-    <h2 class="spotify_title">Écoutes</h2>
+    <h2 class="spotify_title">Streams</h2>
 
-    <div class="spotify_tabs" role="tablist" aria-label="Période">
-      <button class="spotify_tab spotify_tab_active" type="button" role="tab" aria-selected="true" data-period="week">Semaine</button>
-      <button class="spotify_tab" type="button" role="tab" aria-selected="false" data-period="month">Mois</button>
+    <div class="spotify_tabs" role="tablist" aria-label="Period">
+      <button class="spotify_tab spotify_tab_active" type="button" role="tab" aria-selected="true" data-period="week">Week</button>
+      <button class="spotify_tab" type="button" role="tab" aria-selected="false" data-period="month">Month</button>
     </div>
 
     <p class="spotify_period"></p>
@@ -88,20 +88,20 @@
 
   <div class="spotify_panel" role="tabpanel">
 
-    <!-- Titres : n°1 en héros, rangs 2 à 10 en liste (start="2" démarre la numérotation à 2) -->
+    <!-- Titles: N°1 as hero, rank 2 to 10 in the list -->
     <div class="spotify_block spotify_tracks">
-      <h3 class="spotify_block_title">Titres</h3>
+      <h3 class="spotify_block_title">Titles</h3>
       <article class="spotify_hero"></article>
       <ol class="spotify_tracklist" start="2"></ol>
     </div>
 
-    <!-- Artistes : 5 médaillons ronds -->
+    <!-- Artists : 5 medallions -->
     <div class="spotify_block spotify_artists">
-      <h3 class="spotify_block_title">Artistes</h3>
+      <h3 class="spotify_block_title">Artists</h3>
       <ol class="spotify_artistlist"></ol>
     </div>
 
-    <!-- Dernière rangée : albums (podium) et genres (barres) -->
+    <!-- Last row - albums and genre -->
     <div class="spotify_row">
       <div class="spotify_block spotify_albums">
         <h3 class="spotify_block_title">Albums</h3>
@@ -109,7 +109,7 @@
       </div>
 
       <div class="spotify_block spotify_genres">
-        <h3 class="spotify_block_title">Genres</h3>
+        <h3 class="spotify_block_title">Genre</h3>
         <ol class="spotify_genrelist"></ol>
       </div>
     </div>
@@ -157,7 +157,7 @@
     });
   </script>
 
-
+   <!-- Disappearing nav links on the right -->
   <script>
     window.addEventListener('scroll', () => {
       const item = document.getElementById('navigation-links');
