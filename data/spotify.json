@@ -1,157 +1,157 @@
 {
-  "week": "2026-10-13/2026-10-20",
+  "week": "2026-10-19/2026-10-26",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "A Victory of Love - 2019 Remaster",
-      "artist": "Alphaville",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
+      "name": "I Ran (So Far Away)",
+      "artist": "A Flock of Seagulls",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2732d6da1ee1b8d8fe70e1c43fe",
       "plays": 2
     },
     {
       "rank": 2,
-      "name": "Big in Japan - 2019 Remaster",
-      "artist": "Alphaville",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
+      "name": "Au revoir",
+      "artist": "Angèle",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27376bc7fba28c6824eaf828fd6",
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Fallen Angel - 2019 Remaster",
-      "artist": "Alphaville",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
+      "name": "Dis-le",
+      "artist": "Angèle",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2731ec690ae09f194029ed6c0a8",
       "plays": 2
     },
     {
       "rank": 4,
-      "name": "Summer in Berlin - 2019 Remaster",
-      "artist": "Alphaville",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
+      "name": "Instinct (intro)",
+      "artist": "Angèle",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27376bc7fba28c6824eaf828fd6",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "To Germany With Love - 2019 Remaster",
-      "artist": "Alphaville",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
+      "name": "Never Let Me Down Again",
+      "artist": "Depeche Mode",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2730a7d45a345534966a4ad2c39",
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "Shadow",
-      "artist": "Chromatics",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27387198c89d9f1731c3da39def",
+      "name": "Precious",
+      "artist": "Depeche Mode",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ed1506834f09438351cf1dc5",
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "Windswept",
-      "artist": "Johnny Jewel",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273283a65b8940856a1d7d3bc7b",
+      "name": "Strangelove",
+      "artist": "Depeche Mode",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2730a7d45a345534966a4ad2c39",
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "Let It Happen",
-      "artist": "Tame Impala",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79",
-      "plays": 2
+      "name": "Kimi wa 1000%",
+      "artist": "1986 OMEGA TRIBE",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2732f2b8b110c65d10b4b2c19c8",
+      "plays": 1
     },
     {
       "rank": 9,
-      "name": "Lonely in the Future",
-      "artist": "The Strokes",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2736b458d1409d938dad4e3ba2c",
-      "plays": 2
+      "name": "I Ran (So Far Away) - Single Edit",
+      "artist": "A Flock of Seagulls",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273e2f236d0ad512e0bb63108e1",
+      "plays": 1
     },
     {
       "rank": 10,
-      "name": "The Adults Are Talking",
-      "artist": "The Strokes",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273e3f1ba3de4659708c25d0f39",
-      "plays": 2
+      "name": "The Sun Always Shines on T.V.",
+      "artist": "a-ha",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2733a36dd2f63dfb1c73b483008",
+      "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "The Strokes",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb98856eea770468af6dd999d9",
-      "plays": 19
+      "name": "Angèle",
+      "image": "https://i.scdn.co/image/ab6761610000e5eba5396ab4c06009c05685d54d",
+      "plays": 16
     },
     {
       "rank": 2,
-      "name": "Alphaville",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb3f8779bb1c97be855c6b51a8",
+      "name": "Depeche Mode",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebaff13c9484fdad590ccfb73c",
       "plays": 14
     },
     {
       "rank": 3,
-      "name": "Angelo Badalamenti",
-      "image": "https://i.scdn.co/image/816e5aaaf9de137bdb327937ccde4a019eb579a1",
-      "plays": 8
+      "name": "Alphaville",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb3f8779bb1c97be855c6b51a8",
+      "plays": 5
     },
     {
       "rank": 4,
-      "name": "Tame Impala",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebe412a782245eb20d9626c601",
-      "plays": 8
+      "name": "Linkin Park",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb527d95dabbe8b8b527e8136f",
+      "plays": 5
     },
     {
       "rank": 5,
-      "name": "Linkin Park",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb527d95dabbe8b8b527e8136f",
-      "plays": 7
+      "name": "The Smiths",
+      "image": "https://i.scdn.co/image/481b980af463122013e4578c08fb8c5cbfaed1e9",
+      "plays": 5
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Forever Young (Super Deluxe Edition; 2019 Remaster)",
-      "artist": "Alphaville",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273d9e75c5f3171721381f2f698",
-      "plays": 14
+      "name": "Instinct",
+      "artist": "Angèle",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27376bc7fba28c6824eaf828fd6",
+      "plays": 16
     },
     {
       "rank": 2,
-      "name": "The New Abnormal",
-      "artist": "The Strokes",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273e3f1ba3de4659708c25d0f39",
-      "plays": 10
+      "name": "The Singles 86-98",
+      "artist": "Depeche Mode",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2730a7d45a345534966a4ad2c39",
+      "plays": 4
     },
     {
       "rank": 3,
-      "name": "Soundtrack From Twin Peaks",
-      "artist": "Angelo Badalamenti",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2730fe62e9afb4ae8f52a241d33",
-      "plays": 5
+      "name": "Forever Young",
+      "artist": "Alphaville",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273b9c4979446c4d39bc08e9503",
+      "plays": 3
     }
   ],
   "top_genres": [
     {
       "rank": 1,
-      "name": "rock",
-      "plays": 73
+      "name": "pop",
+      "plays": 64
     },
     {
       "rank": 2,
-      "name": "alternative",
-      "plays": 67
+      "name": "rock",
+      "plays": 58
     },
     {
       "rank": 3,
-      "name": "american",
-      "plays": 66
-    },
-    {
-      "rank": 4,
-      "name": "alternative rock",
+      "name": "80s",
       "plays": 57
     },
     {
+      "rank": 4,
+      "name": "british",
+      "plays": 45
+    },
+    {
       "rank": 5,
-      "name": "indie",
-      "plays": 41
+      "name": "new wave",
+      "plays": 45
     }
   ]
 }
