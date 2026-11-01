@@ -1,157 +1,157 @@
 {
-  "month": "2026-09-07/2026-10-07",
+  "month": "2026-10-02/2026-11-01",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Song 2 - 2012 Remaster",
-      "artist": "Blur",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273de114203356c1f7b136960b6",
-      "plays": 1
+      "name": "Alors on danse",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d5962568c5d574d7fdbc8a36",
+      "plays": 4
     },
     {
       "rank": 2,
-      "name": "Jerk It Out",
-      "artist": "Caesars",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27346ed4ae9343359e5965baf7b",
-      "plays": 1
+      "name": "The Adults Are Talking",
+      "artist": "The Strokes",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273e3f1ba3de4659708c25d0f39",
+      "plays": 4
     },
     {
       "rank": 3,
-      "name": "Smoke on the Water - remastered 2012",
-      "artist": "Deep Purple",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273a729c9c3dec04b99d889c66f",
-      "plays": 1
+      "name": "Instinct (intro)",
+      "artist": "Angèle",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27376bc7fba28c6824eaf828fd6",
+      "plays": 3
     },
     {
       "rank": 4,
-      "name": "Money For Nothing - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Bienvenue chez moi",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 3
     },
     {
       "rank": 5,
-      "name": "One World - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Peace or Violence",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 3
     },
     {
       "rank": 6,
-      "name": "Ride Across The River - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Rail de musique",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 3
     },
     {
       "rank": 7,
-      "name": "So Far Away - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Te Quiero",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 3
     },
     {
       "rank": 8,
-      "name": "The Man's Too Strong - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Get Well Soon",
+      "artist": "Surprise Chef",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
+      "plays": 3
     },
     {
       "rank": 9,
-      "name": "Walk Of Life - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "Inside Voice",
+      "artist": "Surprise Chef",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
+      "plays": 3
     },
     {
       "rank": 10,
-      "name": "Why Worry - Remastered 1996",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 1
+      "name": "I Ran (So Far Away)",
+      "artist": "A Flock of Seagulls",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2732d6da1ee1b8d8fe70e1c43fe",
+      "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Dire Straits",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb4bdaa8c5e65b64f50549c393",
-      "plays": 8
+      "name": "Stromae",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebcc129f1c9b5047760d66aae2",
+      "plays": 49
     },
     {
       "rank": 2,
-      "name": "Muse",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebccb215d769112ec422a59ce6",
-      "plays": 8
+      "name": "Surprise Chef",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb11d862889052aa8d0be2b172",
+      "plays": 37
     },
     {
       "rank": 3,
-      "name": "Nancy Ajram",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb5c9cf78344e4a0dd486a0e34",
-      "plays": 4
+      "name": "The Strokes",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb98856eea770468af6dd999d9",
+      "plays": 24
     },
     {
       "rank": 4,
-      "name": "Fares Karam",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebd5d1b42f0cd8135b87655f16",
-      "plays": 2
+      "name": "Alphaville",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb3f8779bb1c97be855c6b51a8",
+      "plays": 19
     },
     {
       "rank": 5,
-      "name": "John Williams",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb86b13e4d2e65ebf694384ef4",
-      "plays": 2
+      "name": "Angèle",
+      "image": "https://i.scdn.co/image/ab6761610000e5eba5396ab4c06009c05685d54d",
+      "plays": 17
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Fantasymphony",
-      "artist": "Danish National Symphony Orchestra",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27330edd9d9b21dff8892b6a7eb",
-      "plays": 8
+      "name": "Cheese",
+      "artist": "Stromae",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae373174b14e3eac81554402",
+      "plays": 23
     },
     {
       "rank": 2,
-      "name": "Brothers In Arms (Remastered 1996)",
-      "artist": "Dire Straits",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27358c4e9c84ece7d31f51636f3",
-      "plays": 8
+      "name": "Frogs In A Pond",
+      "artist": "Surprise Chef",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
+      "plays": 23
     },
     {
       "rank": 3,
-      "name": "The Wow! Signal",
-      "artist": "Muse",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273b295bd39e098e7b68d57aacf",
-      "plays": 5
+      "name": "Instinct",
+      "artist": "Angèle",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27376bc7fba28c6824eaf828fd6",
+      "plays": 17
     }
   ],
   "top_genres": [
     {
       "rank": 1,
       "name": "rock",
-      "plays": 26
+      "plays": 150
     },
     {
       "rank": 2,
-      "name": "british",
-      "plays": 21
+      "name": "pop",
+      "plays": 118
     },
     {
       "rank": 3,
-      "name": "Progressive rock",
-      "plays": 18
+      "name": "alternative",
+      "plays": 106
     },
     {
       "rank": 4,
-      "name": "alternative",
-      "plays": 17
+      "name": "electronic",
+      "plays": 104
     },
     {
       "rank": 5,
       "name": "alternative rock",
-      "plays": 16
+      "plays": 94
     }
   ]
 }
