@@ -1,101 +1,107 @@
 {
-  "week": "2026-10-26/2026-11-02",
+  "week": "2026-11-02/2026-11-09",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Get Well Soon",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
-      "plays": 3
+      "name": "Jerk It Out",
+      "artist": "Caesars",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273b2bf866a8c5bd281353ea1f1",
+      "plays": 2
     },
     {
       "rank": 2,
-      "name": "Inside Voice",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
-      "plays": 3
+      "name": "Something About Us",
+      "artist": "Daft Punk",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2731e81bff9807a9e629fce5ade",
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "Frog Technique",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
+      "name": "Clint Eastwood",
+      "artist": "Gorillaz",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273f6c46838e4425ea96e2562fe",
       "plays": 2
     },
     {
       "rank": 4,
-      "name": "I Love What You've Done With the Place",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
+      "name": "Dirty Harry (feat. Bootie Brown)",
+      "artist": "Gorillaz",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273622aefd794f6fe4d8e714358",
       "plays": 2
     },
     {
       "rank": 5,
-      "name": "Knuckle Sandwich",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
+      "name": "Feel Good Inc.",
+      "artist": "Gorillaz",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2733b4e7f675db2082e19e84e63",
       "plays": 2
     },
     {
       "rank": 6,
-      "name": "Leg Day",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273effcf4ee34b7fe608b5eb9ad",
+      "name": "She's My Collar (feat. Kali Uchis)",
+      "artist": "Gorillaz",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273a5952c0e2e649f588603b743",
       "plays": 2
     },
     {
       "rank": 7,
-      "name": "Outside Voice",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273e6c1a63d562fe2021c3df5f6",
+      "name": "Faint",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2738b5b6fa1326d996181e71dd7",
       "plays": 2
     },
     {
       "rank": 8,
-      "name": "Tadpoles",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2737c4c3af5002c2e8af52c6248",
+      "name": "Numb",
+      "artist": "Linkin Park",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2735f1f51d14e8bea89484ecd1b",
       "plays": 2
     },
     {
       "rank": 9,
-      "name": "La Chanson des Vieux Amants",
-      "artist": "Jacques Brel",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273c13ecf7ced29f9982b013314",
-      "plays": 1
+      "name": "No One Knows",
+      "artist": "Queens of the Stone Age",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2739eec33b045d88f87b9b06e67",
+      "plays": 2
     },
     {
       "rank": 10,
-      "name": "La Valse à Mille Temps",
-      "artist": "Jacques Brel",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273c13ecf7ced29f9982b013314",
-      "plays": 1
+      "name": "Californication",
+      "artist": "Red Hot Chili Peppers",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27362ca483e513455875a69b4e4",
+      "plays": 2
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Surprise Chef",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb11d862889052aa8d0be2b172",
-      "plays": 37
+      "name": "Gorillaz",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebdd5b57b40cf2aaeccd07835e",
+      "plays": 18
     },
     {
       "rank": 2,
-      "name": "高中正義",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
-      "plays": 15
+      "name": "Surprise Chef",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb11d862889052aa8d0be2b172",
+      "plays": 14
     },
     {
       "rank": 3,
-      "name": "Queens of the Stone Age",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb69e0a759aed9e92dd2c7ce02",
-      "plays": 9
+      "name": "Red Hot Chili Peppers",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebc33cc15260b767ddec982ce8",
+      "plays": 11
     },
     {
       "rank": 4,
-      "name": "Jacques Brel",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb94b2ec409d78a20bc2e4af50",
-      "plays": 6
+      "name": "Muse",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebccb215d769112ec422a59ce6",
+      "plays": 9
+    },
+    {
+      "rank": 5,
+      "name": "The Strokes",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb98856eea770468af6dd999d9",
+      "plays": 9
     }
   ],
   "top_albums": [
@@ -104,48 +110,48 @@
       "name": "Frogs In A Pond",
       "artist": "Surprise Chef",
       "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
-      "plays": 23
-    },
-    {
-      "rank": 2,
-      "name": "虹伝説～THE RAINBOW GOBLINS～",
-      "artist": "Masayoshi Takanaka",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273a8fd1d331c811e557db74d27",
       "plays": 14
     },
     {
+      "rank": 2,
+      "name": "Demon Days",
+      "artist": "Gorillaz",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273622aefd794f6fe4d8e714358",
+      "plays": 6
+    },
+    {
       "rank": 3,
-      "name": "Perfecth",
-      "artist": "Queens of the Stone Age",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2734d957fefd8e7b61b9fcfc374",
-      "plays": 9
+      "name": "Californication (Deluxe Edition)",
+      "artist": "Red Hot Chili Peppers",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27394d08ab63e57b0cae74e8595",
+      "plays": 5
     }
   ],
   "top_genres": [
     {
       "rank": 1,
-      "name": "funk",
-      "plays": 52
+      "name": "rock",
+      "plays": 85
     },
     {
       "rank": 2,
-      "name": "guitar",
-      "plays": 52
+      "name": "alternative",
+      "plays": 76
     },
     {
       "rank": 3,
-      "name": "jazz",
-      "plays": 52
+      "name": "alternative rock",
+      "plays": 73
     },
     {
       "rank": 4,
-      "name": "Psychedelic Rock",
-      "plays": 46
+      "name": "indie",
+      "plays": 45
     },
     {
       "rank": 5,
-      "name": "australia",
-      "plays": 37
+      "name": "american",
+      "plays": 41
     }
   ]
 }
