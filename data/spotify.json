@@ -1,157 +1,157 @@
 {
-  "week": "2026-11-02/2026-11-09",
+  "week": "2026-11-09/2026-11-16",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Jerk It Out",
-      "artist": "Caesars",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273b2bf866a8c5bd281353ea1f1",
-      "plays": 2
+      "name": "Le Plat Pays - Édition Restaurée '24",
+      "artist": "Jacques Brel",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273663ac4b2879c86df8ca260b1",
+      "plays": 3
     },
     {
       "rank": 2,
-      "name": "Something About Us",
-      "artist": "Daft Punk",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2731e81bff9807a9e629fce5ade",
+      "name": "Handel / Orch. Hale: Keyboard Suite No. 4 in D Minor, HWV 437: III. Sarabande",
+      "artist": "George Frideric Handel",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273d402a56a6ea55af4119c2c89",
       "plays": 2
     },
     {
       "rank": 3,
-      "name": "Clint Eastwood",
-      "artist": "Gorillaz",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273f6c46838e4425ea96e2562fe",
-      "plays": 2
+      "name": "Dear Maria, Count Me In",
+      "artist": "All Time Low",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273c8913cd7b91bb7f6bbbec305",
+      "plays": 1
     },
     {
       "rank": 4,
-      "name": "Dirty Harry (feat. Bootie Brown)",
-      "artist": "Gorillaz",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273622aefd794f6fe4d8e714358",
-      "plays": 2
+      "name": "What You Want",
+      "artist": "Angèle",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273dead0548b222459aa1a27ef9",
+      "plays": 1
     },
     {
       "rank": 5,
-      "name": "Feel Good Inc.",
-      "artist": "Gorillaz",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2733b4e7f675db2082e19e84e63",
-      "plays": 2
+      "name": "Complicated",
+      "artist": "Avril Lavigne",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2731e311ae42181e0351cc8aa94",
+      "plays": 1
     },
     {
       "rank": 6,
-      "name": "She's My Collar (feat. Kali Uchis)",
-      "artist": "Gorillaz",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273a5952c0e2e649f588603b743",
-      "plays": 2
+      "name": "Thirteen",
+      "artist": "Big Star",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ece578a226806ad05af7a03d",
+      "plays": 1
     },
     {
       "rank": 7,
-      "name": "Faint",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2738b5b6fa1326d996181e71dd7",
-      "plays": 2
+      "name": "We Didn't Start the Fire",
+      "artist": "Billy Joel",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ce32b2f1b4b9e2f1c68f84cc",
+      "plays": 1
     },
     {
       "rank": 8,
-      "name": "Numb",
-      "artist": "Linkin Park",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2735f1f51d14e8bea89484ecd1b",
-      "plays": 2
+      "name": "Never There",
+      "artist": "Cake",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2738c28d7443694de36c67be905",
+      "plays": 1
     },
     {
       "rank": 9,
-      "name": "No One Knows",
-      "artist": "Queens of the Stone Age",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2739eec33b045d88f87b9b06e67",
-      "plays": 2
+      "name": "couleur pastel",
+      "artist": "candeur cyclone",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2738d7f4d726958a0b854779fd6",
+      "plays": 1
     },
     {
       "rank": 10,
-      "name": "Californication",
-      "artist": "Red Hot Chili Peppers",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27362ca483e513455875a69b4e4",
-      "plays": 2
+      "name": "Улетай на крыльях ветра (Remix)",
+      "artist": "Dabro remix",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273cb85cc0cbdc822e6ab064460",
+      "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Gorillaz",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebdd5b57b40cf2aaeccd07835e",
-      "plays": 18
-    },
-    {
-      "rank": 2,
-      "name": "Surprise Chef",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb11d862889052aa8d0be2b172",
-      "plays": 14
-    },
-    {
-      "rank": 3,
-      "name": "Red Hot Chili Peppers",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebc33cc15260b767ddec982ce8",
+      "name": "Jacques Brel",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb94b2ec409d78a20bc2e4af50",
       "plays": 11
     },
     {
+      "rank": 2,
+      "name": "Phil Collins",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebe1b4af6dd9cad1b03d03218d",
+      "plays": 11
+    },
+    {
+      "rank": 3,
+      "name": "Fairuz",
+      "image": "https://i.scdn.co/image/ab67616d0000b27330e293e4d5d78ced09fea2f1",
+      "plays": 8
+    },
+    {
       "rank": 4,
-      "name": "Muse",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebccb215d769112ec422a59ce6",
-      "plays": 9
+      "name": "Ludwig Göransson",
+      "image": "https://i.scdn.co/image/ab6772690000c46ce21cc6b5cc9143179fdac34e",
+      "plays": 5
     },
     {
       "rank": 5,
-      "name": "The Strokes",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb98856eea770468af6dd999d9",
-      "plays": 9
+      "name": "Georg Friedrich Händel",
+      "image": "https://i.scdn.co/image/ab67616d0000b273764bd012e31bfed379fa163f",
+      "plays": 2
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "Frogs In A Pond",
-      "artist": "Surprise Chef",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273abc900e2b29bf2129e03da95",
-      "plays": 14
+      "name": "The Odyssey (Original Motion Picture Soundtrack)",
+      "artist": "Ludwig Göransson",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273bf5606605d62f131a62ec5b2",
+      "plays": 5
     },
     {
       "rank": 2,
-      "name": "Demon Days",
-      "artist": "Gorillaz",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273622aefd794f6fe4d8e714358",
-      "plays": 6
+      "name": "Une Grande Sélection De Ses Chansons Aimées (Édition Restaurée '24)",
+      "artist": "Jacques Brel",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273663ac4b2879c86df8ca260b1",
+      "plays": 4
     },
     {
       "rank": 3,
-      "name": "Californication (Deluxe Edition)",
-      "artist": "Red Hot Chili Peppers",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27394d08ab63e57b0cae74e8595",
-      "plays": 5
+      "name": "Shahrazad (Live)",
+      "artist": "Fairuz",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27354937778f65ebf40275957cb",
+      "plays": 2
     }
   ],
   "top_genres": [
     {
       "rank": 1,
-      "name": "rock",
-      "plays": 85
+      "name": "singer-songwriter",
+      "plays": 26
     },
     {
       "rank": 2,
-      "name": "alternative",
-      "plays": 76
+      "name": "male vocalists",
+      "plays": 24
     },
     {
       "rank": 3,
-      "name": "alternative rock",
-      "plays": 73
+      "name": "rock",
+      "plays": 21
     },
     {
       "rank": 4,
-      "name": "indie",
-      "plays": 45
+      "name": "pop",
+      "plays": 20
     },
     {
       "rank": 5,
-      "name": "american",
-      "plays": 41
+      "name": "french",
+      "plays": 18
     }
   ]
 }
