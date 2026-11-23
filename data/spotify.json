@@ -1,157 +1,157 @@
 {
-  "week": "2026-11-09/2026-11-16",
+  "week": "2026-11-16/2026-11-23",
   "top_tracks": [
     {
       "rank": 1,
-      "name": "Le Plat Pays - Édition Restaurée '24",
-      "artist": "Jacques Brel",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273663ac4b2879c86df8ca260b1",
-      "plays": 3
-    },
-    {
-      "rank": 2,
-      "name": "Handel / Orch. Hale: Keyboard Suite No. 4 in D Minor, HWV 437: III. Sarabande",
-      "artist": "George Frideric Handel",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273d402a56a6ea55af4119c2c89",
+      "name": "Les Prisons De Nantes",
+      "artist": "Tri Yann",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2730d47cdadecdbe743740a4673",
       "plays": 2
     },
     {
+      "rank": 2,
+      "name": "Riverside",
+      "artist": "Agnes Obel",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ae70ffe7505b2a4f45372cb5",
+      "plays": 1
+    },
+    {
       "rank": 3,
-      "name": "Dear Maria, Count Me In",
-      "artist": "All Time Low",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273c8913cd7b91bb7f6bbbec305",
+      "name": "Nautilus (feat. Kaaris)",
+      "artist": "Alkpote",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273bdb8ee278337a019c62ddda2",
       "plays": 1
     },
     {
       "rank": 4,
-      "name": "What You Want",
-      "artist": "Angèle",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273dead0548b222459aa1a27ef9",
+      "name": "Goud",
+      "artist": "Bazart",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273202dc424cc19e2313c95b0f9",
       "plays": 1
     },
     {
       "rank": 5,
-      "name": "Complicated",
-      "artist": "Avril Lavigne",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2731e311ae42181e0351cc8aa94",
+      "name": "More Than a Feeling",
+      "artist": "Boston",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2738c1fadcc997a65384f34d694",
       "plays": 1
     },
     {
       "rank": 6,
-      "name": "Thirteen",
-      "artist": "Big Star",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ece578a226806ad05af7a03d",
+      "name": "Fortunate Son",
+      "artist": "Creedence Clearwater Revival",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2735b18abb5facf12c82192bda7",
       "plays": 1
     },
     {
       "rank": 7,
-      "name": "We Didn't Start the Fire",
-      "artist": "Billy Joel",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273ce32b2f1b4b9e2f1c68f84cc",
+      "name": "Around the World",
+      "artist": "Daft Punk",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2738ac778cc7d88779f74d33311",
       "plays": 1
     },
     {
       "rank": 8,
-      "name": "Never There",
-      "artist": "Cake",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2738c28d7443694de36c67be905",
+      "name": "S.O.S. d'un terrien en détresse - Remasterisé en 2009",
+      "artist": "Daniel Balavoine",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2732f5b249add2cebf2923f8c16",
       "plays": 1
     },
     {
       "rank": 9,
-      "name": "couleur pastel",
-      "artist": "candeur cyclone",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2738d7f4d726958a0b854779fd6",
+      "name": "Voyage voyage",
+      "artist": "Desireless",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2738f5813c842cb115f3cf1fecd",
       "plays": 1
     },
     {
       "rank": 10,
-      "name": "Улетай на крыльях ветра (Remix)",
-      "artist": "Dabro remix",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273cb85cc0cbdc822e6ab064460",
+      "name": "Sacoche",
+      "artist": "Dinos",
+      "cover": "https://i.scdn.co/image/ab67616d0000b27378ce472bebf495f7a532f4a9",
       "plays": 1
     }
   ],
   "top_artists": [
     {
       "rank": 1,
-      "name": "Jacques Brel",
-      "image": "https://i.scdn.co/image/ab6761610000e5eb94b2ec409d78a20bc2e4af50",
-      "plays": 11
-    },
-    {
-      "rank": 2,
-      "name": "Phil Collins",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebe1b4af6dd9cad1b03d03218d",
-      "plays": 11
-    },
-    {
-      "rank": 3,
-      "name": "Fairuz",
-      "image": "https://i.scdn.co/image/ab67616d0000b27330e293e4d5d78ced09fea2f1",
+      "name": "Pierre Rapsat",
+      "image": "https://i.scdn.co/image/ab67616d0000b273b5a1ffb548f02bb1b0794d7c",
       "plays": 8
     },
     {
+      "rank": 2,
+      "name": "Linkin Park",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb527d95dabbe8b8b527e8136f",
+      "plays": 2
+    },
+    {
+      "rank": 3,
+      "name": "Tri Yann",
+      "image": "https://i.scdn.co/image/dcc58d2be26dbae722973bfe7024858afdc03df4",
+      "plays": 2
+    },
+    {
       "rank": 4,
-      "name": "Ludwig Göransson",
-      "image": "https://i.scdn.co/image/ab6772690000c46ce21cc6b5cc9143179fdac34e",
-      "plays": 5
+      "name": "Agnes Obel",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebcf9882b955077831d1d36345",
+      "plays": 1
     },
     {
       "rank": 5,
-      "name": "Georg Friedrich Händel",
-      "image": "https://i.scdn.co/image/ab67616d0000b273764bd012e31bfed379fa163f",
-      "plays": 2
+      "name": "Alkpote",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb2d14e35f8f24c9a3fbb37c46",
+      "plays": 1
     }
   ],
   "top_albums": [
     {
       "rank": 1,
-      "name": "The Odyssey (Original Motion Picture Soundtrack)",
-      "artist": "Ludwig Göransson",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273bf5606605d62f131a62ec5b2",
-      "plays": 5
+      "name": "Dazibao",
+      "artist": "Pierre Rapsat",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273b5a1ffb548f02bb1b0794d7c",
+      "plays": 3
     },
     {
       "rank": 2,
-      "name": "Une Grande Sélection De Ses Chansons Aimées (Édition Restaurée '24)",
-      "artist": "Jacques Brel",
-      "cover": "https://i.scdn.co/image/ab67616d0000b273663ac4b2879c86df8ca260b1",
-      "plays": 4
+      "name": "Lâchez les fauves (Édition remasterisée)",
+      "artist": "Pierre Rapsat",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2737b42acbc8981351b65e35d55",
+      "plays": 2
     },
     {
       "rank": 3,
-      "name": "Shahrazad (Live)",
-      "artist": "Fairuz",
-      "cover": "https://i.scdn.co/image/ab67616d0000b27354937778f65ebf40275957cb",
+      "name": "Le Meilleur De Tri Yann",
+      "artist": "Tri Yann",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2730d47cdadecdbe743740a4673",
       "plays": 2
     }
   ],
   "top_genres": [
     {
       "rank": 1,
-      "name": "singer-songwriter",
-      "plays": 26
+      "name": "french",
+      "plays": 18
     },
     {
       "rank": 2,
-      "name": "male vocalists",
-      "plays": 24
+      "name": "rock",
+      "plays": 15
     },
     {
       "rank": 3,
-      "name": "rock",
-      "plays": 21
+      "name": "singer-songwriter",
+      "plays": 13
     },
     {
       "rank": 4,
-      "name": "pop",
-      "plays": 20
+      "name": "chanson francaise",
+      "plays": 12
     },
     {
       "rank": 5,
-      "name": "french",
-      "plays": 18
+      "name": "All",
+      "plays": 11
     }
   ]
 }
